@@ -31,6 +31,7 @@ a {
 /* Set color for elements with class card-category */
 .card-category {
     color: var(--color-primary);
+}
 
 /* Set color for elements with class section-tagline */
 .section-tagline {
