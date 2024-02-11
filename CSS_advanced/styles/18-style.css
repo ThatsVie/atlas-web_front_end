@@ -169,14 +169,15 @@ h1, h2, h3, h4, h5, h6 {
     float: right;
 }
 
-/* Styling for nav class */
+/* Style for the nav class */
 .nav {
     margin: 0;
     padding: 0;
+    list-style: none;
     text-align: center;
 }
 
-/* Styling for nav-item class in nav */
+/* Style for the nav-item class within nav */
 .nav-item {
     font-family: var(--nav-item-font-family);
     font-weight: var(--nav-item-font-weight);
@@ -186,13 +187,13 @@ h1, h2, h3, h4, h5, h6 {
     margin: var(--nav-item-margin);
 }
 
-/* Styling for nav-link class in nav */
+/* Style for the nav-link class within nav */
 .nav-link {
     display: block;
-    padding: calc(var(--section-padding) / 2) 0;
+    padding: calc(var(--root-font-size) / 2) var(--root-font-size);
 }
 
-/* Styling for nav-link class while hovering */
+/* Style for the hover state of nav-link within nav */
 .nav-link:hover {
     color: var(--nav-item-link-hover);
 }
