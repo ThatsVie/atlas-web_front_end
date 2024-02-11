@@ -262,6 +262,6 @@ ul.row {
 }
 
 /* Style for svg children within social-link */
-.social-link svg {
+.social-link > svg {
     fill: var(--text-color);
 }
