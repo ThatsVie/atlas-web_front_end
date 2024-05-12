@@ -64,5 +64,16 @@ Forced the hover state using the state simulation options in the Styles pane.
 
 Took a  screenshot while the hover state was active.
 
-Took a screenshot named 2-pathways_menu.png while the hover state was active, showing the visual effects applied to the "cake" block when hovered over. This is useful for visual testing and ensuring interactive elements respond as expected without interacting with the site through user input.
+Took a screenshot named `2-pathways_menu.png` while the hover state was active, showing the visual effects applied to the "cake" block when hovered over. This is useful for visual testing and ensuring interactive elements respond as expected without interacting with the site through user input.
 
+### Task 3: Extracting CSS Styling for "Download me!" Button
+
+This task involved capturing all CSS styling applied to the "Download me!" button on the "https://dev-tools.hbtn.info/" website. The purpose was to understand how CSS properties are used to style a specific element on a web page, providing insight into CSS specificity, inheritance, and the cascade.
+
+**Steps:**
+
+Used the Developer Tools in the browser to inspect the "Download me!" button.
+
+Copied all CSS styles from both directly applied and inherited sources that affect the button’s appearance and behavior into file named `3-button_styles`
+
+### Task 4:
