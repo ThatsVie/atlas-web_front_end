@@ -128,3 +128,17 @@ Convert the hexadecimal color to its HSL representation using a color conversion
 
 Document the HSL value in `8-hsl`
 
+### Task 9: Determining Max-Width of the Container
+
+Identify the maximum width setting for the first .container within the "About" section of the website under specific browser conditions.
+
+ **Steps:**
+ 
+Ensure the browser width is set between 1250px and 1440px.
+
+Open Developer Tools and select the first .container within the "About" section.
+
+Use the "Computed" tab to find the max-width property of the .container.
+
+Record the value found and save it as max-width: <VALUE>; in `9-max_width`.
+
