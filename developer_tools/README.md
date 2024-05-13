@@ -172,9 +172,17 @@ Click on the file name to view details, including the size of the file in bytes 
 
 This value is documented in the `11-coverage`
 
+### Task 12: Emulating Print Media
 
+Practice the ability to emulate different media types using Developer Tools to visualize how a web page would appear when printed.
 
+**Steps:**
 
+Open Developer Tools and navigate to the 'Rendering' panel.
+
+Change the CSS media type to "print" to simulate how the page would look when printed.
+
+Take a screenshot of the homepage in this mode. `12-print_version.png`
 
 
 
