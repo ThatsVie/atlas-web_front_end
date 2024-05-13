@@ -116,14 +116,15 @@ Count each occurrence where a click event is added to elements
 
 The result is documented in `7-number_of_listeners~
 
+### Task 8: Hexadecimal to HSL Conversion
 
+Find the HSL equivalent of the background color of the "Send" button on the website.
 
+**Steps:**
 
+Use Developer Tools to inspect the "Send" button and find its hexadecimal color code.
 
+Convert the hexadecimal color to its HSL representation using a color conversion tool.
 
-
-
-
-
-
+Document the HSL value in `8-hsl`
 
