@@ -184,10 +184,19 @@ Change the CSS media type to "print" to simulate how the page would look when pr
 
 Take a screenshot of the homepage in this mode. `12-print_version.png`
 
+### Task 13: Console Reference to an Element
 
+Utilize the $0 command in the browser's Developer Tools console to reference the last inspected element
 
+**Steps:**
 
+Use the Developer Tools to select the Avatar image in the header.
 
+Switch to the Console tab and type $0, then press Enter to execute.
+
+Observe the output, which shows the HTML representation of the selected Avatar image element.
+
+The output is documented in file `13-logo_dollar0`
 
 
 
