@@ -87,3 +87,13 @@ Practice DOM manipulation by removing a specific element from the webpage and do
 Use Developer Tools to remove the "cake" box div from the Portfolio section.
 
 Document the change by taking and saving a screenshot as 5-deleted_elements.png.
+
+### Task 6: Identifying CSS Source for Styling
+
+Determine the source file of the CSS property for an element using Developer Tools.
+
+Steps involve selecting the h2 tag with the text "ABOUT" and inspecting its margin-bottom property in the 'Computed' tab of Developer Tools to identify the source CSS file.
+
+Documented in `6-declaration_file`
+
+
