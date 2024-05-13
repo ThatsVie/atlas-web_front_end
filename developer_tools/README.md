@@ -240,10 +240,7 @@ It shows two figures- the first is the actual data transferred (compressed), and
 
 Screenshot of the Network tab displaying these figures is saved as `16-weight.png`
 
-
-
-
-
+### Task 17: Analyzing Network Requests
 
 
 
