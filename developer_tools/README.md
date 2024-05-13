@@ -224,10 +224,21 @@ The inspection reveals that the website uses Bootstrap as its front-end framewor
 
 The result is documented in the file '15-hbtn_framework'
 
+### Task 16: Page Weight Analysis
 
+Determine and document the total weight of the webpage when fully loaded.
 
+**Steps:**
 
+Navigate to the Developer Tools on the browser while on the page.
 
+Go to the 'Network' tab and refresh the page to load all resources.
+
+Note the total data transferred and the resources loaded at the bottom of the Network tab.
+
+It shows two figures- the first is the actual data transferred (compressed), and the second is the total size of all resources once processed (uncompressed).
+
+Screenshot of the Network tab displaying these figures is saved as `16-weight.png`
 
 
 
