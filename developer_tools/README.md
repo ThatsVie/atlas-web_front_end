@@ -294,4 +294,18 @@ Count the number of image resource requests that appear, which represents the to
 
 Documented answer in file `19-images_loaded`
 
+### Task 20: Determining Favicon Type
 
+This task involves identifying the type of the favicon used on the webpage. Favicons are small icons associated with a webpage or website, displayed in browser tabs and bookmarks.
+
+**Steps:**
+
+Access the website in Google Chrome and activate the Developer Tools
+
+Go to the 'Elements' tab to view the source HTML of the page.
+
+Use the search function within the Elements panel (Ctrl+F) and search for "favicon" to  locate the `<link>` tag that defines the favicon.
+
+Examine the type attribute of the `<link>` tag to find out the type of the favicon image, which describes the file format of the image.
+
+Documented in `20-favicon_type`
