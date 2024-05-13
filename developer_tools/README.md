@@ -276,9 +276,22 @@ Count the CSS resource requests that appear filtered by this type.
 
 Document the total number of CSS resources loaded into file `18-css_loaded`
 
+### Task 19: Counting Image Resources
 
+This task is focused on identifying the number of image resources that the webpage loads. 
 
+**Steps:**
 
+Open the website in Google Chrome and activate the Developer Tools
 
+Navigate to the 'Network' tab and clear any previous data
+
+Refresh the webpage to capture all network activities from the beginning.
+
+Use the filter feature in the Network tab by typing "img" or selecting the 'Img' filter to isolate only the image resources.
+
+Count the number of image resource requests that appear, which represents the total images loaded by the page.
+
+Documented answer in file `19-images_loaded`
 
 
