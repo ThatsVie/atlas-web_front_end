@@ -212,10 +212,17 @@ Note the output that the console returns.
 
 The result is documented in the file `14-doc_title`
 
+### Task 15: Identifying the Front-End Framework
 
+Determine the front-end framework used by the Holberton School Developer Tools website.
 
+**Steps:**
 
+Open the browser's Developer Tools and inspect various elements, particularly looking at class names and CSS files included in the webpage.
 
+The inspection reveals that the website uses Bootstrap as its front-end framework, as evidenced by the Bootstrap-specific class names and styles.(btn, container, row)
+
+The result is documented in the file '15-hbtn_framework'
 
 
 
