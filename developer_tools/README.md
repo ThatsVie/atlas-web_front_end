@@ -309,3 +309,21 @@ Use the search function within the Elements panel (Ctrl+F) and search for "favic
 Examine the type attribute of the `<link>` tag to find out the type of the favicon image, which describes the file format of the image.
 
 Documented in `20-favicon_type`
+
+### Task 21: Identifying the Icon Font Library
+
+This task involves identifying the font library used for icons on the webpage
+
+**Steps:**
+
+Open the website in Google Chrome.
+
+Activate the Developer Tools 
+
+Navigate to the 'Elements' tab to inspect the source HTML of the page.
+
+Search for references to icon fonts within <link> or <style> tags.
+
+Identify that the website uses FontAwesome for its icons by finding the relevant font-family or source URLs linked to FontAwesome.
+
+Documented answer in `21-hbtn_font_lib`
