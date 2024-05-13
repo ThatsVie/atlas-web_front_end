@@ -142,3 +142,16 @@ Use the "Computed" tab to find the max-width property of the .container.
 
 Record the value found and save it as max-width: <VALUE>; in `9-max_width`.
 
+### Task 10: Rearranging Sections
+
+Swap the "About" and "Portfolio" sections on the website to demonstrate DOM manipulation
+
+This task shows how to use Developer Tools for real-time HTML structure changes without altering the source code, useful for testing layout adjustments.
+
+**Steps:**
+
+Open Developer Tools and locate the "About" and "Portfolio" sections in the DOM.
+
+Drag the "About section above the "Portfolio" section to swap their positions.
+
+Capture a screenshot showing the new order of these sections, name it `10-moved_around.png`
