@@ -258,6 +258,24 @@ This figure represents the total number of requests for resources such as images
 
 Screenshot of the Network tab showing the number of requests is saved to `17-requests.png`
 
+### Task 18: Counting CSS Resources
+
+This task determines the number of CSS resources that the webpage loads.
+
+**Steps:**
+
+Access the website in Google Chrome and open the Developer Tools
+
+Go to the 'Network' tab and clear any previous data
+
+Reload the page to monitor all network activity from the start.
+
+Apply a filter in the Network tab by typing "css" in the filter box to display only CSS files.
+
+Count the CSS resource requests that appear filtered by this type.
+
+Document the total number of CSS resources loaded into file `18-css_loaded`
+
 
 
 
