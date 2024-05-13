@@ -155,3 +155,35 @@ Open Developer Tools and locate the "About" and "Portfolio" sections in the DOM.
 Drag the "About section above the "Portfolio" section to swap their positions.
 
 Capture a screenshot showing the new order of these sections, name it `10-moved_around.png`
+
+### Task 11: Determining File Size
+
+Identify the file size of the freelancer.css file
+
+**Steps:**
+
+Open the Developer Tools in the browser and switch to the 'Network' tab.
+
+Reload the page to capture all network requests.
+
+Search for `freelancer.css` in the Network tab.
+
+Click on the file name to view details, including the size of the file in bytes as reported by the browser. (seen under content-length)
+
+This value is documented in the `11-coverage`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
