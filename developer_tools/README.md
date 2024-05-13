@@ -84,6 +84,8 @@ Capture and save the updated buttons as 4-new_buttons.png
 
 Practice DOM manipulation by removing a specific element from the webpage and documenting the visual result.
 
+**Steps:**
+
 Use Developer Tools to remove the "cake" box div from the Portfolio section.
 
 Document the change by taking and saving a screenshot as 5-deleted_elements.png.
@@ -92,8 +94,36 @@ Document the change by taking and saving a screenshot as 5-deleted_elements.png.
 
 Determine the source file of the CSS property for an element using Developer Tools.
 
-Steps involve selecting the h2 tag with the text "ABOUT" and inspecting its margin-bottom property in the 'Computed' tab of Developer Tools to identify the source CSS file.
+**Steps:**
+
+Select the h2 tag with the text "ABOUT" and inspect its margin-bottom property in the 'Computed' tab of Developer Tools to identify the source CSS file.
 
 Documented in `6-declaration_file`
+
+### Task 7: Counting Click Event Listeners
+
+Determine the number of times click events are referenced in the JavaScript files of the website.
+
+**Steps:**
+
+Access Developer tools
+
+Go to the 'Sources' tab where the site’s files are listed.
+
+Search through JavaScript files for instances of click event references using the search functionality (Ctrl+F)
+
+Count each occurrence where a click event is added to elements 
+
+The result is documented in `7-number_of_listeners~
+
+
+
+
+
+
+
+
+
+
 
 
