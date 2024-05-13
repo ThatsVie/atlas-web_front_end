@@ -198,6 +198,37 @@ Observe the output, which shows the HTML representation of the selected Avatar i
 
 The output is documented in file `13-logo_dollar0`
 
+### Task 14: Logging Document Title
+
+Utilize the console to log the title of the webpage
+
+**Steps:**
+
+Access the browser's Developer Tools and switch to the Console tab.
+
+Enter `console.log(document.title)` in the console and press Enter to execute the command.
+
+Note the output that the console returns.
+
+The result is documented in the file `14-doc_title`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
