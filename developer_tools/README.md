@@ -34,9 +34,7 @@ Opened the website in a browser and accessed Developer Tools.
 
 Switched to device emulation mode and selected iPhone X as the target device.
 
-Captured a screenshot showing the site as rendered on an iPhone X screen.
-
-Took a screenshot named `0-responsive_device.png`, providing a visual reference of the website's mobile responsiveness.
+Capture and save the screenshot as `0-responsive_device.png`
 
 ### Task 1: Changing the Background Color
 
@@ -44,13 +42,11 @@ In this task, the background color of the entire website was changed to #4233bd.
 
 **Steps:**
 
-Accessed the Developer Tools and selected the `<body>` tag.
+Select the `<body>` tag in Developer Tools.
 
 Modified the CSS directly within the Developer Tools to change the background color.
 
-Navigated to the "PORTFOLIO" section and took a screenshot to capture the change.
-
-Took a screenshot named `1-change_bg_color.png`, documenting the new background color as it appears in the "PORTFOLIO" section.
+Navigated to the "PORTFOLIO" section and took a screenshot to capture the change, named it `1-change_bg_color.png`
 
 ### Task 2: Forcing the Hover State
 
@@ -62,9 +58,7 @@ Used Developer Tools to select the "cake" block.
 
 Forced the hover state using the state simulation options in the Styles pane.
 
-Took a  screenshot while the hover state was active.
-
-Took a screenshot named `2-pathways_menu.png` while the hover state was active, showing the visual effects applied to the "cake" block when hovered over. This is useful for visual testing and ensuring interactive elements respond as expected without interacting with the site through user input.
+Took a screenshot named `2-pathways_menu.png` while the hover state was active, showing the visual effects applied to the "cake" block when hovered over. 
 
 ### Task 3: Extracting CSS Styling for "Download me!" Button
 
@@ -77,13 +71,19 @@ Used the Developer Tools in the browser to inspect the "Download me!" button.
 Copied all CSS styles from both directly applied and inherited sources that affect the button’s appearance and behavior into file named `3-button_styles`
 
 ### Task 4: Styling Buttons
+
 Update the styles of specific button types and document the changes.
 
 **Steps:**
 
-All primary buttons (btn-primary) on the page are modified to have a background color of #0080ee
+Modify the background color of `btn-primary` to `#0080ee` and text color of `btn-outline-light` to `#0020aa`.
 
-All outlined light buttons (btn-outline-light) are updated to display text in the color #0020aa
+Capture and save the updated buttons as 4-new_buttons.png
 
-A screenshot is taken to capture all buttons that reflect these style changes and named `4-new_buttons.png`
+### Task 5: Removing an Element
 
+Practice DOM manipulation by removing a specific element from the webpage and documenting the visual result.
+
+Use Developer Tools to remove the "cake" box div from the Portfolio section.
+
+Document the change by taking and saving a screenshot as 5-deleted_elements.png.
