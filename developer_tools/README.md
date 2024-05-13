@@ -76,4 +76,14 @@ Used the Developer Tools in the browser to inspect the "Download me!" button.
 
 Copied all CSS styles from both directly applied and inherited sources that affect the button’s appearance and behavior into file named `3-button_styles`
 
-### Task 4:
+### Task 4: Styling Buttons
+Update the styles of specific button types and document the changes.
+
+**Steps:**
+
+All primary buttons (btn-primary) on the page are modified to have a background color of #0080ee
+
+All outlined light buttons (btn-outline-light) are updated to display text in the color #0020aa
+
+A screenshot is taken to capture all buttons that reflect these style changes and named `4-new_buttons.png`
+
