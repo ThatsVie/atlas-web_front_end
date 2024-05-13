@@ -242,7 +242,21 @@ Screenshot of the Network tab displaying these figures is saved as `16-weight.pn
 
 ### Task 17: Analyzing Network Requests
 
+This task involves recording the number of network requests made when accessing the webpage to understand the complexity and potential load times associated with the site.
 
+**Steps:**
+
+Open the Developer Tools in Google Chrome and navigate to the 'Network' tab.
+
+Clear any existing data if necessary
+
+Reload the webpage to track all the network requests made during the page load.
+
+After the page reloads, note the total number of requests displayed at the bottom of the Network tab.
+
+This figure represents the total number of requests for resources such as images, scripts, CSS files, and more, which are essential for rendering the page.
+
+Screenshot of the Network tab showing the number of requests is saved to `17-requests.png`
 
 
 
