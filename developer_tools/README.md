@@ -377,3 +377,22 @@ Click on "Anylyze page load" to start the Lighthouse audit. Wait for the process
 Once the audit is complete, the report will include a section titled "Serve static assets with an efficient cache policy". This section provides details about static assets that require better cache policies.
 
 Screenshot of result is documented in `24-static_assets_audit.png`
+
+### Task 25: Assessing Accessibility for Contrast Issues
+
+This task involves conducting an accessibility audit to identify issues related to contrast.
+
+**Steps:**
+
+Run an accessibility audit using Developer Tools on the page.
+
+Identify that the background and foreground colors do not have a sufficient contrast ratio.
+
+Corresponding letter choice of contrast issue is Documented in file '25-contrast_issue'
+
+
+
+
+
+
+
