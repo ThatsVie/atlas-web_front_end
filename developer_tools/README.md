@@ -403,8 +403,25 @@ Navigate to the audit results concerning images without alt attributes.
 Record the classes of the elements highlighted by the audit. Documented in `26-no_alt`
 
 
+### Task 27: Identifying Missing Attributes in Links
 
+This task involves identifying missing security attributes in links that open in new tabs (target="_blank") on the Developer Tools page. 
 
+**Steps:**
+
+Open the Developer Tools website using Google Chrome.
+
+Right-click on the page and select "Inspect" to open Developer Tools.
+
+Use the "Elements" panel and press Ctrl + F to bring up the search box.
+
+Type "_blank" in the search box to find all occurrences within the HTML document.
+
+Review these links to determine if they are missing the rel="noopener" or rel="noreferrer" attributes.
+
+Confirm that both rel="noopener" and rel="noreferrer" are absent from these links.
+
+Document answer in `27-missing_attr`
 
 
 
