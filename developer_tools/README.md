@@ -1,12 +1,12 @@
 # Developer Tools
 
-In this project we analyze [this website](https://dev-tools.hbtn.info/) using Developer Tools. We deepen our understanding of how web developers can use these tools to inspect elements, modify styles, audit accessibility and performance, and debug issues directly within the browser. We open and utilize Developer Tools in a Chrome browser, edit HTML and CSS in real-time, audit web pages for best practices with Lighthouse, create and execute JavaScript snippets, and investigate file and server configurations. We practice blocking requests, measuring resource usage, and rearranging elements on the page for testing purposes.
+In this project we analyze [this website](https://dev-tools.hbtn.info/) using Developer Tools to enhance our skills in web development and debugging. We practice how to inspect elements, modify styles, and debug directly within the browser. Tasks include using Developer Tools in Chrome to edit HTML and CSS in real-time, auditing web pages with Lighthouse, and creating and executing JavaScript snippets. We also delve blocking requests, measuring resource usage, and dynamically rearranging page elements to optimize and troubleshoot web applications effectively.
 
 ## Learning Objectives
 
 ### What are Developer Tools in your browser?
 
-Developer Tools, often referred to as DevTools, are a set of tools integrated into most modern web browsers like Chrome, Firefox, Safari, and Edge. These tools help developers test and debug their web applications directly within the browser. They offer insights into the DOM, allow real-time CSS and HTML edits, show JavaScript errors, and much more. Throughout the tasks, such as **Task 4 (Styling Buttons)** and **Task 24 (CEvaluating Cache Policies for Static Assets)**, we extensively use DevTools to alter webpage styles and analyze resource loading efficiencies.
+Developer Tools, often referred to as DevTools, are a set of tools integrated into most modern web browsers like Chrome, Firefox, Safari, and Edge. These tools help developers test and debug their web applications directly within the browser. They offer insights into the DOM, allow real-time CSS and HTML edits, show JavaScript errors, and much more. Throughout the tasks, such as **Task 4 (Styling Buttons)** and **Task 24 (Evaluating Cache Policies for Static Assets)**, we use DevTools to alter webpage styles and analyze resource loading efficiencies.
 
 ### How do we open the Developer Tools on Chrome, Firefox, Safari, and Edge?
 
