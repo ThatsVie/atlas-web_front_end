@@ -505,9 +505,21 @@ Verify that no service workers are registered for this page.
 
 Documented in file `32-service_workers`
 
+### Task 33: Identifying SSL Certificate Issuer
 
+This task involves verifying the implementation of HTTPS by identifying the issuer of the SSL certificate used by the webpage.
 
+**Steps:**
 
+Open the website in a browser and access Developer Tools.
+
+Navigate to the "Security" panel within Developer Tools.
+
+Click on "View certificate" to open the certificate details.
+
+Locate and record the name of the organization that issued the SSL certificate, which is listed under the issuer information.
+
+Documented in file `33-ssl_cert`
 
 
 
