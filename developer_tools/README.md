@@ -26,49 +26,49 @@
 
 ### Task 0: Capturing the Website on iPhone X
 
-This task involved using the device toolbar in Developer Tools to emulate an iPhone X screen size and take a screenshot of the website. This helps demonstrate the site's responsive design capabilities and ensures that it looks appropriate on mobile devices.
+This task involves using the device toolbar in Developer Tools to emulate an iPhone X screen size and take a screenshot of the website. This helps demonstrate the site's responsive design capabilities and ensures that it looks appropriate on mobile devices.
 
 **Steps:**
 
-Opened the website in a browser and accessed Developer Tools.
+Open the website in a browser and access Developer Tools.
 
-Switched to device emulation mode and selected iPhone X as the target device.
+Switch to device emulation mode and select iPhone X as the target device.
 
 Capture and save the screenshot as `0-responsive_device.png`
 
 ### Task 1: Changing the Background Color
 
-In this task, the background color of the entire website was changed to #4233bd. This task demonstrates how Developer Tools can be used to modify the appearance of a website in real-time for testing and development purposes.
+In this task, the background color of the entire website is changed to #4233bd. This task demonstrates how Developer Tools can be used to modify the appearance of a website in real-time for testing and development purposes.
 
 **Steps:**
 
 Select the `<body>` tag in Developer Tools.
 
-Modified the CSS directly within the Developer Tools to change the background color.
+Modify the CSS directly within the Developer Tools to change the background color.
 
-Navigated to the "PORTFOLIO" section and took a screenshot to capture the change, named it `1-change_bg_color.png`
+Navigate to the "PORTFOLIO" section and take a screenshot to capture the change, name it `1-change_bg_color.png`
 
 ### Task 2: Forcing the Hover State
 
-This task focused on demonstrating the ability to manipulate element states through Developer Tools. Specifically, the hover state of the "cake" block in the "Portfolio" section was forced, and a screenshot was taken to capture this state.
+This task focuses on demonstrating the ability to manipulate element states through Developer Tools. The hover state of the "cake" block in the "Portfolio" section was forced, and a screenshot was taken to capture this state.
 
 **Steps:**
 
-Used Developer Tools to select the "cake" block.
+Use Developer Tools to select the "cake" block.
 
-Forced the hover state using the state simulation options in the Styles pane.
+Force the hover state using the state simulation options in the Styles pane.
 
-Took a screenshot named `2-pathways_menu.png` while the hover state was active, showing the visual effects applied to the "cake" block when hovered over. 
+Take a screenshot named `2-pathways_menu.png` while the hover state is active, showing the visual effects applied to the "cake" block when hovered over. 
 
 ### Task 3: Extracting CSS Styling for "Download me!" Button
 
-This task involved capturing all CSS styling applied to the "Download me!" button on the "https://dev-tools.hbtn.info/" website. The purpose was to understand how CSS properties are used to style a specific element on a web page, providing insight into CSS specificity, inheritance, and the cascade.
+This task involves capturing all CSS styling applied to the "Download me!" button on the "https://dev-tools.hbtn.info/" website. The purpose is to  understand how CSS properties are used to style a specific element on a web page, providing insight into CSS specificity, inheritance, and the cascade.
 
 **Steps:**
 
-Used the Developer Tools in the browser to inspect the "Download me!" button.
+Use the Developer Tools in the browser to inspect the "Download me!" button.
 
-Copied all CSS styles from both directly applied and inherited sources that affect the button’s appearance and behavior into file named `3-button_styles`
+Copy all CSS styles from both directly applied and inherited sources that affect the button’s appearance and behavior into file named `3-button_styles`
 
 ### Task 4: Styling Buttons
 
@@ -88,7 +88,7 @@ Practice DOM manipulation by removing a specific element from the webpage and do
 
 Use Developer Tools to remove the "cake" box div from the Portfolio section.
 
-Document the change by taking and saving a screenshot as 5-deleted_elements.png.
+Document the change by taking and saving a screenshot as `5-deleted_elements.png`.
 
 ### Task 6: Identifying CSS Source for Styling
 
@@ -96,7 +96,7 @@ Determine the source file of the CSS property for an element using Developer Too
 
 **Steps:**
 
-Select the h2 tag with the text "ABOUT" and inspect its margin-bottom property in the 'Computed' tab of Developer Tools to identify the source CSS file.
+Select the `h2` tag with the text "ABOUT" and inspect its margin-bottom property in the 'Computed' tab of Developer Tools to identify the source CSS file.
 
 Documented in `6-declaration_file`
 
@@ -130,15 +130,15 @@ Document the HSL value in `8-hsl`
 
 ### Task 9: Determining Max-Width of the Container
 
-Identify the maximum width setting for the first .container within the "About" section of the website under specific browser conditions.
+Identify the maximum width setting for the first `.container` within the "About" section of the website under specific browser conditions.
 
  **Steps:**
  
 Ensure the browser width is set between 1250px and 1440px.
 
-Open Developer Tools and select the first .container within the "About" section.
+Open Developer Tools and select the first `.container` within the "About" section.
 
-Use the "Computed" tab to find the max-width property of the .container.
+Use the "Computed" tab to find the max-width property of the `.container`.
 
 Record the value found and save it as max-width: <VALUE>; in `9-max_width`.
 
@@ -146,13 +146,13 @@ Record the value found and save it as max-width: <VALUE>; in `9-max_width`.
 
 Swap the "About" and "Portfolio" sections on the website to demonstrate DOM manipulation
 
-This task shows how to use Developer Tools for real-time HTML structure changes without altering the source code, useful for testing layout adjustments.
+This task shows how to use Developer Tools for HTML structure changes without altering the source code, useful for testing layout adjustments.
 
 **Steps:**
 
 Open Developer Tools and locate the "About" and "Portfolio" sections in the DOM.
 
-Drag the "About section above the "Portfolio" section to swap their positions.
+Drag the "About" section above the "Portfolio" section to swap their positions.
 
 Capture a screenshot showing the new order of these sections, name it `10-moved_around.png`
 
@@ -194,13 +194,13 @@ Use the Developer Tools to select the Avatar image in the header.
 
 Switch to the Console tab and type $0, then press Enter to execute.
 
-Observe the output, which shows the HTML representation of the selected Avatar image element.
+Note the output, which shows the HTML representation of the selected Avatar image element.
 
 The output is documented in file `13-logo_dollar0`
 
 ### Task 14: Logging Document Title
 
-Utilize the console to log the title of the webpage
+Utilize the console to log the title of the webpage.
 
 **Steps:**
 
@@ -235,8 +235,6 @@ Navigate to the Developer Tools on the browser while on the page.
 Go to the 'Network' tab and refresh the page to load all resources.
 
 Note the total data transferred and the resources loaded at the bottom of the Network tab.
-
-It shows two figures- the first is the actual data transferred (compressed), and the second is the total size of all resources once processed (uncompressed).
 
 Screenshot of the Network tab displaying these figures is saved as `16-weight.png`
 
@@ -343,3 +341,22 @@ Navigate to the 'Network' tab, and then filter the traffic by selecting the 'Fet
 Identify me.json as the resource responsible for exactly one XHR call during the page operations
 
 Document answer in file `22-xhr_calls`
+
+### Task 23: Performing a Performance Audit with Lighthouse
+
+This task demonstrates how to perform a Performance audit using Lighthouse in Google Chrome's Developer Tools. Lighthouse provides a comprehensive assessment of various performance metrics that are crucial for understanding the efficiency and responsiveness of a website under optimal conditions.
+
+**Steps:**
+
+Navigate to the website using Google Chrome.
+
+Open Developer Tools
+
+Locate and click on the 'Lighthouse' tab within Developer Tools.
+
+Configure the audit settings by selecting **Mode**: 'Navigation(Default)' **Categories**: 'Performance' and **Device**: 'Desktop' 
+
+Start the audit by clicking on "Analyze page load" to evaluate the website's performance.
+
+Capture and save a screenshot of the Lighthouse performance metrics once the audit completes. This screenshot is saved as `23-performance_audit.png` 
+
