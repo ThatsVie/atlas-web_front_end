@@ -423,7 +423,21 @@ Confirm that both rel="noopener" and rel="noreferrer" are absent from these link
 
 Document answer in `27-missing_attr`
 
+### Task 28: Identifying Links with Unclear Descriptions
 
+This task involved identifying `<a>` tags with insufficient text descriptions, which could affect accessibility.
+
+**Steps:**
+
+Open the website and access Developer Tools.
+
+Perform an accessibility audit.
+
+Examine the audit results to identify links marked as having unclear text descriptions.
+
+Use the Elements panel and Ctrl+F to search and verify these elements directly in the HTML structure.
+
+Documented in `28-unclear_desc.png`
 
 
 
