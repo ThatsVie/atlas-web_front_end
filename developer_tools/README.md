@@ -1,6 +1,6 @@
 # Developer Tools
 
-In this project we analyze [this website](https://dev-tools.hbtn.info/) using various features of browser Developer Tools. We deepen our understanding of how web developers can use these tools to inspect elements, modify styles, audit accessibility and performance, and debug issues directly within the browser. We open and utilize Developer Tools in a Chrome browser, edit HTML and CSS in real-time, audit web pages for best practices with Lighthouse, create and execute JavaScript snippets, and investigate file and server configurations. We also practice blocking requests, measuring resource usage, and rearranging elements on the page for testing purposes.
+In this project we analyze [this website](https://dev-tools.hbtn.info/) using Developer Tools. We deepen our understanding of how web developers can use these tools to inspect elements, modify styles, audit accessibility and performance, and debug issues directly within the browser. We open and utilize Developer Tools in a Chrome browser, edit HTML and CSS in real-time, audit web pages for best practices with Lighthouse, create and execute JavaScript snippets, and investigate file and server configurations. We practice blocking requests, measuring resource usage, and rearranging elements on the page for testing purposes.
 
 ## Learning Objectives
 
