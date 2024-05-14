@@ -459,10 +459,21 @@ Capture a screenshot showing the console output after running the snippet.
 
 Documented in `29-how_many_colors.png`
 
+### Task 30: Blocking CSS Requests
 
+This task demonstrates how to disable all CSS files on a webpage using Developer Tools.
 
+**Steps:**
 
+Open Developer Tools and switch to the 'Network' tab.
 
+Use the filter to display only CSS files.
+
+Right-click on any CSS file and choose "Block request URL" or "Block request domain" to stop loading all CSS files.
+
+Refresh the page to view the effects with all CSS requests blocked.
+
+Documented in `30-no_css.png` and ``30-no_css_2.png
 
 
 
