@@ -475,8 +475,19 @@ Refresh the page to view the effects with all CSS requests blocked.
 
 Documented in `30-no_css.png`
 
+### Task 31: Session Storage Key Inspection
 
+Identify the sole key stored in the session storage of the website.
 
+**Steps:**
+
+Open the Developer Tools and navigate to the Application panel.
+
+In the left sidebar, expand the "Storage" section and click on "Session Storage," then select the site.
+
+The only key present is named name with the value Bob Dylan.
+
+Documented in file `31-session_storage_key`
 
 
 
