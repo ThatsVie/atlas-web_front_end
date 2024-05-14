@@ -489,9 +489,21 @@ The only key present is named name with the value Bob Dylan.
 
 Documented in file `31-session_storage_key`
 
+### Task 32: Checking for Service Workers
 
+This task involves determining whether the website employs service workers.
 
+**Steps:**
 
+Open the website in a browser and access Developer Tools.
+
+Navigate to the Application panel.
+
+Select the "Service Workers" from the left sidebar to view any registered service workers.
+
+Verify that no service workers are registered for this page.
+
+Documented in file `32-service_workers`
 
 
 
