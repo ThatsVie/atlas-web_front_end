@@ -521,9 +521,20 @@ Locate and record the name of the organization that issued the SSL certificate, 
 
 Documented in file `33-ssl_cert`
 
+### Task 34: SSL Certificate Expiration
 
+This task requires checking the expiration date of the SSL certificate for the website.
 
+**Steps:**
 
+Open the website in the browser.
 
+Access the Security panel in the Developer Tools.
+
+View the SSL certificate details.
+
+Locate and document the expiration date of the certificate.
+
+Screenshot saved to 34-ssl_expiration.png
 
 
