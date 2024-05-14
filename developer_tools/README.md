@@ -439,6 +439,25 @@ Use the Elements panel and Ctrl+F to search and verify these elements directly i
 
 Documented in `28-unclear_desc.png`
 
+### Task 29: Creating and Running a Snippet
+
+This task demonstrates how to utilize the Sources panel in Developer Tools to create, manage, and execute JavaScript snippets.
+
+**Steps:**
+
+Access the Sources panel and navigate to the Snippets tab.
+
+Create a new snippet named allcolors.js.
+
+Paste the provided JavaScript code into the snippet.
+
+Execute the snippet by pressing Ctrl+Enter
+
+Navigate to Console
+
+Capture a screenshot showing the console output after running the snippet.
+
+Documented in `29-how_many_colors.png`
 
 
 
