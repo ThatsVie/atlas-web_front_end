@@ -327,3 +327,19 @@ Search for references to icon fonts within <link> or <style> tags.
 Identify that the website uses FontAwesome for its icons by finding the relevant font-family or source URLs linked to FontAwesome.
 
 Documented answer in `21-hbtn_font_lib`
+
+### Task 22: Identifying the Resource Generating XHR Calls
+
+This task involves identifying the specific resource that generates exactly one XHR (XMLHttpRequest) call on the website. XHR facilitates asynchronous data fetching, allowing parts of a web page to be updated without a full reload.
+
+**Steps:**
+
+Open the website in Google Chrome.
+
+Activate Developer Tools.
+
+Navigate to the 'Network' tab, and then filter the traffic by selecting the 'Fetch/XHR' option 
+
+Identify me.json as the resource responsible for exactly one XHR call during the page operations
+
+Document answer in file `22-xhr_calls`
