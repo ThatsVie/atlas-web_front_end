@@ -473,7 +473,7 @@ Right-click on any CSS file and choose "Block request URL" or "Block request dom
 
 Refresh the page to view the effects with all CSS requests blocked.
 
-Documented in `30-no_css.png` and ``30-no_css_2.png
+Documented in `30-no_css.png`
 
 
 
