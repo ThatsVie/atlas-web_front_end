@@ -360,3 +360,20 @@ Start the audit by clicking on "Analyze page load" to evaluate the website's per
 
 Capture and save a screenshot of the Lighthouse performance metrics once the audit completes. This screenshot is saved as `23-performance_audit.png` 
 
+### Task 24: Evaluating Cache Policies for Static Assets
+
+This task focuses on evaluating the efficiency of cache policies applied to static assets on the website.
+
+**Steps:**
+
+Navigate to website using Google Chrome.
+
+Open Developer Tools
+
+Switch to the 'Lighthouse' tab within the Developer Tools. Configure the audit to check only the "Performance" category to focus on static assets and caching.
+
+Click on "Anylyze page load" to start the Lighthouse audit. Wait for the process to complete.
+
+Once the audit is complete, the report will include a section titled "Serve static assets with an efficient cache policy". This section provides details about static assets that require better cache policies.
+
+Screenshot of result is documented in `24-static_assets_audit.png`
