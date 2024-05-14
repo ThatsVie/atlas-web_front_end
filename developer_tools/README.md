@@ -390,6 +390,41 @@ Identify that the background and foreground colors do not have a sufficient cont
 
 Corresponding letter choice of contrast issue is Documented in file '25-contrast_issue'
 
+### Task 26: Identifying Images Without Alt Attributes
+
+This task requires identifying images that lack alt attributes and noting the classes assigned to these images.
+
+**Steps:**
+
+Run an Accessibility audit with Lighthouse
+
+Navigate to the audit results concerning images without alt attributes.
+
+Record the classes of the elements highlighted by the audit. Documented in `26-no_alt`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
