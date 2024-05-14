@@ -1,26 +1,52 @@
 # Developer Tools
 
+In this project we analyze [this website](https://dev-tools.hbtn.info/) using various features of browser Developer Tools. We deepen our understanding of how web developers can use these tools to inspect elements, modify styles, audit accessibility and performance, and debug issues directly within the browser. We open and utilize Developer Tools in a Chrome browser, edit HTML and CSS in real-time, audit web pages for best practices with Lighthouse, create and execute JavaScript snippets, and investigate file and server configurations. We also practice blocking requests, measuring resource usage, and rearranging elements on the page for testing purposes.
+
 ## Learning Objectives
 
-### What Developer Tools in your browser are
+### What are Developer Tools in your browser?
 
-### How to open the Developer Tools on Chrome, Firefox, Safari, and Edge.
+Developer Tools, often referred to as DevTools, are a set of tools integrated into most modern web browsers like Chrome, Firefox, Safari, and Edge. These tools help developers test and debug their web applications directly within the browser. They offer insights into the DOM, allow real-time CSS and HTML edits, show JavaScript errors, and much more. Throughout the tasks, such as **Task 4 (Styling Buttons)** and **Task 24 (CEvaluating Cache Policies for Static Assets)**, we extensively use DevTools to alter webpage styles and analyze resource loading efficiencies.
 
-### How to use the elements tab to edit HTML and CSS
+### How do we open the Developer Tools on Chrome, Firefox, Safari, and Edge?
 
-### How to audit a page according to the tips suggested by Lighthouse
+Chrome/Firefox/Edge: Right click and scroll/press on inspect or Ctrl+Shift+I to open DevTools.
 
-### How to create and run snippets on a page
+Safari: Enable the Develop menu in Safari's Advanced preferences, then press Option+Cmd+I.
 
-### How to get information about files and server configurations
+### How do we use the elements tab to edit HTML and CSS?
 
-### How to block requests
+The Elements tab allows you to inspect and modify HTML and CSS in real-time. In **Task 1 (Changing Background Color)**, we accessed the `<body>` tag in the Elements tab to change the background color, seeing the impact immediately without altering the actual files.
 
-### How to know how much JavaScript or CSS is used on a page
+### How do we audit a page according to the tips suggested by Lighthouse?
 
-### How to detect 404 issues
+Lighthouse is an open-source, automated tool for improving the quality of web pages. It can be run against any web page, public or requiring authentication. It has audits for performance, accessibility, progressive web apps, SEO, and more. In **Task 23 (Performing a Performance Audit with Lighthouse)**, we used Lighthouse to perform a performance audit, identifying potential improvements.
 
-### How to move elements on a webpage
+### How do we create and run snippets on a page?
+
+Snippets are small scripts that you can write and execute within DevTools. **Task 29 (Creating and Running a Snippet)** involved creating a new snippet called allcolors.js, pasting provided JavaScript code, and running it directly in DevTools to observe outputs logged in the console.
+
+### How do we get information about files and server configurations?
+
+DevTools provides detailed insights into the resources loaded by a page, including files and server configurations. For instance, in **Task 11 (Determining File Size)**, we checked the size of a CSS file, gaining insight into its impact on the overall page load.
+
+### How do we block requests?
+
+Blocking requests can help simulate the absence of resources and understand their impact on the page. In **Task 30 (Blocking CSS Requests)**, we blocked all CSS requests to see how the page appears without any styles, which helps in understanding the criticality of CSS files.
+
+### How do we know how much JavaScript or CSS is used on a page?
+
+To determine the usage of JavaScript and CSS on a webpage, you can utilize the Network panel in Chrome DevTools. This panel allows you to view all resources loaded by the page, including JavaScript and CSS files. You can filter these resources by type to focus specifically on JavaScript or CSS files. By refreshing the page with the Network panel open, you can observe the files as they load and analyze details such as their size and load time.
+
+In **Task 16 (Page Weight Analysis)**, the Network panel was used to measure the total weight of the page, including all JavaScript and CSS files. This task showed how you can view the size and number of requests for each type of file, providing insights into how much JavaScript and CSS are being used on the page. This information is important for identifying potential areas for optimization and ensuring efficient loading and execution of web resources.
+
+### How do we detect 404 issues?
+
+404 issues can be identified in the Network panel of DevTools, where it lists out all network requests made by the page along with their status codes. In various tasks, we monitored network requests to ensure all resources were loaded correctly(200) without any 404 errors.
+
+### How do we move elements on a webpage?
+
+The Elements panel can be used to drag and manipulate the position of HTML elements directly in the DOM tree. In **Task 10 (Rearranging Sections)**, we moved the sections of "About" and "Portfolio" to demonstrate this capability, showing how DevTools can be used for quick layout adjustments.
 
 ## Tasks
 
@@ -535,6 +561,6 @@ View the SSL certificate details.
 
 Locate and document the expiration date of the certificate.
 
-Screenshot saved to 34-ssl_expiration.png
+Screenshot saved to `34-ssl_expiration.png`
 
 
