@@ -187,6 +187,40 @@ sass 11-loop_photos.scss | tail -n +3
 
 The output CSS code creates a class for each name in the list `$list-names` and assigns the background image based on the name using `@import` and `@each` statement.
 
+### Task 12 - Write a Sass file that creates H* tags, where ‘*’ is the size of the font used.  h1 must have a font size equal to 1px, h2 must have a font size equal to 2px, h3 must have a font size equal to 3px, h4 must have a font size equal to 4px, h5 must have a font size equal to 5px. You must use the `@for` statement.
+
+To test, input this command in your terminal:
+```
+sass 12-loop_header.scss | tail -n +2
+```
+
+`sass 12-loop_header.scss` runs the Sass preprocessor on the file `12-loop_header.scss`. Sass processes the SCSS file and outputs the compiled CSS.
+
+`| tail -n +2` is a pipe (`|`) to the `tail` command, which outputs lines starting from the second line onward, removing the first line of the output to show the CSS code.
+
+![image](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/3c7332d5-27d8-467f-8afc-2fe0c0682af2)
+
+The output CSS code creates H* tags with font sizes corresponding to the tag number (h1 with 1px, h2 with 2px, etc.) using the `@for` statement.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
