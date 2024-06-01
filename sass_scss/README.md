@@ -112,6 +112,20 @@ sass 6-nested_hover.scss | tail -n +2
 
 The output CSS code assigns text color to `button` tags and changes the text color when the user hovers over `button` tags using nested declarations.
 
+### Task 7 - Write a Sass file that assigns Font size 14px to all `body` tags, Font size 16px to all `h1` tags inside `body` tags, and Font size 12px to `h1` tags of class `.smaller` inside `body` tags. You must use nested declarations.
+
+To test, input this command in your terminal:
+```
+sass 7-nested_deeper.scss | tail -n +2
+```
+
+`sass 7-nested_deeper.scss` runs the Sass preprocessor on the file `7-nested_deeper.scss`. Sass processes the SCSS file and outputs the compiled CSS.
+
+`| tail -n +2` is a pipe (`|`) to the `tail` command, which outputs lines starting from the second line onward, removing the first line of the output to show the CSS code.
+
+![image](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/1713d881-d4d7-4487-a3a9-57617fd151c6)
+
+The output CSS code assigns font size 14px to all `body` tags, font size 16px to all `h1` tags inside `body` tags, and font size 12px to `h1` tags of class `.smaller` inside `body` tags using nested declarations.
 
 
 
