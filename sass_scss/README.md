@@ -217,8 +217,20 @@ sass 100-loop_col.scss | tail -n +2
 
 The output CSS code creates `.col-*` classes with different widths using the `@for` statement.
 
+### Task 14 - Write a Sass file that assigns Font size 20px to `h1` tags and Font size 14px to `h1` tags when the screen width is smaller than 320px
 
+To test, input this command in your terminal:
+```
+sass 101-media_query.scss | tail -n +2
+```
 
+`sass 101-media_query.scss` runs the Sass preprocessor on the file `101-media_query.scss`. Sass processes the SCSS file and outputs the compiled CSS.
+
+`| tail -n +2` is a pipe (`|`) to the `tail` command, which outputs lines starting from the second line onward, removing the first line of the output to show the CSS code.
+
+![image](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/fa603972-e520-4b8c-bc9d-8a339300f06c)
+
+The output CSS code assigns font size 20px to `h1` tags and changes the font size to 14px when the screen width is smaller than 320px.
 
 
 
