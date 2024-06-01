@@ -157,6 +157,20 @@ sass 9-extend_list.scss | tail -n +2
 
 The output CSS code assigns font size 12px to all tags of class `.info`, text color `#00FF00` to all tags of class `.success` (extending the style of the class `.info`), and text color `#FF0000` to all tags of class `.warning` (extending the style of the class `.info`).
 
+### Task 10 - Write a Sass file that assigns Text color `$red` from `10-colors.scss` to the class `.red`, Text color `$green` from `10-colors.scss` to the class `.green`, Text color `$blue` from `10-colors.scss` to the class `.blue`. You must use `@import`.
+
+To test, input this command in your terminal:
+```
+sass 10-import_colors.scss | tail -n +3
+```
+
+`sass 10-import_colors.scss` runs the Sass preprocessor on the file `10-import_colors.scss`. Sass processes the SCSS file and outputs the compiled CSS.
+
+`| tail -n +3` is a pipe (`|`) to the `tail` command, which outputs lines starting from the third line onward, removing the first two lines of the output to show the CSS code.
+
+![image](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/816820eb-87fb-46a6-a697-c1461da7a251)
+
+The output CSS code assigns text color `$red` from `10-colors.scss` to the class `.red`, text color `$green` from `10-colors.scss` to the class `.green`, and text color `$blue` from `10-colors.scss` to the class `.blue` using `@import`.
 
 
 
