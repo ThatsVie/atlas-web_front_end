@@ -1,0 +1,17 @@
+/* Sass variables for text and background colors */
+
+$gray-text: #3D3D3D;
+$dim-gray-background: #6D6D6D;
+
+body {
+  color: $gray-text;
+  background-color: $dim-gray-background;
+}
+
+p {
+  color: $gray-text;
+}
+
+h2 {
+  background-color: $dim-gray-background;
+}
