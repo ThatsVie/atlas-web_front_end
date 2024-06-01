@@ -202,9 +202,20 @@ sass 12-loop_header.scss | tail -n +2
 
 The output CSS code creates H* tags with font sizes corresponding to the tag number (h1 with 1px, h2 with 2px, etc.) using the `@for` statement.
 
+### Task 13 - Write a Sass file that creates classes with different widths. `.col-1` with width equal to 100%, `.col-2` with width equal to 50%, `.col-3` with width equal to 33.3333333333% and `.col-4` with width equal to 25%. You must create `.col-*` class from 1 to 4 using the `@for` statement.
 
+To test, input this command in your terminal:
+```
+sass 100-loop_col.scss | tail -n +2
+```
 
+`sass 100-loop_col.scss` runs the Sass preprocessor on the file `100-loop_col.scss`. Sass processes the SCSS file and outputs the compiled CSS.
 
+`| tail -n +2` is a pipe (`|`) to the `tail` command, which outputs lines starting from the second line onward, removing the first line of the output to show the CSS code.
+
+![image](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/edbf8949-4021-4758-80f7-0f0e2e20fae0)
+
+The output CSS code creates `.col-*` classes with different widths using the `@for` statement.
 
 
 
