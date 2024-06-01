@@ -97,7 +97,20 @@ sass 5-nested_child.scss | tail -n +2
 
 The output CSS code assigns text color `#3D3D3D` to elements inside `body` tags and text color `#FF0000` to any elements of class `.red` that are the first children of the `body` using nested declarations.
 
+### Task 6 - Write a Sass file that assigns Text color to `button` tags, Changes text color when the user hovers over `button` tags and You must use nested declarations.
 
+To test, input this command in your terminal:
+```
+sass 6-nested_hover.scss | tail -n +2
+```
+
+`sass 6-nested_hover.scss` runs the Sass preprocessor on the file `6-nested_hover.scss`. Sass processes the SCSS file and outputs the compiled CSS.
+
+`| tail -n +2` is a pipe (`|`) to the `tail` command, which outputs lines starting from the second line onward, removing the first line of the output to show the CSS code.
+
+![image](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/4a0f4f02-14b7-4094-82d3-cbba6ef8cb0a)
+
+The output CSS code assigns text color to `button` tags and changes the text color when the user hovers over `button` tags using nested declarations.
 
 
 
