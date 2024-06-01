@@ -82,6 +82,21 @@ sass 4-nested_class.scss | tail -n +2
 
 The output CSS code assigns text color `#3D3D3D` to elements inside `body` tags and text color `#FF0000` to any elements of class `.red` inside `body` tags using nested declarations.
 
+### Task 5 - Write a Sass file that assigns Text color `#3D3D3D` to elements inside `body` tags, Text color `#FF0000` to any elements of class `.red` that are the first children of the `body` and You must use nested declarations.
+
+To test, input this command in your terminal:
+```
+sass 5-nested_child.scss | tail -n +2
+```
+
+`sass 5-nested_child.scss` runs the Sass preprocessor on the file `5-nested_child.scss`. Sass processes the SCSS file and outputs the compiled CSS.
+
+`| tail -n +2` is a pipe (`|`) to the `tail` command, which outputs lines starting from the second line onward, removing the first line of the output to show the CSS code.
+
+![image](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/277a6914-cafc-4ebb-9faa-51180a4269a0)
+
+The output CSS code assigns text color `#3D3D3D` to elements inside `body` tags and text color `#FF0000` to any elements of class `.red` that are the first children of the `body` using nested declarations.
+
 
 
 
