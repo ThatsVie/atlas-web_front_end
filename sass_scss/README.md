@@ -127,6 +127,44 @@ sass 7-nested_deeper.scss | tail -n +2
 
 The output CSS code assigns font size 14px to all `body` tags, font size 16px to all `h1` tags inside `body` tags, and font size 12px to `h1` tags of class `.smaller` inside `body` tags using nested declarations.
 
+### Task 8 - Write a Sass file that assigns Margin left and right at 10px to `body` tags, Margin left and right at 15px to `div` tags. You must use a mixin.
+
+To test, input this command in your terminal:
+```
+sass 8-mixin_margins.scss | tail -n +2
+```
+
+`sass 8-mixin_margins.scss` runs the Sass preprocessor on the file `8-mixin_margins.scss`. Sass processes the SCSS file and outputs the compiled CSS.
+
+`| tail -n +2` is a pipe (`|`) to the `tail` command, which outputs lines starting from the second line onward, removing the first line of the output to show the CSS code.
+
+![image](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/8220ec5c-de17-43f5-b8fe-fd6b08cb0ca5)
+
+The output CSS code assigns margin left and right at 10px to `body` tags and margin left and right at 15px to `div` tags using a mixin.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
