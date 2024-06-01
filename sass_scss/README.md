@@ -232,7 +232,20 @@ sass 101-media_query.scss | tail -n +2
 
 The output CSS code assigns font size 20px to `h1` tags and changes the font size to 14px when the screen width is smaller than 320px.
 
+### Task 15 - Write a Sass file that assigns Font size 20px to `h1` tags, Font size 18px to `h1` tags when the screen width is smaller than 960px, Font size 16px to `h1` tags when the screen width is smaller than 640px, Font size 14px to `h1` tags when the screen width is smaller than 320px, and Text color `#1D1D1D` to `h1.small` tags when the screen width is smaller than 320px.
 
+To test, input this command in your terminal:
+```
+sass 102-media_query.scss | tail -n +2
+```
+
+`sass 102-media_query.scss` runs the Sass preprocessor on the file `102-media_query.scss`. Sass processes the SCSS file and outputs the compiled CSS.
+
+`| tail -n +2` is a pipe (`|`) to the `tail` command, which outputs lines starting from the second line onward, removing the first line of the output to show the CSS code.
+
+![image](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/f9489b80-5d52-4598-a923-995e4a408346)
+
+The output CSS code assigns different font sizes to `h1` tags based on screen width and assigns text color `#1D1D1D` to `h1.small` tags when the screen width is smaller than 320px.
 
 
 
