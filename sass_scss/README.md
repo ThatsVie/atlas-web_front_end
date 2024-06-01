@@ -142,6 +142,23 @@ sass 8-mixin_margins.scss | tail -n +2
 
 The output CSS code assigns margin left and right at 10px to `body` tags and margin left and right at 15px to `div` tags using a mixin.
 
+### Task 9 - Write a Sass file that assigns Font size 12px to all tags of class `.info`, Text color `#00FF00` to all tags of class `.success` and extend the style of the class `.info`, Text color `#FF0000` to all tags of class `.warning` and extend the style of the class `.info`
+
+To test, input this command in your terminal:
+```
+sass 9-extend_list.scss | tail -n +2
+```
+
+`sass 9-extend_list.scss` runs the Sass preprocessor on the file `9-extend_list.scss`. Sass processes the SCSS file and outputs the compiled CSS.
+
+`| tail -n +2` is a pipe (`|`) to the `tail` command, which outputs lines starting from the second line onward, removing the first line of the output to show the CSS code.
+
+![image](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/5eacab6e-778f-4cb2-bbbe-53961f7b1e05)
+
+The output CSS code assigns font size 12px to all tags of class `.info`, text color `#00FF00` to all tags of class `.success` (extending the style of the class `.info`), and text color `#FF0000` to all tags of class `.warning` (extending the style of the class `.info`).
+
+
+
 
 
 
