@@ -65,8 +65,22 @@ sass 3-nested_tag.scss | tail -n +2
 
 ![image](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/f541793b-0014-433a-aa18-ee641f4b1965)
 
-
 The output CSS code assigns no margin or padding to the `body` tags and a margin of 10px to all `p` tags inside `body` tags using nested declarations.
+
+### Task 4 - Write a Sass file that assigns Text color `#3D3D3D` to elements inside `body` tags, Text color `#FF0000` to any elements of class `.red` inside `body` tags and You must use nested declarations.
+
+To test, input this command in your terminal:
+```
+sass 4-nested_class.scss | tail -n +2
+```
+
+`sass 4-nested_class.scss` runs the Sass preprocessor on the file `4-nested_class.scss`. Sass processes the SCSS file and outputs the compiled CSS.
+
+`| tail -n +2` is a pipe (`|`) to the `tail` command, which outputs lines starting from the second line onward, removing the first line of the output to show the CSS code.
+
+![image](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/b6261b4c-c42e-45dd-b05d-5643b538725d)
+
+The output CSS code assigns text color `#3D3D3D` to elements inside `body` tags and text color `#FF0000` to any elements of class `.red` inside `body` tags using nested declarations.
 
 
 
