@@ -172,6 +172,20 @@ sass 10-import_colors.scss | tail -n +3
 
 The output CSS code assigns text color `$red` from `10-colors.scss` to the class `.red`, text color `$green` from `10-colors.scss` to the class `.green`, and text color `$blue` from `10-colors.scss` to the class `.blue` using `@import`.
 
+### Task 11 - Write a Sass file that creates a class for each name in the list `$list-names` and assigns the background image based on the name. You must use `@import` and `@each` statement.
+
+To test, input this command in your terminal:
+```
+sass 11-loop_photos.scss | tail -n +3
+```
+
+`sass 11-loop_photos.scss` runs the Sass preprocessor on the file `11-loop_photos.scss`. Sass processes the SCSS file and outputs the compiled CSS.
+
+`| tail -n +3` is a pipe (`|`) to the `tail` command, which outputs lines starting from the third line onward, removing the first two lines of the output to show the CSS code.
+
+![image](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/ea3404ad-d4a4-4e8b-8f72-eb608b2c1c9f)
+
+The output CSS code creates a class for each name in the list `$list-names` and assigns the background image based on the name using `@import` and `@each` statement.
 
 
 
