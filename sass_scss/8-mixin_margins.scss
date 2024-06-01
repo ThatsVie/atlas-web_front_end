@@ -1,0 +1,16 @@
+/* Mixin for setting left and right margins for body and div tags */
+$body-margin: 10px;
+$div-margin: 15px;
+
+@mixin set-margin($margin) {
+  margin-left: $margin;
+  margin-right: $margin;
+}
+
+body {
+  @include set-margin($body-margin);
+}
+
+div {
+  @include set-margin($div-margin);
+}
