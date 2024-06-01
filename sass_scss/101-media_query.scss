@@ -1,0 +1,10 @@
+/* Assign font size to h1 and change it for smaller screens with @media */
+h1 {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 320px) {
+  h1 {
+    font-size: 14px;
+  }
+}
