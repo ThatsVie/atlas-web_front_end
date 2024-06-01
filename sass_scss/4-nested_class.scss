@@ -1,0 +1,8 @@
+/* Assigns text color #3D3D3D to body elements, and #FF0000 to .red elements inside body */
+body {
+  color: #3D3D3D;
+
+  .red {
+    color: #FF0000;
+  }
+}
