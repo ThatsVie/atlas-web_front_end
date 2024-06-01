@@ -1,0 +1,8 @@
+/* Assigns text color to body elements, .red first children of body- nested*/
+body {
+  color: #3D3D3D;
+
+  > .red {
+    color: #FF0000;
+  }
+}
