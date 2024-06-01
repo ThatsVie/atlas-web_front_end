@@ -1,0 +1,8 @@
+/* Assigns text color to button and changes it to green on hover using nesting */
+button {
+  color: #FF0000;
+
+  &:hover {
+    color: #00FF00;
+  }
+}
