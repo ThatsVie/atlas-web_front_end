@@ -46,8 +46,44 @@ sass 2-color_variables.scss | tail -n +2
 
 `sass 2-color_variables.scss` runs the Sass preprocessor on the file `2-color_variables.scss`. Sass processes the SCSS file and outputs the compiled CSS.
 
-`| tail -n +2` is a pipe (|) to the tail command, which is used to output the last part of files. The `-n +2` part specifies that tail should start outputting from the second line onward. This skips the first line of the output from the sass command.
+`| tail -n +2` is a pipe (|) to the `tail` command, which is used to output the last part of files. The `-n +2` part specifies that tail should start outputting from the second line onward. This skips the first line of the output from the sass command.
 
 ![image](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/66fa6fa6-0bc1-4375-a4d6-4d08ea3ff514)
 
 The output CSS code assigns the text color `#3D3D3D` to the `body` and `p` tags and the background color `#6D6D6D` to the `body` and `h2` tags.
+
+### Task 3 - Write a Sass file that assigns no margin or padding to `body` tags, margin of 10px to all `p` tags inside `body` tags and You must use nested declarations.
+
+To test, input this command in your terminal:
+```
+sass 3-nested_tag.scss | tail -n +2
+```
+
+`sass 3-nested_tag.scss` runs the Sass preprocessor on the file `3-nested_tag.scss`. Sass processes the SCSS file and outputs the compiled CSS.
+
+`| tail -n +2` is a pipe (`|`) to the `tail` command, which outputs lines starting from the second line onward, removing the first line of the output to show the CSS code.
+
+![image](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/f541793b-0014-433a-aa18-ee641f4b1965)
+
+
+The output CSS code assigns no margin or padding to the `body` tags and a margin of 10px to all `p` tags inside `body` tags using nested declarations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
