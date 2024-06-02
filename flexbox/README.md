@@ -176,6 +176,39 @@ ul.row {
 ![li col](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/8739b6fc-5a24-423b-9cd0-f95f31af614e)
 
 
+### Task 5 - Wrap Elements in Header and Adjust Styles
+
+For this task, we wrapped specific elements in the Header section in a new container and adjusted the CSS to apply flexbox properties and remove redundant rules.
+
+**HTML Changes:**
+Wrapped the `header-logo` and `navbar-menu` in a new `div` with class `header-container`.
+
+**CSS Changes:**
+```css
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Removed the following rules:
+   - header-logo
+   - header-logo a
+   - navbar-menu
+*/
+
+/* Removed the following variables:
+   - --header-logo-position
+   - --header-logo-link-display
+   - --header-logo-link-position
+   - --header-logo-link-top
+   - --header-logo-link-left
+*/
+```
+
+**To test, open the `5-index.html` file in a browser and inspect the Header section to ensure the `header-container` class is applied and the styles are correct.**
+
+![header container](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/69aa8565-edcf-45a9-b499-61bfa24fbe37)
+
 
 
 
