@@ -29,7 +29,7 @@ p {
 
 ### What is the difference between Sass and Scss?
 
-Sass (Indented Syntax) ios lder syntax, uses indentation, no braces or semicolons.
+Sass (Indented Syntax) is older syntax, uses indentation, no braces or semicolons.
 
 SCSS (Sassy CSS) is newer syntax, similar to CSS, uses braces and semicolons.
 
