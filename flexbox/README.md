@@ -142,11 +142,38 @@ Merged the two `<ul>` elements in the Services section into one.
 
 ![without flex wrap](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/bb65e94f-6c36-42ea-82b1-b3d6bba8bb10)
 
+### Task 4 - Adjust Grid Layout Using `calc`
+
+For this task, we updated the grid layout to use the `calc` function for setting widths, and adjusted the margin and padding for the grid layout.
+
+**CSS Changes:**
+```css
+/* Adjust widths using `calc` */
+.col-1-3 {
+  width: calc((100% / 3) - 2rem);
+}
+
+.col-1-2 {
+  width: calc((100% / 2) - 2rem);
+}
+
+/* Update margin for grid columns */
+[class*='col-'] {
+  margin: 1rem;
+}
+
+/* Adjust margin for row */
+ul.row {
+  margin: -1rem;
+}
+```
+
+**To test, open the `4-index.html` file in a browser and inspect the grid elements to ensure the widths and margins are set correctly.**
+
+![ul row](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/a2b79f3e-c739-4d67-b4fa-672efa321a1e)
 
 
-
-
-
+![li col](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/8739b6fc-5a24-423b-9cd0-f95f31af614e)
 
 
 
