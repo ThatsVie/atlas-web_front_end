@@ -428,11 +428,11 @@ If the list has 1 or fewer elements, it is already sorted.
 
 Choose the middle element as the pivot.
 
-Iterate through the list, partitioning elements into $smaller, $equal, and $larger lists based on their comparison with the pivot.
+Iterate through the list, partitioning elements into `$smaller`, `$equal`, and `$larger` lists based on their comparison with the pivot.
 
-Recursively sort the $smaller and $larger lists and concatenate them with the $equal list to produce the sorted result.
+Recursively sort the `$smaller` and `$larger` lists and concatenate them with the `$equal` list to produce the sorted result.
 
-Sass supports features like custom functions, @for loops, and @each loops, making it possible to implement sorting algorithms directly in Sass. By using these features, you can perform complex operations like sorting strings based on ASCII values, which is not natively supported in CSS.
+Sass supports features like custom functions, `@for` loops, and `@each` loops, making it possible to implement sorting algorithms directly in Sass. By using these features, you can perform operations like sorting strings based on ASCII values, which is not natively supported in CSS.
 
 
 
