@@ -67,3 +67,42 @@ In the provided HTML structure, the `.row` class has `<li>` elements as its dire
 The `.row` class should use Flexbox, making all its direct children (`<li>` elements) flex items.
 
 The layout should remain the same visually, but now it's managed with Flexbox properties.
+
+### Task 1 - Add new classes on sections
+
+For this task, we added specific classes to the outermost section tags for various sections in the HTML file.
+
+To test, open the `1-index.html` file in a browser and inspect the section tags to ensure the new classes have been added correctly.
+
+![1-index](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/f801692b-a300-463b-a171-faecb0c732a9)
+
+**Updated Sections:**
+- Services: `section-services`
+- Works: `section-works`
+- About Us: `section-about-us`
+- Latest News: `section-latest-news`
+- Testimonials: `section-testimonial`
+- Contact: `section-contact`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
