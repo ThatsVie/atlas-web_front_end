@@ -62,6 +62,9 @@ Open `0-index.html` in a web browser to ensure that the layout appears as intend
 
 Use the browser's Developer Tools to inspect `row` elements and verify that their children are now flex items.
 
+![display flex](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/05f8c39b-f290-4d1d-8b17-5c42a5c4fecb)
+
+
 In the provided HTML structure, the `.row` class has `<li>` elements as its direct children. When you apply `display: flex` to the `.row` class, these `<li>` elements will become flex items. 
 
 The `.row` class should use Flexbox, making all its direct children (`<li>` elements) flex items.
@@ -84,7 +87,30 @@ To test, open the `1-index.html` file in a browser and inspect the section tags 
 - Testimonials: `section-testimonial`
 - Contact: `section-contact`
 
+### Task 2 - Adjust Flex Direction for Latest News Section
 
+For this task, we changed the flex direction of the "Latest news" section to `row-reverse`.
+
+To test, open the `2-index.html` file in a browser and inspect the "Latest news" section to ensure the news items are displayed in reverse order.
+
+Before reversal:
+![pre reversal](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/c65cedea-5171-43ca-b970-6b721c736a12)
+
+After reversal:
+
+![post reversal](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/f32d584c-f974-40a4-b005-75809a96a7a0)
+
+
+![2 index](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/5649cce0-89aa-420d-bcda-586dac081bbf)
+
+**CSS Changes:**
+```css
+/* Section Latest news
+   ============================= */
+.section-latest-news .row {
+  flex-direction: row-reverse;
+}
+```
 
 
 
