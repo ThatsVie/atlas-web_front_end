@@ -2,6 +2,149 @@
 
 ## Learning Objectives
 
+### What does Sass means?
+
+Sass (Syntactically Awesome StyleSheets) is a CSS preprocessor that allows you to write more efficient, maintainable, and scalable CSS. It extends the capabilities of CSS with features like variables, nested rules, mixins, and more, making it easier to manage complex stylesheets.
+
+### How do we write Sass & Scss files?
+Sass offers two syntax options:
+
+Sass (Indented Syntax) uses indentation rather than braces and semicolons. Example:
+```
+$primary-color: #333
+body
+  color: $primary-color
+```
+
+SCSS (Sassy CSS) is a more CSS-like syntax, which uses braces and semicolons. Example from **Task 1**:
+```
+$text-color: #3D3D3D;
+body {
+  color: $text-color;
+}
+p {
+  color: $text-color;
+}
+```
+
+### What is the difference between Sass and Scss?
+
+Sass (Indented Syntax) ios lder syntax, uses indentation, no braces or semicolons.
+
+SCSS (Sassy CSS) is newer syntax, similar to CSS, uses braces and semicolons.
+
+### What is Sass preprocessing?
+
+Sass preprocessing involves converting Sass/SCSS files into standard CSS files that browsers can understand. This process includes expanding variables, resolving nested rules, compiling mixins, and other preprocessing tasks. Example from **Task 0**:
+```
+sass 0-debug_log.scss | head -n 0
+```
+This command preprocesses the SCSS file and outputs the compiled CSS.
+
+### How do we delare a variable in Sass?
+Variables in Sass allow you to store values that you can reuse throughout your stylesheet. Example from **Task 2**:
+```
+$gray-text: #3D3D3D;
+$dim-gray-background: #6D6D6D;
+
+body {
+  color: $gray-text;
+  background-color: $dim-gray-background;
+}
+```
+### How do we use nested definition?
+Nested definitions allow you to nest your CSS selectors in a way that follows the same visual hierarchy of your HTML. Example from **Task 3**:
+```
+body {
+  margin: 0px;
+  padding: 0px;
+  p {
+    margin: 10px;
+  }
+}
+```
+
+### How do we import a Sass file?
+The `@import` directive allows you to split your CSS into smaller, more manageable files and import them where needed. Example from **Task 10**:
+```
+@import '10-colors';
+
+.red {
+  color: $red;
+}
+.green {
+  color: $green;
+}
+.blue {
+  color: $blue;
+}
+```
+
+### How do we use mixins?
+Mixins allow you to create reusable chunks of code. Example from **Task 8**:
+```
+$body-margin: 10px;
+$div-margin: 15px;
+
+@mixin set-margin($margin) {
+  margin-left: $margin;
+  margin-right: $margin;
+}
+
+body {
+  @include set-margin($body-margin);
+}
+
+div {
+  @include set-margin($div-margin);
+}
+```
+
+### How do we declare extend/inheritance styles?
+The `@extend` directive allows one selector to inherit the styles of another. Example from **Task 9**:
+```
+.info {
+  font-size: 12px;
+}
+
+.success {
+  @extend .info;
+  color: #00FF00;
+}
+
+.warning {
+  @extend .info;
+  color: #FF0000;
+}
+```
+### How do we manipulate operators?
+Sass allows the use of operators for various arithmetic and string operations. Example from **Task 12**:
+```
+@for $i from 1 through 5 {
+  h#{$i} {
+    font-size: #{$i}px;
+  }
+}
+```
+### References to Tasks
+
+**Task 0**: Demonstrates preprocessing with @debug.
+
+**Task 1**: Shows variable declaration.
+
+**Task 2**: Uses variables for color assignment.
+
+**Task 3**: Demonstrates nested definitions.
+
+**Task 8**: Uses mixins for margin settings.
+
+**Task 9**: Shows extend/inheritance styles.
+
+**Task 10**: Demonstrates importing Sass files.
+
+**Task 12**: Uses @for loop and manipulation of operators for dynamic font sizes.
+
+
 ## Tasks & Usage
 
 ### Task 0 - Write a Sass file that prints Hello world in the debug output
@@ -249,20 +392,47 @@ The output CSS code assigns different font sizes to `h1` tags based on screen wi
 
 
 
+### Task 16 - Write a Sass file that sorts the variable `$list_to_sort` and prints the sorted list in the debug output
 
+**Failed Approach - Direct String Comparison**
 
+Reason for Failure:
 
+Sass does not support direct string comparison operations like < or > for strings. This caused errors such as Undefined operation: "a lt b".
 
+**Failed Approach - Custom Sorting with String Length** 
 
+Reason for Failure:
 
+Sass does not support direct string comparison operations even when comparing substrings. This caused errors like Undefined operation: "j gt a"
 
+**Successful Approach - Using ASCII Values for String Comparison**
+By using ASCII values for character comparison and implementing a custom quick-sort algorithm, we successfully sorted the list of strings.
 
+To test, input this command in your terminal:
+```
+sass 103-sort_strings.scss | tail -n +2
+```
 
+`sass 103-sort_strings.scss` runs the Sass preprocessor on the file `103-sort_strings.scss`. Sass processes the SCSS file and outputs the sorted list in the debug output.
 
+`| tail -n +2` is a pipe (`|`) to the `tail` command, which outputs lines starting from the second line onward, removing the first line of the output to show the debug message.
 
+![image](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/9f1e2a46-38e6-42dc-87bc-12282cefe90c)
 
+The output shows the sorted list `anna carrie felicia john kim zoe` printed in the debug output.
 
+**How this works**:
 
+If the list has 1 or fewer elements, it is already sorted.
+
+Choose the middle element as the pivot.
+
+Iterate through the list, partitioning elements into $smaller, $equal, and $larger lists based on their comparison with the pivot.
+
+Recursively sort the $smaller and $larger lists and concatenate them with the $equal list to produce the sorted result.
+
+Sass supports features like custom functions, @for loops, and @each loops, making it possible to implement sorting algorithms directly in Sass. By using these features, you can perform complex operations like sorting strings based on ASCII values, which is not natively supported in CSS.
 
 
 
