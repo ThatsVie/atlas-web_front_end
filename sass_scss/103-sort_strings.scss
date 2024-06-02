@@ -1,0 +1,58 @@
+/* Import the list from 103-sort_list.scss */
+@import '103-sort_list';
+
+/* Default alphabetical order */
+$alphabet-order: "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p"
+  "q" "r" "s" "t" "u" "v" "w" "x" "y" "z" !default;
+
+/* compare two strings */
+@function compare-strings($str1, $str2, $order) {
+  @if type-of($str1) == "number" and type-of($str2) == "number" {
+    @return $str1 < $str2;
+  }
+
+  $str1: to-lower-case($str1);
+  $str2: to-lower-case($str2);
+
+  @for $i from 1 through min(str-length($str1), str-length($str2)) {
+    $char1: str-slice($str1, $i, $i);
+    $char2: str-slice($str2, $i, $i);
+
+    @if $char1 and $char2 and index($order, $char1) != index($order, $char2) {
+      @return index($order, $char1) < index($order, $char2);
+    }
+  }
+
+  @return str-length($str1) < str-length($str2);
+}
+
+/* Quick sort function */
+@function quick-sort($list, $order: $alphabet-order) {
+  $smaller: ();
+  $equal: ();
+  $larger: ();
+
+  @if length($list) > 1 {
+    $pivot: nth($list, ceil(length($list) / 2));
+
+    @each $element in $list {
+      @if $element == $pivot {
+        $equal: append($equal, $element, list-separator($list));
+      } @else if compare-strings($element, $pivot, $order) {
+        $smaller: append($smaller, $element, list-separator($list));
+      } @else {
+        $larger: append($larger, $element, list-separator($list));
+      }
+    }
+
+    @return join(
+      join(quick-sort($smaller, $order), $equal),
+      quick-sort($larger, $order)
+    );
+  }
+
+  @return $list;
+}
+
+/* Debug sorted list */
+@debug quick-sort($list_to_sort);
