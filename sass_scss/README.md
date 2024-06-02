@@ -2,7 +2,7 @@
 
 ## Learning Objectives
 
-### What does Sass means?
+### What does Sass mean?
 
 Sass (Syntactically Awesome StyleSheets) is a CSS preprocessor that allows you to write more efficient, maintainable, and scalable CSS. It extends the capabilities of CSS with features like variables, nested rules, mixins, and more, making it easier to manage complex stylesheets.
 
