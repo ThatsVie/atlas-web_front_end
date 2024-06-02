@@ -75,10 +75,6 @@ The layout should remain the same visually, but now it's managed with Flexbox pr
 
 For this task, we added specific classes to the outermost section tags for various sections in the HTML file.
 
-To test, open the `1-index.html` file in a browser and inspect the section tags to ensure the new classes have been added correctly.
-
-![1-index](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/f801692b-a300-463b-a171-faecb0c732a9)
-
 **Updated Sections:**
 - Services: `section-services`
 - Works: `section-works`
@@ -87,21 +83,15 @@ To test, open the `1-index.html` file in a browser and inspect the section tags 
 - Testimonials: `section-testimonial`
 - Contact: `section-contact`
 
+**To test, open the `1-index.html` file in a browser and inspect the section tags to ensure the new classes have been added correctly.**
+
+![1-index](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/f801692b-a300-463b-a171-faecb0c732a9)
+
+
+
 ### Task 2 - Adjust Flex Direction for Latest News Section
 
 For this task, we changed the flex direction of the "Latest news" section to `row-reverse`.
-
-To test, open the `2-index.html` file in a browser and inspect the "Latest news" section to ensure the news items are displayed in reverse order.
-
-Before reversal:
-![pre reversal](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/c65cedea-5171-43ca-b970-6b721c736a12)
-
-After reversal:
-
-![post reversal](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/f32d584c-f974-40a4-b005-75809a96a7a0)
-
-
-![2 index](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/5649cce0-89aa-420d-bcda-586dac081bbf)
 
 **CSS Changes:**
 ```css
@@ -111,6 +101,65 @@ After reversal:
   flex-direction: row-reverse;
 }
 ```
+
+**To test, open the `2-index.html` file in a browser and inspect the "Latest news" section to ensure the news items are displayed in reverse order.**
+
+**Before reversal:**
+![pre reversal](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/c65cedea-5171-43ca-b970-6b721c736a12)
+
+**After reversal:**
+
+![post reversal](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/f32d584c-f974-40a4-b005-75809a96a7a0)
+
+
+![2 index](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/5649cce0-89aa-420d-bcda-586dac081bbf)
+
+
+
+### Task 3 - Simplify services list
+
+For this task, we ensured that the flex items in the Services section can wrap onto multiple lines.
+
+**HTML Changes:**
+Merged the two `<ul>` elements in the Services section into one.
+
+**CSS Changes:**
+```css
+/* Section SERVICES
+   ============================= */
+.section-services .row {
+  flex-wrap: wrap;
+}
+```
+
+**To test, open the `3-index.html` file in a browser and inspect the Services section to ensure the items wrap correctly.**
+
+**With `flex-wrap`:**
+![with flex wrap](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/f41b24d8-f272-4fe4-b528-36f6ff1fc888)
+
+
+**Without `flex-wrap`:**
+
+![without flex wrap](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/bb65e94f-6c36-42ea-82b1-b3d6bba8bb10)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
