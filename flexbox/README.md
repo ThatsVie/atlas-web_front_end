@@ -252,6 +252,33 @@ For this task, we adjusted the header container to center align its items vertic
 
 ![7 index](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/277e3d60-d51a-405b-aea8-fe6d92fca19c)
 
+### Task 8 - Adjust Section Hero with Flexbox
+
+For this task, we applied flexbox properties to the `section-inner` class within the `section-hero` class.
+
+**CSS Changes:**
+```css
+.section-hero .section-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 50vh;
+}
+```
+
+**To test, open the `8-index.html` file in a browser and inspect the `section-hero` section to ensure the flexbox properties are applied correctly.**
+
+**Before changes to `section-inner`**
+
+![before section inner](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/077851bd-170c-409d-8b3e-8f25dbca0b1d)
+
+
+**After changes to `section-inner`**
+
+
+![after section inner](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/d40c48a0-0d85-48ab-ba75-b750b5f2c7ab)
+
 
 
 
