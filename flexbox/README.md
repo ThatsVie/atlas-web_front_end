@@ -304,8 +304,48 @@ For this task, we targeted all classes that begin with `col-` inside the `sectio
 ![after align self center](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/646bcd0d-94e3-4adc-a998-fe63658a84a4)
 
 
+### Task 10 - Adjust Section Hero and Add Hero Homepage Styles
+
+For this task, we adjusted the `section-hero` styles and created a new `hero-homepage` class with specific styles for `section-body` and `section-category` within `section-hero`.
+
+**CSS Changes:**
+```css
+.hero-homepage {
+  background-position: 75% 0;
+  background-repeat: no-repeat;
+  background-size: 90rem auto;
+  background-color: #010101;
+}
+
+.section-hero {
+  position: relative;
+  margin-top: -8.5rem;
+}
+
+.section-hero .section-body {
+  padding: 10rem 4rem;
+}
+
+.section-hero .section-category {
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+```
+**HTML Changes:**
+```html
+<header class="section-hero hero-homepage" data-section-theme="dark">
+  <div class="container">
+    <div class="section-body">
+      <section class="section-inner">
+      </section>
+    </div>
+  </div>
+</header>
+```
+**To test, open the `10-article.html` file in a browser and inspect the `section-hero` section to ensure the new styles are applied correctly.**
 
 
+![10 article html](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/b5dfad63-badb-429b-a1c1-b8e993fe777b)
 
 
 
