@@ -404,6 +404,64 @@ For this task, we added the `hero-article` class, set a background image, and in
 ![11 article html](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/9f2fecf8-31b4-46f7-9dac-030bfdabe2dc)
 
 
+### Task 12 - Add Main Article Structure and Styles
+
+For this task, we added the `main-article` structure with the specified classes and content. We also updated the CSS to style the `main-article`, `post`, `post-content`, and `post-aside`.
+
+**HTML Changes:**
+```html
+<main>
+  <!– Hero section –>
+  <header class="section-hero hero-article" style="background-image: url('images/pic-article-02.jpg');" data-section-theme="dark">
+    <div class="container">
+      <div class="section-body">
+        <section class="section-inner">
+          <span class="section-category">Digital Life</span>
+          <h1 class="section-title">Ut alios omittam, hunc appello, quem ille unum secutus est</h1>
+        </section>
+      </div>
+    </div>
+  </header>
+  <div class="main-article">
+    <div class="container">
+      <div class="post">
+        <article class="post-content">
+        </article>
+        <!-- Aside section -->
+        <aside class="post-aside">
+          <div class="post-meta"></div>
+          <div class="post-share"></div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</main>
+```
+**CSS Changes:**
+```css
+.main-article {
+  padding: 5rem 0;
+}
+
+/* Post
+   ============================= */
+.post {
+  display: flex;
+}
+
+.post-content {
+  width: 100%;
+}
+
+.post-aside {
+  order: -1;
+  min-width: 20%;
+}
+```
+**To test, open the `12-article.html` file in a browser and inspect the `main-article` section to ensure the new structure and styles are applied correctly.**
+
+![12 article html](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/3e34df71-7217-4812-a3de-3cf5dc401b4f)
+
 
 
 
