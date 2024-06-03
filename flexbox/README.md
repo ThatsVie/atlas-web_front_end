@@ -575,14 +575,66 @@ For this task, we added social share links inside the `post-share` div by copyin
 ![14 article html](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/7160c51e-318d-4dc8-87fb-4fb231e76e5d)
 
 
+### Task 15 - Add Article Content and Styling
+For this task, we added specific content to the article page and applied styles.
+
+**HTML Changes:**
+```html
+<article class="post-content">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tum mihi Piso: Quid ergo? Tum ille: Ain tandem? Non autem hoc: igitur ne illud quidem. Sed quod proximum fuit non vidit. Nos commodius agimus. An nisi populari fama?</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed haec omittamus; <b>Hoc Hieronymus summum bonum esse dixit.</b> Duo Reges: constructio interrete.</p>
+                  <h2>Prioris generis est docilitas, memoria</h2>
+                  <ol>
+                    <li>Nec enim, dum metuit, iustus est, et certe, si metuere destiterit, non erit;</li>
+                    <li>Quid enim de amicitia statueris utilitatis causa expetenda vides.</li>
+                  </ol>
+                  <p>Morbi pharetra congue ante ac tincidunt. Donec euismod eu mauris nec laoreet. Praesent id sodales ipsum. Aliquam erat volutpat. Ut porta sem eget libero faucibus, eget convallis nisi finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum accumsan euismod nunc quis viverra.</p>
+                  <figure>
+                    <img src="images/the-honest-company-j69c0Q650Hw-unsplash.jpg" alt="Glasses, baby converse shoes, black bag, wipes on a dresser with an open drawer" width="620" height="350">
+                    <figcaption class="img-caption">Pugnant Stoici cum Peripateticis. Prioris generis est docilitas</figcaption>
+                  </figure>
+                  <p>Quare conare, quaeso. Dici enim nihil potest verius. Primum divisit ineleganter; Suam denique cuique naturam esse ad vivendum ducem.</p>
+                  <blockquote cite="https://www.holbertonschool.com/">Ego autem tibi, Piso, assentior usu hoc venire, ut acrius aliquanto et attentius de claris viris locorum admonitu cogitemus.</blockquote>
+                  <p>Omnia contraria, quos etiam insanos esse vultis. Tibi hoc incredibile, quod beatissimum.</p>
+                  <h2>Piso igitur hoc modo, vir optimus tuique, ut scis, amantissimus.</h2>
+                  <p><a href="https://www.holbertonschool.com/" target="_blank" rel="noopener noreferrer">Apparet statim, quae sint officia, quae actiones.</a> Quae in controversiam veniunt, de iis, si placet, disseramus.</p>
+                  <ul>
+                    <li>Tubulum fuisse, qua illum, cuius is condemnatus est rogatione, P.</li>
+                    <li>Quis est autem dignus nomine hominis, qui unum diem totum velit esse in genere isto voluptatis?</li>
+                    <li>Sed in rebus apertissimis nimium longi sumus.</li>
+                  </ul>
+                  <p>Hoc etsi multimodis reprehendi potest, tamen accipio, quod dant. Atqui, inquam, Cato, si istud optinueris, traducas me ad te totum licebit. Nemo nostrum istius generis asotos iucunde putat vivere. Res enim se praeclare habebat, et quidem in utraque parte. Qui autem esse poteris, nisi te amor ipse ceperit? Ita fit cum gravior, tum etiam splendidior oratio. De vacuitate doloris eadem sententia erit. Sin tantum modo ad indicia veteris memoriae cognoscenda, curiosorum.</p>
+                </article>
+```
+**CSS Changes:**
+```css
+.post img {
+    width: 100%;
+    height: auto;
+  }
+
+  .post-content p:first-child {
+    font-size: var(--font-size-x-large);
+  }
+
+  .post-content .img-caption {
+    margin: 1rem 0;
+    padding: 0 .5rem;
+    font-size: var(--font-size-small);
+    color: var(--color-grey);
+    text-align: center;
+  }
+```
+**To test, open the `100-article.html` file in a browser**
 
 
+![100 article html 1](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/da37f63c-fa59-4446-9df2-43f0f85525e0)
 
 
+![100 article html 2](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/3f3f95c9-f4e1-49ed-b03e-fe1090a28aea)
 
 
-
-
+![100 article html 3](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/3399d244-5f0f-44f6-a52a-349444753e49)
 
 
 
