@@ -209,7 +209,31 @@ Wrapped the `header-logo` and `navbar-menu` in a new `div` with class `header-co
 
 ![header container](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/69aa8565-edcf-45a9-b499-61bfa24fbe37)
 
+### Task 6 - Adjust Navbar with Flexbox
 
+For this task, we adjusted the navbar to use flexbox and modified the margin settings for the nav items.
+
+**CSS Changes:**
+```css
+.nav {
+  display: flex;
+}
+
+/* Removed the display declaration from .nav .nav-item */
+
+/* Moved the margin declaration */
+.nav-item + .nav-item {
+  margin: var(--nav-item-margin);
+}
+
+/* Updated variable */
+:root {
+  --nav-item-margin: 0 0 0 2rem;
+}
+```
+To test, open the `6-index.html` file in a browser and inspect the navbar to ensure the flexbox properties and margin settings are applied correctly.
+
+![6 index](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/62b933fd-efdb-4f95-b245-be7a2b791186)
 
 
 
