@@ -231,10 +231,26 @@ For this task, we adjusted the navbar to use flexbox and modified the margin set
   --nav-item-margin: 0 0 0 2rem;
 }
 ```
-To test, open the `6-index.html` file in a browser and inspect the navbar to ensure the flexbox properties and margin settings are applied correctly.
+**To test, open the `6-index.html` file in a browser and inspect the navbar to ensure the flexbox properties and margin settings are applied correctly.**
 
 ![6 index](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/62b933fd-efdb-4f95-b245-be7a2b791186)
 
+### Task 7 - Center Align Items in Header
+
+For this task, we adjusted the header container to center align its items vertically.
+
+**CSS Changes:**
+```css
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* added this line */
+}
+```
+
+**To test, open the `7-index.html` file in a browser and inspect the header to ensure the items are centered vertically.**
+
+![7 index](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/277e3d60-d51a-405b-aea8-fe6d92fca19c)
 
 
 
