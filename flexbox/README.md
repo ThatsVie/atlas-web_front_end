@@ -540,10 +540,39 @@ For this task, we added post meta information inside the `post-meta` div and upd
 **To test, open the `13-article.html` file in a browser and inspect the `post-meta` section to ensure the new structure and styles are applied correctly.**
 
 
-![13 article html](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/a18a578c-9488-450f-ae05-14024e4362e7)
+![13 article html](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/b1d6e512-0967-44f3-bb98-2ab9443db73d)
 
+### Task 14 - Add Social Share Links
 
+For this task, we added social share links inside the `post-share` div by copying the existing social nav list from the footer, removing the Instagram link, and updating the href attributes.
 
+**HTML Changes:**
+```html
+<div class="post-share">
+  <ul class="social nav">
+    <li class="social-item nav-item">
+      <a href="#" class="social-link">
+        <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="25" height="25">
+          <title>Facebook icon</title>
+          <path d="M23.998 12c0-6.628-5.372-12-11.999-12C5.372 0 0 5.372 0 12c0 5.988 4.388 10.952 10.124 11.852v-8.384H7.078v-3.469h3.046V9.356c0-3.008 1.792-4.669 4.532-4.669 1.313 0 2.686.234 2.686.234v2.953H15.83c-1.49 0-1.955.925-1.955 1.874V12h3.328l-.532 3.469h-2.796v8.384c5.736-.9 10.124-5.864 10.124-11.853z"/>
+        </svg>
+      </a>
+    </li>
+    <li class="social-item nav-item">
+      <a href="#" class="social-link">
+        <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="25" height="25">
+          <title>Twitter icon</title>
+          <path d="M23.954 4.569a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.061a4.923 4.923 0 0 0 3.946 4.827 4.996 4.996 0 0 1-2.212.085 4.937 4.937 0 0 0 4.604 3.417 9.868 9.868 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 0 0 2.46-2.548l-.047-.02z"/>
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
+```
+
+**To test, open the `14-article.html` file in a browser and inspect the `post-share` section to ensure the new structure is applied correctly.**
+
+![14 article html](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/7160c51e-318d-4dc8-87fb-4fb231e76e5d)
 
 
 
