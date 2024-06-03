@@ -2,37 +2,78 @@
 ## Learning Objectives
 
 ### What is Flexbox?
+Flexbox, or the Flexible Box Layout, is a one-dimensional layout method in CSS3 designed to distribute space and align items within a container. It helps create complex layouts more efficiently compared to traditional methods like floats or positioning.
+
+**Example:**
+
+In **Task 0**, we added `display: flex` to the `.row` class to convert the child elements into flex items.
 
 ### How do we convert float positioning to a flex display?
+Converting float positioning to a flex display involves setting display: flex on the parent container and adjusting or removing float-related properties on the child elements.
+
+**Example:**
+In **Task 0**, we removed the `float: left` from the `[class*='col-']` selector and added `display: flex` to the `.row class`, transforming the layout from using floats to Flexbox.
 
 ### How do we horizontally and vertically align elements using Flexbox?
+Flexbox provides properties like `justify-content` for horizontal alignment and `align-items` for vertical alignment.
+
+**Example:**
+
+In **Task 5**, we used `justify-content: space-between` in the `.header-container` class to horizontally distribute the logo and navigation bar. In **Task 7**, we added `align-items: center` to the same class to vertically center the items within the header.
 
 ### Whats is the difference between the main and cross axes?
+In Flexbox, the main axis is defined by the `flex-direction` property and is the primary axis along which flex items are placed. The cross axis is perpendicular to the main axis.
+
+**Example:**
+
+In **Task 2**, we set `flex-direction: row-reverse` on the `.row class` inside `.section-latest-news`, making the main axis horizontal (row) but reversed. If we used `flex-direction: column`, the main axis would be vertical.
 
 ### What properties work on flex elements vs flex container?
+Properties that work on the flex container:
+
+`display: flex` `flex-direction` `flex-wrap` `justify-content` `align-items` `align-content`
+
+Properties that work on flex items:
+
+`order` `flex-grow` `flex-shrink` `flex-basis` `align-self`
+
+**Example:**
+In **Task 6**, we applied `display: flex` to the  `.nav` class (flex container). In **Task 9**, we used `align-self: center` on the `.col-` classes within `.section-about-us` (flex items).
 
 ### What are Shorthands for flex?
+Flexbox provides shorthand properties to simplify the definition of multiple properties. The flex shorthand can set flex-grow, flex-shrink, and flex-basis in one declaration.
 
+**Example:**
+
+We didn't explicitly use the flex shorthand in this project, but an example would be:
+``` css
+.flex-item {
+  flex: 1 1 auto; /* flex-grow: 1, flex-shrink: 1, flex-basis: auto */
+}
+```
 ### How do we create a new page with flex in mind?
+Creating a new page with Flexbox involves structuring the HTML to have meaningful containers and applying Flexbox properties to align and distribute content.
+
+**Example:**
+
+Throughout this project, we structured various sections (like the header, services, and hero sections) to use Flexbox for alignment and spacing. 
 
 ## Tasks and Usage
 
 ### Task 0: Add Display Flex
 
-**Objective:** 
-Modify the provided HTML and CSS to use Flexbox for the `.row` class.
+In this task we modified the provided HTML and CSS to use Flexbox for the `.row` class.
 
 **Steps:**
 
-
-1. **Copy Starter Files:**
-   - Copy the provided HTML into `0-index.html`.
-   - Copy the provided CSS into `0-styles.css`.
-
-2. **Modify the CSS:**
-   - Add `display: flex` to the `.row` class.
-   - Remove the `row::after` declaration.
-   - Remove `float: left` from `[class*='col-']`.
+- Copy the provided HTML into `0-index.html`.
+- Copy the provided CSS into `0-styles.css`.
+  
+  Modify the CSS:
+  
+- Add `display: flex` to the `.row` class.
+- Remove the `row::after` declaration.
+- Remove `float: left` from `[class*='col-']`.
 
 **Code Changes:**
 
