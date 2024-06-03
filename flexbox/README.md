@@ -280,7 +280,28 @@ For this task, we applied flexbox properties to the `section-inner` class within
 ![after section inner](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/d40c48a0-0d85-48ab-ba75-b750b5f2c7ab)
 
 
+### Task 9 - Align Items in Section About Us
 
+For this task, we targeted all classes that begin with `col-` inside the `section-about-us` class to center align the items.
+
+**CSS Changes:**
+```css
+/* Section ABOUT US
+   ============================= */
+.section-about-us [class*='col-'] {
+  align-self: center;
+}
+```
+
+**To test, open the `9-index.html` file in a browser and inspect the `section-about-us` section to ensure the items are centered.**
+
+**Before targeting**
+
+![before align self center](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/8fa6f82d-0aaf-4bca-850d-19c36abdf387)
+
+**After targeting**
+
+![after align self center](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/646bcd0d-94e3-4adc-a998-fe63658a84a4)
 
 
 
