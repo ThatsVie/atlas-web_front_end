@@ -347,8 +347,61 @@ For this task, we adjusted the `section-hero` styles and created a new `hero-hom
 
 ![10 article html](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/b5dfad63-badb-429b-a1c1-b8e993fe777b)
 
+### Task 11 - Add Hero Article Section with Background and Styles
 
+For this task, we added the `hero-article` class, set a background image, and included specific content in the Hero section. We also updated the CSS to style the `hero-article` section.
 
+**HTML Changes:**
+```html
+<header class="section-hero hero-article" style="background-image: url('images/pic-article-02.jpg');" data-section-theme="dark">
+  <div class="container">
+    <div class="section-body">
+      <section class="section-inner">
+        <span class="section-category">Digital Life</span>
+        <h1 class="section-title">Ut alios omittam, hunc appello, quem ille unum secutus est</h1>
+      </section>
+    </div>
+  </div>
+</header>
+```
+
+**CSS Changes:**
+```css
+/*** ARTICLE PAGE ***/
+/* Section HERO (article)
+   ============================= */
+.hero-article {
+  background-size: 150rem 100rem;
+  background-position: 50% 0;
+}
+
+.hero-article::before {
+  content: '';
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.hero-article .section-inner {
+  text-align: center;
+  align-items: center;
+  min-height: 40vh;
+}
+
+.hero-article .section-body {
+  position: relative;
+  padding: 7rem 0 0;
+  z-index: 2;
+}
+```
+
+**To test, open the `11-article.html` file in a browser and inspect the `hero-article` section to ensure the new styles and content are applied correctly.**
+
+![11 article html](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/9f2fecf8-31b4-46f7-9dac-030bfdabe2dc)
 
 
 
