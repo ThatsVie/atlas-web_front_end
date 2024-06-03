@@ -463,7 +463,84 @@ For this task, we added the `main-article` structure with the specified classes 
 ![12 article html](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/3e34df71-7217-4812-a3de-3cf5dc401b4f)
 
 
+### Task 13 - Add Post Meta Information and Styles
 
+For this task, we added post meta information inside the `post-meta` div and updated the CSS to style the `post-meta` section.
+
+**HTML Changes:**
+```html
+<div class="post-meta">
+  <ul class="post-meta-list row">
+    <li class="post-meta-author">
+      <strong>Written by:</strong>
+      <a href="#" rel="author">William Attaway</a>
+    </li>
+    <li class="post-meta-date">
+      <strong>Posted on:</strong>
+      <time datetime="2019-10">October 2019</time>
+    </li>
+    <li class="post-meta-tag">
+      <strong>Tags:</strong>
+      <ul class="tag-list">
+        <li><a href="#" rel="tag">Web Design</a></li>
+        <li><a href="#" rel="tag">UX</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+```
+**CSS Changes:**
+```css
+/* Post Meta
+      ============================= */
+
+  .post-meta-list {
+    flex-direction: column;
+  }
+
+  .post-meta-list strong {
+    color: var(--color-primary);
+    font-size: var(--font-size-small);
+    text-transform: uppercase;
+    display: block;
+  }
+
+  .post-meta-list [class*='post-meta-'] {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 0.2rem solid var(--color-light-grey);
+  }
+
+  .post-meta-list [class*='post-meta-']:last-child {
+    border: none;
+    margin-bottom: 3rem;
+  }
+
+  /* Tag list
+      ============================= */
+
+  .tag-list {
+    padding: 0;
+    list-style: none;
+  }
+
+  .tag-list li {
+    display: inline;
+  }
+
+  .tag-list li::after {
+    content: ", ";
+  }
+
+  .tag-list li:last-child::after {
+    content: '';
+  }
+```
+
+**To test, open the `13-article.html` file in a browser and inspect the `post-meta` section to ensure the new structure and styles are applied correctly.**
+
+
+![13 article html](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/a18a578c-9488-450f-ae05-14024e4362e7)
 
 
 
