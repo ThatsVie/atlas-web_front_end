@@ -678,4 +678,43 @@ For this task, we added specific content to the article page and applied styles.
 ![100 article html 3](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/3399d244-5f0f-44f6-a52a-349444753e49)
 
 
+### Task 16 - Flexbox Layout for Boxes
+For this task, we aimed to display a set of boxes in a specific layout using Flexbox. The goal was to arrange the boxes as shown in the provided example, with different colors, sizes, and text inside each box.
+
+**Provided example:**
+
+![task 16](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/de55cf75-0e60-41bf-a508-2a30472c51b4)
+
+**Steps:**
+
+- Set up HTML structure provided.
+- Flexbox was used to arrange the boxes horizontally and ensure they aligned properly without using floats, text-align, margins, or padding.
+- Properties like `justify-content`, `align-items`, and `flex` were utilized to align and size the boxes effectively.
+- A color picker tool was used to choose colors for each box based on the provided image
+- Several iterations and refinements using Dev Tools 
+- The `body` and `.container` are set to use Flexbox, ensuring all direct children are treated as flex items.
+- The container is centered horizontally within the body and the items are aligned along their baselines.
+- The `flex` shorthand is used for each box to specify how they should grow, shrink, and their initial size (flex-basis).
+- Different background colors and font sizes were applied to each box.
+
+
+**To test the implementation, open the `101-index.html` file in a browser and ensure the boxes are displayed as shown in the example screenshot.**
+
+**Final result:**
+![101 index](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/cfd4fdf6-2aa6-4e86-a3b8-2cd3ce81ac31)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
