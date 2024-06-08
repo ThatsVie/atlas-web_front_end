@@ -132,6 +132,8 @@ To accomplish this we:
 - Verify that there are no issues related to missing or improper labels for form elements.
 
 
+![Screenshot 2024-06-08 175137](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/45f5e8fb-1605-403f-b0fd-d0d915bc7f48)
+
 
 
 
