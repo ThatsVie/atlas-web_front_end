@@ -47,13 +47,13 @@ The goal of this task is to improve accessibility by ensuring that elements have
 
 **To test these changes:**
 
-- **Open `fix-a11y/01-index.html` in your web browser.**
 - **Use the Axe Chrome Extension:**
    - Install the Axe Chrome Extension from the Chrome Web Store.
    - Open `fix-a11y/01-index.html` in your browser.
    - Open Chrome DevTools
    - Navigate to the "Axe" tab in DevTools.
-   - Click "Analyze" to run the accessibility checks.
+   - Click "Scan" to run the accessibility checks.
+   
 - **Review the Results:**
    - Check for color contrast issues and other accessibility concerns.
    - Follow the suggestions provided by Axe to fix any issues.
@@ -71,7 +71,18 @@ After removing the problematic styles (`fix-a11y/01-index.html`), the color cont
 ![Screenshot 2024-06-08 153324](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/75f09ddc-bd5f-4039-8bd5-de72bf5cc5d1)
 
 
+### Task 3: Ensure Documents Have a `<title>` Element
+The goal of this task is to improve accessibility by ensuring that all documents have a `<title>` element to aid in navigation.
 
+**To test these changes:**
+
+- Open `fix-a11y/02-index.html` in your web browser.
+- Open Chrome DevTools 
+- Navigate to the "Axe" tab in DevTools.
+- Click "Scan" to run the accessibility checks.
+- Check for issues related to the absence of a `<title>` element and verify that the issue is resolved.
+
+![title issue resolved](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/fa58edcc-0c17-45a7-b767-2a437a01efcc)
 
 
 
