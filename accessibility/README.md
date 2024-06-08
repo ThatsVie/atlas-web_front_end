@@ -134,7 +134,23 @@ To accomplish this we:
 
 ![Screenshot 2024-06-08 175137](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/45f5e8fb-1605-403f-b0fd-d0d915bc7f48)
 
+### Task 7: Ensure Links Have Discernible Text
+The goal of this task is to improve accessibility by ensuring that links have discernible text, especially when they use icons instead of text.
 
+**To accomplish this:**
+- Added `aria-label="Facebook"` to the `<a>` tag containing the `facebook-icon`.
+- Added `aria-label="Twitter"` to the `<a>` tag containing the `twitter-icon`.
+
+**To test these changes:**
+
+- Open `fix-a11y/06-index.html` in your web browser.
+- Open Chrome DevTools
+- Navigate to the "Axe" tab in DevTools.
+- Click "Scan" to run the accessibility checks.
+- Verify that there are no issues related to links without discernible text.
+
+
+![Screenshot 2024-06-08 175751](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/161b468b-9bd4-46c3-8da8-cb2bb466d897)
 
 
 
