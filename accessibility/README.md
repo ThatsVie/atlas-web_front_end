@@ -42,6 +42,34 @@ The goal of this task is to improve accessibility by adding skip links, allowing
 
 ![main in index](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/00accd87-03aa-4220-9454-5332a5ef5ce9)
 
+### Task 2: Ensure Elements Have Sufficient Color Contrast
+The goal of this task is to improve accessibility by ensuring that elements have sufficient color contrast. To accomplish this we removed `color: #a6a5a5;` and `background-color: #5f7a8a;` from the body styles in `fix-a11y/01-index.html`.
+
+**To test these changes:**
+
+- **Open `fix-a11y/01-index.html` in your web browser.**
+- **Use the Axe Chrome Extension:**
+   - Install the Axe Chrome Extension from the Chrome Web Store.
+   - Open `fix-a11y/01-index.html` in your browser.
+   - Open Chrome DevTools
+   - Navigate to the "Axe" tab in DevTools.
+   - Click "Analyze" to run the accessibility checks.
+- **Review the Results:**
+   - Check for color contrast issues and other accessibility concerns.
+   - Follow the suggestions provided by Axe to fix any issues.
+
+**Before:**
+
+In the initial implementation (`fix-a11y/00-index.html`), the color contrast is poor, making it difficult for users to read the content.
+![Screenshot 2024-06-08 153313](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/17d028ad-b908-4d52-bb1d-eca652ce8524)
+
+
+**After:**
+
+After removing the problematic styles (`fix-a11y/01-index.html`), the color contrast is improved, providing better readability.
+
+![Screenshot 2024-06-08 153324](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/75f09ddc-bd5f-4039-8bd5-de72bf5cc5d1)
+
 
 
 
