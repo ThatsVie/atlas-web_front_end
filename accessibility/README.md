@@ -5,7 +5,7 @@
 ## Tasks and Usage
 
 ### Task 0: Make the "Works" Card Focus Visible
-The goal of this task is to ensure that the focus state of the "Works" cards is visually apparent when navigating using the keyboard in the desktop version of the webpage.
+The goal of this task is to ensure that the focus state of the "Works" cards is visually apparent when navigating using the keyboard in the desktop version of the webpage. To accomplish this, we updated the CSS to remove opacity settings and properly handle focus states.
 
 **To test these changes:**
 
@@ -26,7 +26,8 @@ After making the changes (`01-index.html`), the focus state is visible with a da
 ![after](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/6f08af58-828d-4614-9ae7-abea26b9734c)
 
 ### Task 1: Add the Skip Links
-The goal of this task is to improve accessibility by adding skip links, allowing users to quickly navigate to the primary navigation and main content using keyboard shortcuts.
+The goal of this task is to improve accessibility by adding skip links, allowing users to quickly navigate to the primary navigation and main content using keyboard shortcuts. To accomplish this, we added skip links just after the `<body>` tag and updated the necessary IDs and styles.
+
 
 **To test these changes:**
 - Open `skip-links/01-index.html` and `skip-links/01-article.html` in your web browser.
@@ -72,7 +73,7 @@ After removing the problematic styles (`fix-a11y/01-index.html`), the color cont
 
 
 ### Task 3: Ensure Documents Have a `<title>` Element
-The goal of this task is to improve accessibility by ensuring that all documents have a `<title>` element to aid in navigation.
+The goal of this task is to improve accessibility by ensuring that all documents have a `<title>` element to aid in navigation. We accomplished this by adding `<title>Homepage - A fake website</title>` to the `<head>` section of `fix-a11y/02-index.html`.
 
 **To test these changes:**
 
@@ -85,8 +86,18 @@ The goal of this task is to improve accessibility by ensuring that all documents
 ![title issue resolved](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/fa58edcc-0c17-45a7-b767-2a437a01efcc)
 
 
+### Task 4: Ensure the Document has a `lang` Attribute
+The goal of this task is to improve accessibility by ensuring that the document has a `lang` attribute to indicate the language of the content. We accomplished this by adding `lang="en"` to the `<html>` tag in `fix-a11y/03-index.html`.
 
+**To test these changes:**
 
+- Open `fix-a11y/03-index.html` in your browser.
+- Open Chrome DevTools
+- Navigate to the "Axe" tab in DevTools.
+- Click "Scan" to run the accessibility checks.
+- Check for issues related to the absence of a `lang` attribute and verify that the issue is resolved.
+
+![lang en](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/f7fcf7f0-1053-4767-a60f-aed51383bb92)
 
 
 
