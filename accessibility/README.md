@@ -115,6 +115,23 @@ The goal of this task is to improve accessibility by ensuring that all images ha
 ![alt image fix](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/5cc0283a-4166-4696-8c8d-92276dbf57de)
 
 
+### Task 6: Ensure Form Elements Have Labels
+The goal of this task is to improve accessibility by ensuring that form elements have appropriate labels.
+
+To accomplish this we:
+- Added a label just before the input with the class `visually-hidden` and `for="email"`.
+- Updated the input element with `id="email"`, `type="email"`, `autocomplete="email"`, `required`, and `aria-required="true"`.
+- Changed the submit link from an `<a>` tag to a `<button>` element for better accessibility.
+
+**To test these changes:**
+
+- Open `fix-a11y/05-index.html` in your web browser.
+- Open Chrome DevTools
+- Navigate to the "Axe" tab in DevTools.
+- Click "Scan" to run the accessibility checks.
+- Verify that there are no issues related to missing or improper labels for form elements.
+
+
 
 
 
