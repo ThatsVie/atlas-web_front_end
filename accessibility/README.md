@@ -149,9 +149,21 @@ The goal of this task is to improve accessibility by ensuring that links have di
 - Click "Scan" to run the accessibility checks.
 - Verify that there are no issues related to links without discernible text.
 
-
 ![Screenshot 2024-06-08 175751](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/161b468b-9bd4-46c3-8da8-cb2bb466d897)
 
+### Task 8: Ensure Zooming and Scaling Are Not Disabled
+The goal of this task is to improve accessibility by ensuring that zooming and scaling are not disabled on the webpage.
+To accomplish this we removed `user-scalable=no` from the `<meta name="viewport">` tag in `fix-a11y/07-index.html`.
+
+**To test these changes:**
+
+- Open `fix-a11y/07-index.html` in your web browser.
+- Open Chrome DevTools
+- Navigate to the "Axe" tab in DevTools.
+- Click "Scan" to run the accessibility checks.
+- Verify that there are no issues related to zooming and scaling being disabled.
+
+![Screenshot 2024-06-08 180614](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/3448f25e-9e17-440e-92b8-4f50ac7f885b)
 
 
 
