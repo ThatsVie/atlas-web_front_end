@@ -100,7 +100,19 @@ The goal of this task is to improve accessibility by ensuring that the document 
 ![lang en](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/f7fcf7f0-1053-4767-a60f-aed51383bb92)
 
 
+### Task 5: Ensure Images Have Alternate Text
+The goal of this task is to improve accessibility by ensuring that all images have appropriate alternate text. To accomplish this we added an `alt` attribute with the text `Name of the logo` to the `<img>` tag pointing to `logo.png` and added an empty `alt` attribute (`alt=""`) to the `<img>` tag pointing to `hero-img.png`.
 
+**To test these changes:**
+
+- Open `fix-a11y/04-index.html` in your web browser.
+- Open Chrome DevTools
+- Navigate to the "Axe" tab in DevTools.
+- Click "Scan" to run the accessibility checks.
+- Verify that there are no issues related to missing or improper `alt` attributes for images.
+
+
+![alt image fix](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/5cc0283a-4166-4696-8c8d-92276dbf57de)
 
 
 
