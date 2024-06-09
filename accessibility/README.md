@@ -193,7 +193,23 @@ The goal of this task is to improve accessibility by ensuring that heading level
 ![Screenshot 2024-06-09 113044](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/8fec3e93-4fc5-4319-917a-b5fa7e732f4a)
 
 
+### Task 10: Ensure Document Has One Main Landmark
+The goal of this task is to improve accessibility by ensuring the document has one main landmark and all content is contained within appropriate landmark elements.
 
+**To accomplish this:**
+- Converted relevant `<div>` tags to semantic HTML5 elements (`<header>`, `<nav>`, `<main>`, `<section>`, and `<footer>`) to define the structure of the document clearly.
+
+**To test these changes:**
+
+- Open `fix-a11y/09-index.html` in your web browser.
+- Install the Landmarks extension for a visual representation of your landmarks.
+- Open Chrome DevTools
+- Navigate to the "Axe" tab in DevTools.
+- Click "Scan" to run the accessibility checks.
+- Verify that there are no issues related to missing or improper landmarks.
+
+
+![Screenshot 2024-06-09 121831](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/f57417f1-8853-4b82-ad88-ae0c7b778eda)
 
 
 
