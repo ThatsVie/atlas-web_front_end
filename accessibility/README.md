@@ -2,6 +2,39 @@
 
 ## Learning Objectives
 
+### What is ARIA’s main purpose?
+
+ARIA (Accessible Rich Internet Applications) is designed to make web content and applications more accessible to people with disabilities. It provides additional attributes that can be applied to HTML elements to provide information to assistive technologies.
+
+In **Task 1**, we used ARIA landmarks such as aria-label in the skip links to help users navigate directly to primary navigation or main content.
+
+### What are WCAG conformance levels (A, AA and AAA)?
+The Web Content Accessibility Guidelines (WCAG) are organized into three levels of conformance:
+
+**Level A:** The most basic web accessibility features.
+
+**Level AA:** Deals with the biggest and most common barriers for disabled users.
+
+**Level AAA:** The highest and most complex level of web accessibility.
+
+**Level A:** In **Task 6**, ensuring that form elements have labels meets basic accessibility requirements.
+
+**Level AA:** In **Task 2**, ensuring elements have sufficient color contrast is a requirement for Level AA.
+
+**Level AAA:** Although not explicitly stated, many of the proactive steps taken in these tasks could align with Level AAA standards.
+
+### What is the importance of Web Accessibility?
+Web accessibility ensures that websites, tools, and technologies are designed and developed so that people with disabilities can use them. It is crucial for providing equal access and opportunities to all users.
+
+Throughout **Tasks 0-11**, making elements focus-visible (**Task 0**), adding skip links (**Task 1**), ensuring sufficient color contrast (**Task 2**), adding a `<title>` element (**Task 3**), including a `lang` attribute (**Task 4TT), providing alternate text for images (**Task 5**), labeling form elements (**Task 6**), ensuring links have discernible text (**Task 7**), and structuring content with landmarks (**Task 9**) all contribute to making the web more accessible.
+
+### What are Tools to use for Web Accessibility?
+Several tools are available to help developers identify and fix accessibility issues. These include browser extensions, validators, and automated testing tools.
+
+**Axe**: Used in tasks 2, 3, 4, 5, 6, 7, 8, and 10 to run accessibility checks and ensure the issues are resolved.
+**HeadingsMap**: Recommended in task 9 for visual representation of heading structures.
+**Landmarks Extension**: Used in tasks 9 and 10 to visualize landmarks on the page.
+
 ## Tasks and Usage
 
 ### Task 0: Make the "Works" Card Focus Visible
