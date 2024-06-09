@@ -16,7 +16,6 @@ The goal of this task is to add a basic comment form structure to the article pa
 - Sibling to the header, we created a `<form>` element with the following properties:
   - Action set to `#`.
   - Method set to `post`.
-  - Included input fields for "First Name," "Last Name," "Email," "Title," and "Comment," each wrapped in `<div class="form-group">` elements.
 - In `01-styles.css`, we added styles for the comment section and the basic form:
   - For the `.post-comments` class, we set the width to 80%, margin to `10rem 0 0 auto`, and padding-left to `7rem`.
   - For the `.section-title` class inside `.post-comments`, we set the font-variant to `small-caps`.
