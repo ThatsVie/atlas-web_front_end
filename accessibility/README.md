@@ -32,7 +32,9 @@ Throughout **Tasks 0-11**, making elements focus-visible (**Task 0**), adding sk
 Several tools are available to help developers identify and fix accessibility issues. These include browser extensions, validators, and automated testing tools.
 
 **Axe**: Used in tasks 2, 3, 4, 5, 6, 7, 8, and 10 to run accessibility checks and ensure the issues are resolved.
+
 **HeadingsMap**: Recommended in task 9 for visual representation of heading structures.
+
 **Landmarks Extension**: Used in tasks 9 and 10 to visualize landmarks on the page.
 
 ## Tasks and Usage
