@@ -211,6 +211,24 @@ The goal of this task is to improve accessibility by ensuring the document has o
 
 ![Screenshot 2024-06-09 121831](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/f57417f1-8853-4b82-ad88-ae0c7b778eda)
 
+### Task 11: Ensure Elements Become a List
+The goal of this task is to enhance accessibility by correctly marking up elements that should be structured as lists. It is important to note that automated tools do not always identify elements that should be formatted as lists. Therefore, there was no initial warning, but we proactively addressed this issue.
+
+**To accomplish this:**
+- Converted the navigation `<div>` to a `<ul>` with each `<p>` transformed to an `<li>`.
+- Transformed the children of the `<div class="package-list">` to a `<ul>`, with each `<span>` inside being an `<li>`.
+
+**To test these changes:**
+
+- Open `fix-a11y/10-index.html` in your web browser.
+- Open Chrome DevTools.
+- Navigate to the "Axe" tab in DevTools.
+- Click "Scan" to run the accessibility checks.
+- Verify that there are no issues related to elements that should exist as a list.
+
+![Screenshot 2024-06-09 124117](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/c6085fa1-3d17-4574-9745-d80f574f8c8d)
+
+
 
 
 
