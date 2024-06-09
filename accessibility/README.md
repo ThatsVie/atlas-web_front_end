@@ -166,4 +166,51 @@ To accomplish this we removed `user-scalable=no` from the `<meta name="viewport"
 ![Screenshot 2024-06-08 180614](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/3448f25e-9e17-440e-92b8-4f50ac7f885b)
 
 
+### Task 9: Ensure Heading Levels Increase by One and All Content is Contained by Landmarks
+The goal of this task is to improve accessibility by ensuring that heading levels only increase by one and all page content is contained by landmarks.
+
+**To accomplish this:**
+- Added an `<h1>` element with the text "Homepage" just after the `<div class="header">` closing tag.
+- Adjusted heading levels to follow a logical structure, changing inappropriate headings to more suitable tags (e.g., `<h1>` to `<h2>`, `<h6>` to `<h2>`, `<h4>` to `<h3>`, etc.).
+
+**To test these changes:**
+
+- Open `fix-a11y/08-index.html` in your web browser.
+- Install the HeadingsMap extension for a visual representation of your headings.
+- Open Chrome DevTools
+- Navigate to the "Axe" tab in DevTools.
+- Click "Scan" to run the accessibility checks.
+- Verify that there are no issues related to improper heading levels and all content is contained by landmarks.
+
+**Before changes:**
+
+![Screenshot 2024-06-09 113018](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/e540e177-aea5-4577-a147-c19836c16cf8)
+
+
+**After changes:**
+
+
+![Screenshot 2024-06-09 113044](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/8fec3e93-4fc5-4319-917a-b5fa7e732f4a)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
