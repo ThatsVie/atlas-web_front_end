@@ -70,6 +70,26 @@ The goal of this task is to organize the comment form into fieldsets to improve 
 1. Open `02-article.html` in your web browser.
 2. Verify that the form in the "Leave a Comment" section is organized into two fieldsets as described.
 
-After making the changes (`02-article.html`), the form is organized into fieldsets for better structure and accessibility, even though the rendering appears the same because the `<legend>` tags are hidden.
+After making the changes (`02-article.html`), the form is organized into fieldsets for better structure and accessibility.
 
 ![Screenshot 2024-06-09 153633](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/4a995d07-1c5c-4d8c-b29d-e59cdd1e7f83)
+
+### Task 2: Create Labels and Input Containers
+The goal of this task is to add labels and input containers to the form for better accessibility and usability.
+
+**How we accomplished this:**
+
+- In `03-article.html`, we modified the form by adding labels and input containers:
+  - For each `<div>` with the classes `form-group`, we added a `<label>` element with appropriate `for` attributes and text.
+  - Sibling to each label, we created a `<div>` with the class `form-field`, and inside it, a `<span>` with the class `form-field-container`.
+  - Added a `<button>` with the classes `button` and `button-primary` and the text "Post my comment" to the third `<div>` in the second fieldset.
+
+- In `03-styles.css`, we added styles for the labels:
+  - Set the cursor to `pointer`, display to `block`, white-space to `nowrap`, font-size to `1.4rem`, and padding to `0 0 .5rem`.
+
+**To test these changes:**
+
+1. Open `03-article.html` in your web browser.
+2. Verify that the form now includes labels and input containers for "First Name," "Last Name," "Email," "Title," and "Comment" fields, along with a "Post my comment" button.
+
+![03-article.html](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/a4b2363c-f10b-44a3-96d3-046eceda291e)
