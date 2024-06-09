@@ -40,3 +40,36 @@ The initial implementation (`00-article.html`) did not have a comment section at
 After making the changes (`01-article.html`), a "Leave a Comment" section appears with the required fields and styling, as shown in the final rendering image.
 
 ![01-article.html](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/6204475e-8e61-4c4e-aeb2-c62c5f614dc4)
+
+### Task 1: Add Fieldsets to the Comment Form
+The goal of this task is to organize the comment form into fieldsets to improve structure and accessibility.
+
+**How we accomplished this:**
+
+- In `02-article.html`, we modified the form in the comment section:
+  - Created a first `<fieldset>` with a `<legend>` that has the text "Your personal information" and the class `visually-hidden`.
+  - Inside this `<fieldset>`, created three `<div>` elements:
+    - The first `<div>` has the classes `form-group` and `col-1-2`.
+    - The second `<div>` has the classes `form-group` and `col-1-2`.
+    - The third `<div>` has the classes `form-group` and `col-2-3`.
+  - Created a second `<fieldset>` sibling to the first, with a `<legend>` that has the text "Your comment" and the class `visually-hidden`.
+  - Inside this `<fieldset>`, created three `<div>` elements:
+    - The first `<div>` has the classes `form-group` and `col-2-3`.
+    - The second `<div>` has the classes `form-group` and `col-2-3`.
+    - The third `<div>` has the class `form-group`.
+- In `02-styles.css`, we added styles for the fieldsets:
+  - Targeted all `fieldset` elements and set the following rules:
+    - `display: flex`
+    - `flex-direction: column`
+    - `justify-content: flex-start`
+    - `border: none`
+    - `padding: 0 0 2rem 0`
+
+**To test these changes:**
+
+1. Open `02-article.html` in your web browser.
+2. Verify that the form in the "Leave a Comment" section is organized into two fieldsets as described.
+
+After making the changes (`02-article.html`), the form is organized into fieldsets for better structure and accessibility, even though the rendering appears the same because the `<legend>` tags are hidden.
+
+![Screenshot 2024-06-09 153633](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/4a995d07-1c5c-4d8c-b29d-e59cdd1e7f83)
