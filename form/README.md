@@ -127,6 +127,23 @@ The goal of this task is to add input fields to the form for user data collectio
 
 
 
+### Task 4: Add Help Messages
+The goal of this task is to add help messages to the form fields, providing users with guidance on the required input format.
 
+**How we accomplished this:**
 
+- In `05-article.html`, we added help messages to the form fields:
+  - After each input inside the `span` with `form-field-container` class, we added an empty `<i>` with the `class form-field-icon`.
+  - Added paragraphs with the class `form-help` inside the `div` with `form-field` class to provide instructions for the First Name, Last Name, Title, and Comment fields.
+  
+- In `05-styles.css`, we styled the help messages:
+  - Added styles for the `.form-group`, `.form-field-container`, `.form-field-icon`, and .`form-help` classes to ensure the help messages are displayed correctly and provide useful feedback to users.
 
+**To test these changes:**
+
+Open `05-article.html` in your web browser.
+Verify that help messages appear for the input fields when they are focused, providing guidance on the required input format.
+
+**Final rendering when “Last name” is focused:**
+
+![05-article](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/895742ae-88ff-41ba-905f-bcdafc7360f7)
