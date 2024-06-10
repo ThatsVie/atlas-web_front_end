@@ -95,3 +95,38 @@ The goal of this task is to add labels and input containers to the form for bett
 2. Verify that the form now includes labels and input containers for "First Name," "Last Name," "Email," "Title," and "Comment" fields, along with a "Post my comment" button.
 
 ![03-article](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/84d6619c-e256-4fef-8525-e97346de9422)
+
+
+### Task 3: Create the Inputs
+The goal of this task is to add input fields to the form for user data collection.
+
+**How we accomplished this:**
+
+- In `04-article.html`, we modified the form by adding input fields:
+  - In the first fieldset:
+    - In the first span of the `form-field-container` class, we added an input field for "First Name."
+    - In the second span of the `form-field-container` class, we added an input field for "Last Name."
+    - In the third span of the `form-field-container` class, we added an input field for "Email."
+  - In the second fieldset:
+    - In the first span of the `form-field-container` class, we added an input field for "Title."
+    - In the second span of the `form-field-container` class, we added a textarea for "Comment."
+
+- In `04-styles.css`, we added styles for the input fields and textarea:
+  - Set the position to `relative`, width to `100%`, padding to `1.2rem`, line-height to `1`, border to `.1rem solid var(--color-black)`, background-color to `var(--color-white)`, box-shadow to `none`, and outline to `0`.
+  - Set the padding-right to `3rem` for input fields.
+  - Set the focus state for input fields and textarea with a border of `.1rem solid var(--color-grey)` and background-color of `var(--color-light-grey)`.
+  - Added styles for the placeholder with `font-style: italic` and `font-size: var(--font-size-small)`.
+
+**To test these changes:**
+
+1. Open `04-article.html` in your web browser.
+2. Verify that the form now includes input fields for "First Name," "Last Name," "Email," "Title," and a textarea for "Comment," with appropriate styling and placeholder text.
+
+
+![04-article](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/bd09c4a4-cb60-4558-b9b5-2bb89bcb288e)
+
+
+
+
+
+
