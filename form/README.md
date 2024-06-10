@@ -172,3 +172,56 @@ After making the changes (`06-article.html`), error and valid icons appear next 
 
 
 ![06-article](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/8b03e5b0-389f-49ec-807b-54deb70eb0b1)
+
+
+### Task 6: Add the Search Form
+The goal of this task is to add a search form to the navigation bar.
+
+**How we accomplished this:**
+
+- In `07-article.html`, we modified the navigation bar to include a search form:
+  - Added a new `<li>` with the `nav-item` class.
+  - Inside this `<li>`, created a `<form>` with the class `form-search`, containing an input field and a search button with an SVG icon.
+    
+- In `07-styles.css`, we added styles for the search form:
+  - Styled the `.form-search` class to display the search form correctly.
+  - Styled the `.search-button` class and its child `.search-icon`.
+  - Styled the `input[type="search"]` to ensure it expands on focus.
+  
+**To test these changes:**
+
+1. Open `07-article.html` in your web browser.
+2. Verify that a search form appears in the navigation bar with an input field and search button.
+
+
+**Final rendering of the search button**
+
+![search button](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/bd47fe18-51bd-4d17-9259-127f8364c807)
+
+
+**Final rendering of the search focus**
+
+![search with focus](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/d839e196-7411-4eef-a0a6-cb9548a7db41)
+
+
+**Final rendering of the search focus with text**
+
+![search focus with text](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/ea9cdd4a-5f8d-427f-b15c-45a2385ba972)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
