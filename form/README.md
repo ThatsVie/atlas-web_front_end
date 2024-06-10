@@ -39,7 +39,8 @@ The initial implementation (`00-article.html`) did not have a comment section at
 
 After making the changes (`01-article.html`), a "Leave a Comment" section appears with the required fields and styling, as shown in the final rendering image.
 
-![01-article.html](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/6204475e-8e61-4c4e-aeb2-c62c5f614dc4)
+![01-article](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/4b2aaec8-e107-46a4-8824-3d4c8afcb0ec)
+
 
 ### Task 1: Add Fieldsets to the Comment Form
 The goal of this task is to organize the comment form into fieldsets to improve structure and accessibility.
@@ -70,9 +71,10 @@ The goal of this task is to organize the comment form into fieldsets to improve 
 1. Open `02-article.html` in your web browser.
 2. Verify that the form in the "Leave a Comment" section is organized into two fieldsets as described.
 
-After making the changes (`02-article.html`), the form is organized into fieldsets for better structure and accessibility.
+After making the changes (`02-article.html`), the form is organized into fieldsets for better structure and accessibility. The appearance of the form remains the same because the legends are visually hidden by default.
 
-![Screenshot 2024-06-09 153633](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/4a995d07-1c5c-4d8c-b29d-e59cdd1e7f83)
+![02-article](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/ac7e89c4-31af-4b6d-87e1-d2ef86740591)
+
 
 ### Task 2: Create Labels and Input Containers
 The goal of this task is to add labels and input containers to the form for better accessibility and usability.
@@ -92,4 +94,4 @@ The goal of this task is to add labels and input containers to the form for bett
 1. Open `03-article.html` in your web browser.
 2. Verify that the form now includes labels and input containers for "First Name," "Last Name," "Email," "Title," and "Comment" fields, along with a "Post my comment" button.
 
-![03-article.html](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/a4b2363c-f10b-44a3-96d3-046eceda291e)
+![03-article](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/84d6619c-e256-4fef-8525-e97346de9422)
