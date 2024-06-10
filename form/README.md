@@ -141,9 +141,34 @@ The goal of this task is to add help messages to the form fields, providing user
 
 **To test these changes:**
 
-Open `05-article.html` in your web browser.
-Verify that help messages appear for the input fields when they are focused, providing guidance on the required input format.
+1. Open `05-article.html` in your web browser.
+2. Verify that help messages appear for the input fields when they are focused, providing guidance on the required input format.
 
 **Final rendering when “Last name” is focused:**
 
 ![05-article](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/895742ae-88ff-41ba-905f-bcdafc7360f7)
+
+
+### Task 5: Add Pure HTML/CSS Error Handling
+The goal of this task is to add error handling to the form fields using HTML and CSS.
+
+**How we accomplished this:**
+
+- In `06-styles.css`, we added variables and error handling styles:
+  - Added custom properties for error and valid colors.
+  - Added styles for input fields to show error and valid icons, and change border colors based on validity.
+  - Updated button styles for the `button-primary` class and its hover state.
+
+**To test these changes:**
+
+1. Open `06-article.html` in your web browser.
+2. Verify that error and valid icons appear next to input fields based on their validity.
+3. Ensure that the button's colors change appropriately on hover.
+
+After making the changes (`06-article.html`), error and valid icons appear next to input fields based on their validity, providing visual feedback.
+
+
+**Final rendering of validation layout**
+
+
+![06-article](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/8b03e5b0-389f-49ec-807b-54deb70eb0b1)
