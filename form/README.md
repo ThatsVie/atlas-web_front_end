@@ -2,6 +2,49 @@
 
 ## Learning Objectives
 
+### How to create an HTML5 form:
+
+In **Task 1**, we started by creating a basic HTML5 form structure. We used the `<form>` tag to define the form, and within it, we added various form elements such as `<fieldset>`, `<legend>`, and `<div>` containers to organize the form inputs.
+
+### How to choose the right input type:
+
+In **Task 3**, we added input fields with appropriate types to the form. We used `<input type="text">` for text inputs like "First Name" and "Last Name", and `<input type="email">` for the email field to ensure proper validation.
+
+### How to constrain a form field with regular expressions:
+
+In **Task 3**, we applied regular expressions to constrain the form fields. The "First Name" field uses the pattern `[A-Za-zÀ-ž\s]{3,}` to allow only letters and spaces with a minimum of three characters.
+
+### How to style inputs for invalid, valid, and required fields:
+
+In **Task 5**, we added CSS styles to visually indicate the validity of form inputs. We used pseudo-classes like `:required:invalid` and `:required:valid` to style inputs based on their validity, changing border colors and displaying icons for valid and invalid states.
+
+### How to build a comment form:
+
+In **Task 0**, we laid the basic structure for the comment form by adding a `<form>` element within a `<section>` and using a header to introduce the form with a heading and a brief instruction.
+
+In **Task 1**, we organized the form fields using `<fieldset>` and `<legend>` elements to group related fields logically, improving both structure and accessibility.
+
+In **Task 2**, we enhanced the form by adding labels and input containers, ensuring each form field is properly labeled and wrapped in a `<div>` with the appropriate classes for better styling and accessibility.
+
+In **Task 3**, we added various input fields to the form, such as `text`, `email`, and `textarea`, with appropriate constraints like `pattern`, `maxlength`, and `required` attributes to ensure proper data entry and validation.
+
+In **Task 4**, we introduced help messages that provide users with guidance on the required input format, enhancing the user experience by adding `<i>` elements for icons and `<p>` elements with class `form-help`.
+
+In **Task 5**, we incorporated CSS-based error handling to give visual feedback on the form fields' validity, using pseudo-elements and state-based styling to indicate valid and invalid inputs clearly.
+
+### How to build a simple search form:
+
+In **Task 6**, we added a search form to the navigation bar. We used the `<form>` tag with `type="search"` for the input field, and included a button with a search icon to submit the form.
+
+### How to create usable and accessible forms:
+
+Throughout tasks 0-6, we ensured the forms were usable and accessible by:
+
+- Adding labels to all form inputs for better accessibility.
+- Using appropriate input types to aid in browser validation and user input.
+- Styling inputs to provide visual feedback on validity.
+- Including help messages and ARIA attributes to guide users in filling out the forms correctly.
+
 ## Tasks and Usage
 
 ### Task 0: Basic Comment Structure
