@@ -12,7 +12,7 @@ In Task 0 The provided HTML file was styled using the Bootstrap CSS framework, v
 The goal of Task 1 was to create a responsive web page using Bootstrap classes. The HTML structure could not be changed; only classes were added. The page includes various blocks styled with Bootstrap utility classes to achieve specific layouts and styling for different screen sizes. Each block's background color represents a different Bootstrap contextual color: primary (blue), success (green), danger (red), and warning (yellow).
 
 **Class Names Summary:**
-This approach to naming classes ensures clarity while maintaining a responsive design across different screen sizes.
+
 
 The class `block-lg-primary` indicates a block within the grid layout designed for large screens with a primary color. `block-lg-success`, `block-lg-danger`, and `block-lg-warning` follow the same naming convention, indicating blocks with success, danger, and warning colors, respectively, for large screens.
 
