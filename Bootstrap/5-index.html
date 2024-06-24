@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Atlas - Web Stack - Bootstrap</title>
+  <meta name="description" content="Bootstrap is a free and open-source CSS framework">
+
+  <!-- Bootstrap CSS for styling -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- Small title for screen width <= 768px -->
+  <h1 class="d-block d-md-none">Small title</h1>
+
+  <!-- Big title for screen width > 768px -->
+  <h1 class="d-none d-md-block">Big title</h1>
+
+  <!-- Container with responsive behavior -->
+  <div class="container-md bg-info p-2 rounded border border-info d-flex justify-content-between">
+    <!-- Left aligned div -->
+    <div class="float-left text-light p-1 border-right border-bottom">Left</div>
+
+    <!-- Middle aligned div, hidden for screen width <= 768px -->
+    <div class="d-none d-md-block text-light p-1 border-left border-right border-bottom shadow">Middle</div>
+
+    <!-- Right aligned div -->
+    <div class="float-right text-light p-1 border-left border-bottom">Right</div>
+  </div>
+</body>
+
+</html>

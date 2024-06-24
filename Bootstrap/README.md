@@ -1,6 +1,98 @@
 # Bootstrap
 This project involves using Bootstrap 4.4 to style a webpage. Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS and JavaScript design templates for typography, forms, buttons, navigation, and other interface components.
 
+## Learning Objectives
+
+### Usage of Containers
+
+Containers are the most basic layout element in Bootstrap and are used to contain, pad, and align your content within a given viewport. Bootstrap comes with three types of containers:
+
+- **.container**: A responsive fixed-width container.
+- **.container-fluid**: A full-width container, spanning the entire width of the viewport.
+- **.container-{breakpoint}**: A responsive container with fixed widths at each breakpoint.
+
+
+**Example from Task 5:**
+```html
+<div class="container-md bg-info p-2 rounded border border-info d-flex justify-content-between">
+    <!-- Responsive container with medium width breakpoint -->
+</div>
+```
+
+### Usage of the Grid System
+
+The Bootstrap grid system is a mobile-first flexbox system for building layouts of all shapes and sizes thanks to a twelve-column system, five default responsive tiers, Sass variables and mixins, and dozens of predefined classes.
+
+- **.row**: Defines a row in the grid system.
+- **.col**: Defines columns within a row. The columns will automatically resize based on the viewport size.
+
+**Example from Task 1:**
+```html
+<div class="row">
+    <div class="col-lg bg-primary text-white text-center">Primary</div>
+    <div class="col-lg bg-success text-white text-center">Success</div>
+    <div class="col-lg bg-danger text-white text-center">Danger</div>
+    <div class="col-lg bg-warning text-white text-center">Warning</div>
+</div>
+```
+
+**Example from Task 3:**
+```html
+<div class="row">
+    <div class="col-sm mt-4">
+        <div class="card">
+            <!-- Card content -->
+        </div>
+    </div>
+    <div class="col-sm mt-4">
+        <div class="card">
+            <!-- Card content -->
+        </div>
+    </div>
+    <div class="col-sm mt-4">
+        <div class="card">
+            <!-- Card content -->
+        </div>
+    </div>
+</div>
+```
+
+### Usage of Components
+
+Bootstrap components are pre-styled building blocks for your web application, providing functionalities such as navigation bars, cards, modals, buttons, alerts, and more.
+
+**Example from Task 3 (Card Component):**
+```html
+<div class="card">
+    <div class="card-header">Coding</div>
+    <img class="card-img-top" src="https://via.placeholder.com/450x200" />
+    <div class="card-body">
+        <h5 class="card-title">HTML</h5>
+        <p class="card-text">Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser.</p>
+        <button class="btn btn-danger" data-toggle="modal" data-target="#playModal">Play with</button>
+    </div>
+    <div class="card-footer">40h</div>
+</div>
+```
+
+
+### Usage of Utilities
+
+Bootstrap utilities are a collection of classes that help you quickly and easily style your content without needing to write custom CSS. These include spacing, text alignment, display properties, and more.
+
+**Example from Task 4:**
+```html
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link active" href="#">Introduction</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Discography</a>
+    </li>
+</ul>
+```
+
+
 ## Tasks
 
 ### Task 0: Reboot Styling
@@ -55,6 +147,44 @@ For the modal, the `modal fade` classes are used for the modal itself, and `moda
 
 
 
+### Task 4: Bob Dylan
 
+The goal of Task 4 was to create a responsive web page using Bootstrap classes. The HTML structure could not be changed. Only classes were added. The page includes tabs for "Introduction" and "Discography," with the latter containing collapsible content for each album.
 
+**Class Names Summary:**
 
+The `container-lg bg-light p-3 mt-4` class wraps the content inside a large container with a light background, padding of 3 units, and a top margin of 4 units. The `mb-4` class adds a bottom margin to the `<h1>` element.
+
+The `nav nav-tabs mb-3` classes style the `<ul>` as a tabbed navigation with a bottom margin of 3 units. Within the tabbed navigation, `nav-item` styles each list item, and `nav-link` styles the links. The `tab-content bg-white p-3` class styles the tab content container with padding of 3 units and a white background.
+
+The `tab-pane fade show active` class makes the "Introduction" tab active by default with a fade effect, while `tab-pane fade` adds a fade effect to the "Discography" tab content. The `list-group` class styles the `<ul>` within the "Discography" tab as a grouped list, and `list-group-item` styles each list item. The  `collapse` class adds collapsible behavior to the album descriptions. The `mt-2` class adds a top margin to the paragraphs within the collapsible sections.
+
+### Task 5: Show/Hide - Screen Size
+
+The objective of Task 5 was to create a responsive web page that changes the display of elements based on the screen size. The HTML structure could not be changed; only Bootstrap classes were added to achieve the desired behaviors and styles.
+
+**Class Names Summary:**
+
+The `d-block d-md-none` class ensures the small title is displayed only for screen widths ≤ 768px, while the `d-none d-md-block` class ensures the big title is displayed only for screen widths > 768px.
+
+The `container-md bg-info p-2 rounded border border-info d-flex justify-content-between` class centers the container, makes it take full width for screen widths ≤ 768px, adds a background color of "info," (cyan), padding on all sides, rounded corners, and uses flexbox layout for wrapping the children with justified space between.
+
+The `float-left text-light p-1 border-right border-bottom` class aligns the left div to the left, adds a light text color(gray), padding on all sides, and a border on the right and bottom.
+
+The `d-none d-md-block text-light p-1 border-left border-right border-bottom shadow` class hides the middle div for screen widths ≤ 768px, adds a light text color, padding on all sides, borders on the right, left, and bottom, and a shadow effect.
+
+The `float-right text-light p-1 border-left border-bottom` class aligns the right div to the right, adds a light text color, padding on all sides, and borders on the left and bottom.
+
+### Task 6: Overwrite CSS
+
+Task 6 involved creating a custom stylesheet to override specific Bootstrap styles and achieve a customized layout. The HTML structure remains unchanged, and all customizations are done through CSS.
+
+**Custom Styles**
+
+For button styling, the `.btn-primary` class sets the primary button with white text, a bright red background, and border. On hover, focus, and active states, the background and border change to a darker red. The `.btn-outline-primary` class sets the outline primary button with bright red text and border. On hover, the background changes to bright red, and the text color becomes white.
+
+For link styling, the `a.text-dark:hover, a.text-dark:focus` class changes the link color to bright red on hover and focus, and removes the underline.
+
+For card styling, the `.card` class sets the card border color to bright red and applies a border radius of 1rem. The `.card-header` class sets the background color of card headers to bright red and the text color to white. The top corners of the card header have a slightly smaller border radius to align with the overall card border radius.
+
+The `.border-bottom` class sets the bottom border color to bright red. The `.text-muted` class sets the text color to a grey shade.
