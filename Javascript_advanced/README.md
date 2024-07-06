@@ -102,7 +102,44 @@ To test the `outer` function:
 ![Screenshot 2024-07-06 132328](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/3f6ed971-cfbb-4435-9cc1-930e8c789ddf)
 
 
+## Task 2: Closure
 
+### Objective
+The goal of this task is to understand and implement closures in JavaScript by creating a function that returns another function, demonstrating how inner functions can access variables from their parent scope.
+
+### Task Description
+1. Write a function named `welcomeMessage` that:
+    - Accepts one argument `fullName` (string).
+    - Returns a new function that alerts `Welcome <fullName>`.
+2. After defining `welcomeMessage`, create three variables:
+    - `guillaume` that contains a call to `welcomeMessage` with "Guillaume" as the argument.
+    - `alex` that contains a call to `welcomeMessage` with "Alex" as the argument.
+    - `fred` that contains a call to `welcomeMessage` with "Fred" as the argument.
+
+### Implementation
+The implementation of the task is as follows:
+```javascript
+function welcomeMessage(fullName) {
+    return function() {
+      alert(`Welcome ${fullName}`);
+    }
+  }
+  var guillaume = welcomeMessage('Guillaume');
+  var alex = welcomeMessage('Alex');
+  var fred = welcomeMessage('Fred');
+  
+  ```
+
+### Usage
+To test the `welcomeMessage` function:
+
+1. Open your web browser and navigate to the developer tools.
+2. Go to the "Console" tab.
+3. Copy and paste the above code into the console.
+4. Execute the following in the console:
+    - `guillaume();` should alert "Welcome Guillaume"
+    - `alex();` should alert "Welcome Alex"
+    - `fred();` should alert "Welcome Fred"
 
 
 
