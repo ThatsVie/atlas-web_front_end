@@ -94,3 +94,23 @@ To test the `outer` function:
 2. Go to the "Console" tab.
 3. Copy and paste the above code into the console.
 4. Run the script by pressing Enter. You should see three alerts in sequence: "Welcome", "Welcome Holberton", and "Welcome Holberton!".
+
+![Screenshot 2024-07-06 132301](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/182fbeff-5db5-4342-bf9f-85a76f814459)
+
+![Screenshot 2024-07-06 132315](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/020bb0a1-f89b-41ac-b473-c70acfae5fd5)
+
+![Screenshot 2024-07-06 132328](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/3f6ed971-cfbb-4435-9cc1-930e8c789ddf)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
