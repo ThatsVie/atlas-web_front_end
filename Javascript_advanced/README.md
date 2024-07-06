@@ -36,7 +36,7 @@ function welcome(firstName, lastName) {
 ### Usage
 To test the `welcome` function:
 
-1. Open your web browser and navigate to the web inspector.
+1. Open your web browser and navigate to the developer tools. (right-click on the page and select "Inspect")
 2. Go to the "Console" tab.
 3. Copy and paste the above code into the console.
 4. Run the `welcome('Holberton', 'School');` function by typing it into the console and pressing Enter. You should see an alert with the message "Welcome Holberton School!"
@@ -48,3 +48,49 @@ To test the `welcome` function:
 ![alert(fullName);](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/2c4cf75a-b588-455d-99ae-a6c659481510)
 
 
+## Task 1: Closure Scope Chain
+
+The goal of this task is to understand and implement closure and scope chains in JavaScript by creating nested functions that access variables from their parent scopes.
+
+### Task Description
+1. Create a variable named `globalVariable` with the value `Welcome`.
+2. Create a function named `outer` that:
+    - Alerts the content of the variable `globalVariable`.
+    - Creates a variable named `course` with the value `Holberton`.
+    - Creates a nested function named `inner` that:
+        - Alerts the content of the variables `globalVariable` and `course` concatenated.
+        - Creates a variable named `exclamation` with the value `!`.
+        - Creates a nested function named `inception` that:
+            - Alerts the content of the variables `globalVariable`, `course`, and `exclamation` concatenated.
+        - Calls the function `inception`.
+    - Calls the function `inner`.
+3. Call the function `outer` in the main code (outside any function).
+
+### Implementation
+The implementation of the task is as follows:
+
+```javascript
+const globalVariable = 'Welcome';
+
+function outer() {
+    alert(globalVariable);
+    const course = 'Holberton';
+    function inner() {
+        alert(globalVariable + ' ' + course);
+        const exclamation = '!';
+        function inception() {
+            alert(globalVariable + ' ' + course + exclamation);
+        }
+        inception();
+    }
+    inner();
+}
+outer();
+```
+### Usage
+To test the `outer` function:
+
+1. Open your web browser and navigate to the developer tools.
+2. Go to the "Console" tab.
+3. Copy and paste the above code into the console.
+4. Run the script by pressing Enter. You should see three alerts in sequence: "Welcome", "Welcome Holberton", and "Welcome Holberton!".
