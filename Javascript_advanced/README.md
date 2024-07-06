@@ -39,11 +39,12 @@ To test the `welcome` function:
 1. Open your web browser and navigate to the web inspector.
 2. Go to the "Console" tab.
 3. Copy and paste the above code into the console.
-4. Run the `welcome('Puggy', 'Wuggy');` function by typing it into the console and pressing Enter. You should see an alert with the message "Welcome Puggy Wuggy!"
+4. Run the `welcome('Holberton', 'School');` function by typing it into the console and pressing Enter. You should see an alert with the message "Welcome Holberton School!"
 
-![welcome('Holberton', 'School');](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/59e2e98b-1de2-41a6-90b7-daac420b7187)
+![welcome('Holberton', 'School');](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/8786a58e-1896-4cd2-b5aa-40f9087180e5)
 
-5. Run `alert(fullName)` in the console, you should get a reference error because fullName is not defined in the global scope, demonstrating lexical scoping.
+5. Run `alert(fullName)` in the console. You should get a reference error because fullName is not defined in the global scope, demonstrating lexical scoping.
 
-![Screenshot 2024-07-06 123650](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/ad60263f-263b-494e-b706-71d920634272)
+![alert(fullName);](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/2c4cf75a-b588-455d-99ae-a6c659481510)
+
 
