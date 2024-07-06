@@ -141,8 +141,11 @@ To test the `welcomeMessage` function:
     - `alex();` should alert "Welcome Alex"
     - `fred();` should alert "Welcome Fred"
 
+![Screenshot 2024-07-06 134815](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/af3602ed-d920-4a14-8a6c-0f776b2745a2)
 
+![Screenshot 2024-07-06 134830](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/31a041b0-5309-490d-b72c-c20c5f1d9517)
 
+![Screenshot 2024-07-06 134845](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/05dbe7a7-03c8-45fb-b583-51bedd94d159)
 
 
 
