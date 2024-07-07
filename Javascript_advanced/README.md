@@ -1,14 +1,209 @@
 # JavaScript Advanced
 
+
 ## Learning Objectives
-### What is lexical scoping in JavaScript
-### What is closure in JavaScript
-### How to use closure
-### How to chain different closures
-### How to simulate private methods with Closure
-### The execution stack order with JavaScript
-### How to use binding
-### How to use callbacks
+
+### What is Lexical Scoping in JavaScript
+<details>
+<summary>
+**Lexical scoping** refers to the scope of a variable being determined by its position within the source code. In other words, a variable defined inside a function is not accessible outside of it, and functions have access to variables defined in their outer scope.</summary>
+
+**Example:**
+In Task 0:
+```javascript
+function welcome(firstName, lastName) {
+    const fullName = `${firstName} ${lastName}`;
+    function displayFullName() {
+        alert(`Welcome ${fullName}!`);
+    }
+    displayFullName();
+}
+```
+Here, `fullName` is lexically scoped to the `welcome` function and accessible by the `displayFullName` function.</details>
+
+#### What is Closure in JavaScript
+<details>
+<summary>
+A **closure** is a function that retains access to its outer scope even after the outer function has finished executing. Closures are created every time a function is created.</summary>
+
+**Example:**
+In Task 2:
+```javascript
+function welcomeMessage(fullName) {
+    return function() {
+        alert(`Welcome ${fullName}`);
+    };
+}
+
+const guillaume = welcomeMessage('Guillaume');
+guillaume(); // Alerts "Welcome Guillaume"
+```
+Here, the inner function retains access to `fullName` even after `welcomeMessage` has executed.
+</details>
+
+#### How to Use Closure
+<details>
+<summary>
+Closures can be used to create private variables, implement data encapsulation, and maintain state.
+</summary>
+
+**Example:**
+In Task 6:
+```javascript
+const studentHogwarts = (() => {
+    let privateScore = 0;
+    let name = null;
+
+    function changeScoreBy(points) {
+        privateScore += points;
+    }
+
+    return {
+        setName(newName) {
+            name = newName;
+        },
+        rewardStudent() {
+            changeScoreBy(1);
+        },
+        penalizeStudent() {
+            changeScoreBy(-1);
+        },
+        getScore() {
+            return `${name}: ${privateScore}`;
+        }
+    };
+})();
+```
+Here, `privateScore` and `name` are private variables, and their state is maintained through closures.
+</details>
+
+#### How to Chain Different Closures
+<details>
+<summary>
+Chaining closures involves having functions return other functions that form a chain of function calls, each with access to the previous function's scope.</summary>
+
+**Example:**
+In Task 4:
+```javascript
+function addBy(firstNumber) {
+    return function(secondNumber) {
+        return firstNumber + secondNumber;
+    };
+}
+
+const addBy100 = addBy(100);
+console.log(addBy100(20)); // Outputs 120
+```
+Here, `addBy` returns a function that uses the scope of its parent function.
+</details>
+
+#### How to Simulate Private Methods with Closure
+<details>
+<summary>
+Private methods can be simulated by defining functions within closures that are not exposed outside their scope.</summary>
+
+**Example:**
+In Task 6:
+```javascript
+const studentHogwarts = (() => {
+    let privateScore = 0;
+
+    function changeScoreBy(points) {
+        privateScore += points;
+    }
+
+    return {
+        rewardStudent() {
+            changeScoreBy(1);
+        },
+        penalizeStudent() {
+            changeScoreBy(-1);
+        }
+    };
+})();
+```
+Here, `changeScoreBy` is a private method that is not accessible outside the closure.
+</details>
+
+#### The Execution Stack Order with JavaScript
+<details>
+<summary>
+The execution stack order determines the sequence in which functions are executed in JavaScript. The event loop and `setTimeout` can affect this order.</summary>
+
+**Example:**
+In Task 7:
+```javascript
+console.log('Start of the execution queue');
+
+setTimeout(() => {
+    console.log('Final code block to be executed');
+}, 0);
+
+for (let i = 1; i <= 100; i++) {
+    console.log(i);
+}
+
+console.log('End of the loop printing');
+```
+The `setTimeout` function defers the callback execution, demonstrating the execution stack order.
+</details>
+
+#### How to Use Binding
+<details>
+<summary>
+**Binding** is used to set the `this` value for a function, ensuring that it has the correct context.
+</summary>
+
+**Example:**
+In Task 12:
+```javascript
+const roomDimensions = {
+    width: 50,
+    length: 100,
+    getArea: function() {
+        return this.width * this.length;
+    }
+};
+
+const boundGetArea = roomDimensions.getArea.bind(roomDimensions);
+console.log(boundGetArea()); // Outputs 5000
+```
+Here, `bind` ensures that `this` refers to `roomDimensions` when `getArea` is called.
+</details>
+
+#### How to Use Callbacks
+<details>
+<summary>
+**Callbacks** are functions passed as arguments to other functions and are executed within the outer function to complete some kind of action or routine.</summary>
+
+**Example:**
+In Task 14:
+```javascript
+function createElement(data) {
+    const paragraph = document.createElement('p');
+    paragraph.textContent = data;
+    document.body.appendChild(paragraph);
+}
+
+function queryWikipedia(callback) {
+    const xhr = new XMLHttpRequest();
+    const url = 'https://en.wikipedia.org/w/api.php?...';
+
+    xhr.open('GET', url, true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            const response = JSON.parse(xhr.responseText);
+            const extract = response.query.pages[Object.keys(response.query.pages)[0]].extract;
+            callback(extract);
+        }
+    };
+    xhr.send();
+}
+
+queryWikipedia(createElement);
+```
+Here, `queryWikipedia` uses `createElement` as a callback to process the data after fetching it from Wikipedia.
+</details>
 
 ## Requirements
 - Allowed editors: vi, vim, emacs, Visual Studio Code
