@@ -13,8 +13,9 @@
 ## Tasks and Usage
 
 <details>
-<summary>## Task 0: Lexical Scoping and Welcome Message </summary>
-The goal of this task is to understand and implement lexical scoping in JavaScript by creating a function that displays a welcome message.
+<summary> Task 0: Lexical Scoping and Welcome Message
+
+The goal of this task is to understand and implement lexical scoping in JavaScript by creating a function that displays a welcome message. </summary>
 
 ### Task Description
 Create a function named `welcome` that takes two arguments: `firstName` (string) and `lastName` (string). Within this function:
@@ -52,9 +53,9 @@ To test the `welcome` function:
 
 </details>
 <details>
-<summary>## Task 1: Closure Scope Chain</summary>
+<summary> Task 1: Closure Scope Chain
 
-The goal of this task is to understand and implement closure and scope chains in JavaScript by creating nested functions that access variables from their parent scopes.
+The goal of this task is to understand and implement closure and scope chains in JavaScript by creating nested functions that access variables from their parent scopes. </summary>
 
 ### Task Description
 1. Create a variable named `globalVariable` with the value `Welcome`.
@@ -107,9 +108,9 @@ To test the `outer` function:
 
 </details>
 <details>
-<summary>## Task 2: Closure</summary>
+<summary> Task 2: Closure
 
-The goal of this task is to understand and implement closures in JavaScript by creating a function that returns another function, demonstrating how inner functions can access variables from their parent scope.
+The goal of this task is to understand and implement closures in JavaScript by creating a function that returns another function, demonstrating how inner functions can access variables from their parent scope. </summary>
 
 ### Task Description
 1. Write a function named `welcomeMessage` that:
@@ -153,9 +154,9 @@ To test the `welcomeMessage` function:
 
 </details>
 <details>
-<summary>## Task 3: Closure and Loops </summary>
+<summary> Task 3: Closure and Loops
 
-The goal of this task is to understand and implement closures within loops in JavaScript by creating functions that capture the loop variable.
+The goal of this task is to understand and implement closures within loops in JavaScript by creating functions that capture the loop variable. </summary>
 
 ### Task Description
 1. Write a function named `createClassRoom` that:
@@ -196,11 +197,14 @@ To test the `createClassRoom` function:
     - `console.log(classRoom[3]());` should return `4`
     - `console.log(classRoom[9]());` should return `10`
 
+![Screenshot 2024-07-07 124331](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/d8d57777-a6aa-47c2-b6d4-11684ed5ee4b)
+
+
 </details>
 <details>
-<summary>## Task 4: Complex Closure </summary>
+<summary> Task 4: Complex Closure
 
-The goal of this task is to understand and implement complex closures in JavaScript by creating functions that return other functions, demonstrating how inner functions can perform mathematical operations using their parent scope's variables.
+The goal of this task is to understand and implement complex closures in JavaScript by creating functions that return other functions, demonstrating how inner functions can perform mathematical operations using their parent scope's variables. </summary>
 
 ### Task Description
 1. Create a function named `divideBy` that:
@@ -249,11 +253,15 @@ To test the `divideBy` and `addBy` functions:
     - `console.log(divideBy10(20));` should display `2`
     - `console.log(divideBy100(200));` should display `2`
     - `console.log(addBy1000(20));` should display `1020`
+  
+![Screenshot 2024-07-07 125036](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/97a7e0e2-132f-4737-ab15-2d6a5041a8bb)
+
+
 </details>
 <details>
-<summary>## Task 5: Changing DOM with Closure </summary>
+<summary> Task 5: Changing DOM with Closure
 
-The goal of this task is to understand and implement closures in JavaScript by creating a function that changes the style of the entire page. This function will demonstrate how closures can be used to encapsulate functionality and maintain state.
+The goal of this task is to understand and implement closures in JavaScript by creating a function that changes the style of the entire page. This function will demonstrate how closures can be used to encapsulate functionality and maintain state. </summary>
 
 ### Task Description
 1. Create a function named `changeMode` that:
@@ -335,6 +343,22 @@ main();
 3. You should see a paragraph with the text "Welcome Holberton!" and three buttons: "Spooky", "Dark mode", and "Scream mode".
 4. Clicking each button should change the page's CSS to the corresponding theme.
 
+**Start Screen**
+
+![Screenshot 2024-07-07 133924](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/a5764c71-8318-478f-9058-b8e8f16e2b80)
+
+**Spooky**
+
+![Screenshot 2024-07-07 133936](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/55a7a623-8a4a-4ab9-8464-5bfe7578aebc)
+
+**Dark Mode**
+![Screenshot 2024-07-07 134002](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/d2e8276b-ef46-4706-9995-d83196ecbaf7)
+
+
+**Scream Mode**
+
+![Screenshot 2024-07-07 134017](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/a0258d24-9c82-4b05-8d61-1219951dcd25)
+
 ### Explanation
 
 - The `changeMode` function accepts five arguments (size, weight, transform, background, color) and returns a function that changes the style of the entire page based on these arguments.
@@ -345,9 +369,9 @@ main();
 
 </details>
 <details>
-<summary>## Task 6: Private Methods with Closure </summary>
+<summary> Task 6: Private Methods with Closure
 
-The goal of this task is to understand and implement private methods in JavaScript using closures. This will demonstrate how closures can be used to encapsulate and protect internal state within a module.
+The goal of this task is to understand and implement private methods in JavaScript using closures. This will demonstrate how closures can be used to encapsulate and protect internal state within a module. </summary>
 
 ### Task Description
 1. Write a module named `studentHogwarts` that:
@@ -426,6 +450,8 @@ console.log(draco.getScore()); // Should display "Draco: -2"
     Draco: -2
     ```
 
+![Screenshot 2024-07-07 134823](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/7e1d700d-83f3-4fbe-b54f-cdff45627f2a)
+
 ### Explanation
 
 - The `studentHogwarts` module is defined as a function that returns an object with four public methods: `setName`, `rewardStudent`, `penalizeStudent`, and `getScore`.
@@ -437,8 +463,8 @@ console.log(draco.getScore()); // Should display "Draco: -2"
 
 </details>
 <details>
-<summary>## Task 7: Stack Order and setTimeout</summary>
-The goal of this task is to understand the execution order in JavaScript, especially how the event loop and the call stack work with `setTimeout`.
+<summary> Task 7: Stack Order and setTimeout
+The goal of this task is to understand the execution order in JavaScript, especially how the event loop and the call stack work with `setTimeout`. </summary>
 
 ### Task Description
 1. Write the following commands in the specified order:
@@ -490,14 +516,19 @@ Final code block to be executed
 2. Go to the "Console" tab.
 3. Copy and paste the above code into the console and run it.
 4. You should see the expected output in the console as described above.
+5. 
+![Screenshot 2024-07-07 140117](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/e696012c-1a72-425b-8ddb-e99c2945f532)
+
+![Screenshot 2024-07-07 140131](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/c72bca30-5858-4073-98e2-a7d706a475d6)
+
 
 </details>
 <details>
-<summary>
-## Task 8: Stack Order in Functions
+<summary> Task 8: Stack Order in Functions
 
 The goal of this task is to understand the execution order in JavaScript functions by creating a process order flow that involves logging messages to the console in a specific sequence.
 </summary>
+
 ### Task Description
 1. Write a function named `processPayment` that:
     - Takes one argument `amount` (number).
@@ -562,6 +593,9 @@ All the orders have been processed
 2. Go to the "Console" tab.
 3. Copy and paste the above code into the console and run it.
 4. You should see the expected output in the console as described above.
+
+![Screenshot 2024-07-07 141735](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/21f622d4-eec0-476e-aac9-ee1de5b326a1)
+
 
 ### Explanation
 - **processPayment**: This function takes an `amount` as an argument and logs the message `Collecting payment of <amount>` to the console.
