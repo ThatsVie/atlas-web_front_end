@@ -840,6 +840,7 @@ console.log(`Number of prime numbers between 2 and 100: ${totalPrimes}`);
 3. Copy and paste the above code into the console and run it.
 4. You should see the execution time and the number of prime numbers between 2 and 100 displayed in the console.
 
+![Screenshot 2024-07-07 155154](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/093dcdaa-943a-4a0c-a8f7-601ef1821b17)
 
 
 ### Explanation
@@ -904,6 +905,12 @@ console.log(`Execution time of calculating prime numbers 100 times was ${endTime
 2. Go to the "Console" tab.
 3. Copy and paste the above code into the console and run it.
 4. You should see the execution time displayed in the console.
+
+![Screenshot 2024-07-07 162755](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/700112a2-ee8d-4862-b94e-1db245849127)
+
+
+![Screenshot 2024-07-07 162811](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/942fa1c4-a77c-4d1b-92c4-6579132a72d4)
+
 
 ### Explanation
 - **countPrimeNumbers**: This function counts the number of prime numbers between 2 and 100.
@@ -981,6 +988,9 @@ Execution time of calculating prime numbers 100 times was 0.03999999910593033 mi
 2. Go to the "Console" tab.
 3. Copy and paste the above code into the console and run it.
 
+![Screenshot 2024-07-07 165700](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/ec431238-da96-45a0-ad11-1ca5f3d63794)
+
+
 </details>
 <details>
 <summary>Task 12: Binding
@@ -1031,6 +1041,9 @@ To test the `boundGetArea` function:
 2. Go to the "Console" tab.
 3. Copy and paste the above code into the console.
 4. Run `boundGetArea();` by typing it into the console and pressing Enter. You should see `5000` displayed.
+
+![Screenshot 2024-07-07 171037](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/fcdb528b-ed67-4793-b208-64993d850b3e)
+
 
 </details>
 <details>
@@ -1095,6 +1108,9 @@ To test the `bindLogWelcomeUser` function:
 3. Copy and paste the above code into the console.
 4. Run `bindLogWelcomeUser('Welcome');` by typing it into the console and pressing Enter. You should see `Welcome, Buillaume. Your occupation is: Engineer` displayed.
 5. Run `bindLogWelcomeUser('Hello');` by typing it into the console and pressing Enter. You should see `Hello, Buillaume. Your occupation is: Engineer` displayed.
+
+![Screenshot 2024-07-07 172325](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/bba5d63a-e97d-4958-8a3a-56638f2d4d2d)
+
 </details>
 <details>
 <summary>Task 14: Simple Callback
@@ -1174,6 +1190,8 @@ To test the functionality:
 
 ### Expected Output
 The introductory content of the Stack Overflow article from Wikipedia should be displayed as a paragraph on the web page.
+![Screenshot 2024-07-07 173732](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/1044c981-d4e1-4566-9dd7-9b1f52023607)
+
 </details>
 <details>
 <summary>Task 15: Multiple Callbacks
@@ -1274,4 +1292,28 @@ To test the functionality:
 
 ### Expected Output
 You will see messages indicating whether the item is in stock, whether the payment is being processed, or if there is an error due to no stock or an unrecognized item.
+
+![Screenshot 2024-07-07 175040](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/1d02c98c-3828-44a8-ac1a-e8cbefb6f7c2)
+
+![Screenshot 2024-07-07 175101](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/2a6fb323-ebd5-46b5-9bdd-ff860cd961a0)
+
+![Screenshot 2024-07-07 175126](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/0b3a9e38-20cc-4c50-aa61-607320178c9c)
+
+![Screenshot 2024-07-07 175141](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/31a69209-ea28-45aa-b299-ef876bd9fead)
+
+![Screenshot 2024-07-07 175156](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/61fab0a3-512c-4025-9783-fb31e485cb09)
+
+![Screenshot 2024-07-07 175213](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/a5f33453-ffbb-4d03-8413-2dcf313305b4)
+
+
+
+
+
+
+
+
+
+
+
+
 </details>
