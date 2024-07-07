@@ -5,7 +5,7 @@
 ### What is Lexical Scoping in JavaScript
 <details>
 <summary>
-**Lexical scoping** refers to the scope of a variable being determined by its position within the source code. In other words, a variable defined inside a function is not accessible outside of it, and functions have access to variables defined in their outer scope.</summary>
+Lexical scoping refers to the scope of a variable being determined by its position within the source code. In other words, a variable defined inside a function is not accessible outside of it, and functions have access to variables defined in their outer scope.</summary>
 
 **Example:**
 In Task 0:
@@ -23,7 +23,7 @@ Here, `fullName` is lexically scoped to the `welcome` function and accessible by
 ### What is Closure in JavaScript
 <details>
 <summary>
-A **closure** is a function that retains access to its outer scope even after the outer function has finished executing. Closures are created every time a function is created.</summary>
+A closure is a function that retains access to its outer scope even after the outer function has finished executing. Closures are created every time a function is created.</summary>
 
 **Example:**
 In Task 2:
@@ -150,7 +150,7 @@ The `setTimeout` function defers the callback execution, demonstrating the execu
 ### How to Use Binding
 <details>
 <summary>
-**Binding** is used to set the `this` value for a function, ensuring that it has the correct context.
+Binding is used to set the `this` value for a function, ensuring that it has the correct context.
 </summary>
 
 **Example:**
@@ -173,7 +173,7 @@ Here, `bind` ensures that `this` refers to `roomDimensions` when `getArea` is ca
 ### How to Use Callbacks
 <details>
 <summary>
-**Callbacks** are functions passed as arguments to other functions and are executed within the outer function to complete some kind of action or routine.</summary>
+Callbacks are functions passed as arguments to other functions and are executed within the outer function to complete some kind of action or routine.</summary>
 
 **Example:**
 In Task 14:
@@ -1097,9 +1097,7 @@ To test the `bindLogWelcomeUser` function:
 5. Run `bindLogWelcomeUser('Hello');` by typing it into the console and pressing Enter. You should see `Hello, Buillaume. Your occupation is: Engineer` displayed.
 </details>
 <details>
-<summary>
-
- Task 14: Simple Callback
+<summary>Task 14: Simple Callback
 
 The goal of this task is to understand how to use callbacks in JavaScript by fetching data from an API and dynamically creating an HTML element to display the data. </summary>
 
