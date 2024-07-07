@@ -10,6 +10,12 @@
 ### How to use binding
 ### How to use callbacks
 
+## Requirements
+- Allowed editors: vi, vim, emacs, Visual Studio Code
+- All your files should end with a new line
+- A README.md file, at the root of the folder of the project, is mandatory
+- Your code should use the js extension
+
 ## Tasks and Usage
 
 <details>
@@ -571,28 +577,12 @@ processOrder(12323, 15.0);
 console.log('All the orders have been processed');
 ```
 
-### Expected Output
-Your code should log the following to the console:
-```
-Processing orders
-12321 is being processed
-Collecting payment of 10.99
-12321 has been fully processed
-12322 is being processed
-Collecting payment of 12.99
-12322 has been fully processed
-12323 is being processed
-Collecting payment of 15
-12323 has been fully processed
-All the orders have been processed
-```
-
 ### How to Test
 
 1. Open your web browser and navigate to the developer tools.
 2. Go to the "Console" tab.
 3. Copy and paste the above code into the console and run it.
-4. You should see the expected output in the console as described above.
+4. You should see the expected output in the console as below.
 
 ![Screenshot 2024-07-07 141735](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/21f622d4-eec0-476e-aac9-ee1de5b326a1)
 
@@ -602,5 +592,494 @@ All the orders have been processed
 - **processOrder**: This function takes `orderId` and `amount` as arguments, logs the message `<orderId> is being processed`, calls `processPayment` with the `amount`, and then logs the message `<orderId> has been fully processed`.
 - In the main part of the code, we first log `Processing orders` to the console.
 - We then call `processOrder` three times with different `orderId` and `amount` values.
-- Finally, we log `All the orders have been processed` to the console.
+- We log `All the orders have been processed` to the console.
+</details>
+
+<details>
+<summary> Task 9: Prime Numbers & Timing Execution
+
+The goal of this task is to understand how to measure the execution time of a function using the performance API and to count the number of prime numbers between 2 and 100. </summary>
+
+### Task Description
+1. Write a function named `countPrimeNumbers` that:
+    - Returns the number of prime numbers from 2 to 100.
+
+2. Log to the console the time in milliseconds to execute the function in this format:
+    ```
+    Execution time of printing countPrimeNumbers was <time used> milliseconds.
+    ```
+
+### Implementation
+The implementation of the task is as follows:
+
+```javascript
+function countPrimeNumbers() {
+    let primeCount = 0;
+
+    for (let num = 2; num <= 100; num++) {
+        let isPrimeNumber = true;
+        for (let divisor = 2; divisor <= Math.sqrt(num); divisor++) {
+            if (num % divisor === 0) {
+                isPrimeNumber = false;
+                break;
+            }
+        }
+        if (isPrimeNumber) {
+            primeCount++;
+        }
+    }
+
+    return primeCount;
+}
+
+const startTime = performance.now();
+const totalPrimes = countPrimeNumbers();
+const endTime = performance.now();
+console.log(`Execution time of printing countPrimeNumbers was ${endTime - startTime} milliseconds.`);
+console.log(`Number of prime numbers between 2 and 100: ${totalPrimes}`);
+```
+
+### How to Test
+
+1. Open your web browser and navigate to the developer tools.
+2. Go to the "Console" tab.
+3. Copy and paste the above code into the console and run it.
+4. You should see the execution time and the number of prime numbers between 2 and 100 displayed in the console.
+
+
+
+### Explanation
+- **countPrimeNumbers**: This function iterates from 2 to 100, checking each number to see if it is prime. It counts the number of prime numbers in this range and returns the count.
+- **performance.now()**: This API is used to measure the time before and after calling `countPrimeNumbers` to determine how long the function takes to execute.
+- The execution time and the count of prime numbers are logged to the console.
+</details>
+
+<details>
+<summary>
+Task 10: Execution Stack & Timing Execution
+
+The goal of this task is to measure the execution time of a function that calculates prime numbers, by executing it 100 times, using the performance API. </summary>
+
+### Task Description
+1. Reuse the function `countPrimeNumbers` from `9-prime.js`:
+    - This function will return the number of prime numbers from 2 to 100.
+
+2. Execute the function `countPrimeNumbers` 100 times.
+3. Log to the console the time in milliseconds to execute the function 100 times in this format:
+    ```
+    Execution time of calculating prime numbers 100 times was <time used> milliseconds.
+    ```
+
+### Implementation
+The implementation of the task is as follows:
+
+```javascript
+
+function countPrimeNumbers() {
+    let primeCount = 0;
+
+    for (let num = 2; num <= 100; num++) {
+        let isPrimeNumber = true;
+        for (let divisor = 2; divisor <= Math.sqrt(num); divisor++) {
+            if (num % divisor === 0) {
+                isPrimeNumber = false;
+                break;
+            }
+        }
+        if (isPrimeNumber) {
+            primeCount++;
+        }
+    }
+
+    return primeCount;
+}
+
+const startTime = performance.now();
+for (let i = 0; i < 100; i++) {
+    countPrimeNumbers();
+    console.log(`Execution number ${i + 1}`);
+}
+const endTime = performance.now();
+console.log(`Execution time of calculating prime numbers 100 times was ${endTime - startTime} milliseconds.`);
+
+```
+
+### How to Test
+
+1. Open your web browser and navigate to the developer tools.
+2. Go to the "Console" tab.
+3. Copy and paste the above code into the console and run it.
+4. You should see the execution time displayed in the console.
+
+### Explanation
+- **countPrimeNumbers**: This function counts the number of prime numbers between 2 and 100.
+- The function is executed 100 times in a loop.
+- **performance.now()**: This API is used to measure the time before and after the loop to determine how long it takes to execute the function 100 times.
+- The execution time is logged to the console.
+</details>
+
+<details>
+<summary>
+Task 11: Changing Stack Order using setTimeout
+
+The goal of this task is to measure the execution time of a function that calculates prime numbers, by executing it 100 times, and ensuring the calculations are done at the end of the execution stack using `setTimeout`. </summary>
+
+### Task Description
+1. Reuse the function `countPrimeNumbers` from `10-prime.js`:
+    - This function will return the number of prime numbers from 2 to 100.
+
+2. Use `setTimeout` to defer the execution of the function `countPrimeNumbers` 100 times to the end of the execution stack.
+3. Log to the console the time in milliseconds to execute the function 100 times in this format:
+    ```
+    Execution time of calculating prime numbers 100 times was <time used> milliseconds.
+    ```
+
+### Implementation
+The implementation of the task is as follows:
+
+```javascript
+(function() {
+    function countPrimeNumbers() {
+        let primeCount = 0;
+
+        for (let num = 2; num <= 100; num++) {
+            let isPrimeNumber = true;
+            for (let divisor = 2; divisor <= Math.sqrt(num); divisor++) {
+                if (num % divisor === 0) {
+                    isPrimeNumber = false;
+                    break;
+                }
+            }
+            if (isPrimeNumber) {
+                primeCount++;
+            }
+        }
+
+        return primeCount;
+    }
+
+    const startTime = performance.now();
+    setTimeout(() => {
+        for (let i = 0; i < 100; i++) {
+            countPrimeNumbers();
+        }
+        const endTime = performance.now();
+        console.log(`Execution time of calculating prime numbers 100 times was ${endTime - startTime} milliseconds.`);
+    }, 0);
+})();
+```
+
+### Explanation
+
+- **setTimeout**: The `setTimeout` function in JavaScript allows you to schedule a function to be executed after a specified delay (in milliseconds). When `0` milliseconds is specified, it defers the function execution until after the current event loop cycle, effectively pushing it to the end of the current stack. This ensures that the code inside `setTimeout` runs asynchronously.
+
+- **IIFE (Immediately Invoked Function Expression)**: An IIFE is a function that runs as soon as it is defined. It creates a local scope for the variables and functions within it, preventing them from polluting the global scope. In this task, the IIFE is used to encapsulate the code, ensuring that the variables and functions do not interfere with other scripts or commands in the console.
+
+### Expected Output
+Your code should display something similar to:
+```
+Execution time of calculating prime numbers 100 times was 0.03999999910593033 milliseconds.
+```
+
+### How to Test
+
+1. Open your web browser and navigate to the developer tools.
+2. Go to the "Console" tab.
+3. Copy and paste the above code into the console and run it.
+
+</details>
+<details>
+<summary>Task 12: Binding
+
+The goal of this task is to understand how to use the `bind` method in JavaScript to ensure that the `this` context is correctly set when calling a function. </summary>
+
+### Task Description
+1. Create an object named `roomDimensions` with the following three attributes:
+    - `width`: 50
+    - `length`: 100
+    - `getArea`: A function that returns the surface area of the object using the `width` and `length`.
+
+2. Create a variable named `boundGetArea` that will bind the object `roomDimensions` to the `getArea` function.
+
+### Implementation
+The implementation of the task is as follows:
+
+```javascript
+
+const roomDimensions = {
+    width: 50,
+    length: 100,
+    getArea: function() {
+        return this.width * this.length;
+    }
+};
+
+const boundGetArea = roomDimensions.getArea.bind(roomDimensions);
+
+console.log(boundGetArea()); // Should display 5000
+```
+
+### Explanation
+
+- **roomDimensions Object**: This object has three attributes: `width`, `length`, and `getArea`.
+  - `width`: The width of the room.
+  - `length`: The length of the room.
+  - `getArea`: A function that calculates the area of the room using `width` and `length`.
+
+- **bind Method**: The `bind` method creates a new function that, when called, has its `this` keyword set to the provided value. In this case, `roomDimensions.getArea.bind(roomDimensions)` creates a new function where `this` inside `getArea` refers to the `roomDimensions` object.
+
+- **boundGetArea**: This variable stores the bound function created by `bind`, ensuring that `getArea` will correctly refer to the `roomDimensions` object when called.
+
+### Usage
+To test the `boundGetArea` function:
+
+1. Open your web browser and navigate to the developer tools.
+2. Go to the "Console" tab.
+3. Copy and paste the above code into the console.
+4. Run `boundGetArea();` by typing it into the console and pressing Enter. You should see `5000` displayed.
+
+</details>
+<details>
+<summary>Task 13: Binding + Closure
+
+The goal of this task is to understand how to use the `bind` method in conjunction with closures to ensure that the `this` context is correctly set when calling a function. </summary>
+
+### Task Description
+1. Write an object named `user` with the following attributes:
+    - `hobby`: Calligraphy
+    - `favoriteSport`: Hockey
+    - `astrologicalSign`: Aries
+    - `firstName`: Buillaume
+    - `lastName`: Johns
+    - `location`: Netherlands
+    - `occupation`: Engineer
+
+2. Create a function named `logWelcomeUser` that:
+    - Takes one argument `welcomeString` (String).
+    - Logs to the console `<welcomeString>, <firstName>. Your occupation is: <occupation>`.
+
+3. Create a variable named `bindLogWelcomeUser` that binds the `logWelcomeUser` function to the `user` object.
+4. Call the function with the string `Welcome`.
+
+### Implementation
+The implementation of the task is as follows:
+
+```javascript
+
+const user = {
+    hobby: 'Calligraphy',
+    favoriteSport: 'Hockey',
+    astrologicalSign: 'Aries',
+    firstName: 'Buillaume',
+    lastName: 'Johns',
+    location: 'Netherlands',
+    occupation: 'Engineer'
+};
+
+function logWelcomeUser(welcomeString) {
+    console.log(`${welcomeString}, ${this.firstName}. Your occupation is: ${this.occupation}`);
+}
+
+const bindLogWelcomeUser = logWelcomeUser.bind(user);
+
+//  usage
+bindLogWelcomeUser('Welcome'); // Should display "Welcome, Buillaume. Your occupation is: Engineer"
+```
+
+### Explanation
+
+- **user Object**: This object has multiple attributes: `hobby`, `favoriteSport`, `astrologicalSign`, `firstName`, `lastName`, `location`, and `occupation`.
+- **logWelcomeUser Function**: This function takes one argument, `welcomeString`, and logs a welcome message that includes the user's first name and occupation using `this`.
+- **bind Method**: The `bind` method is used to create a new function (`bindLogWelcomeUser`) with `this` bound to the `user` object.
+- **Example Usage**: Calling `bindLogWelcomeUser('Welcome')` logs the welcome message to the console with the bound `this` context.
+
+### Usage
+To test the `bindLogWelcomeUser` function:
+
+1. Open your web browser and navigate to the developer tools (usually accessible by right-clicking on the page and selecting "Inspect" or pressing F12).
+2. Go to the "Console" tab.
+3. Copy and paste the above code into the console.
+4. Run `bindLogWelcomeUser('Welcome');` by typing it into the console and pressing Enter. You should see `Welcome, Buillaume. Your occupation is: Engineer` displayed.
+5. Run `bindLogWelcomeUser('Hello');` by typing it into the console and pressing Enter. You should see `Hello, Buillaume. Your occupation is: Engineer` displayed.
+</details>
+<details>
+<summary>
+
+ Task 14: Simple Callback
+
+The goal of this task is to understand how to use callbacks in JavaScript by fetching data from an API and dynamically creating an HTML element to display the data. </summary>
+
+### Task Description
+1. Write a new function named `createElement` that:
+    - Accepts one argument `data` (String).
+    - Creates a paragraph element.
+    - Sets the content of the paragraph to `data`.
+    - Appends the paragraph to the document body.
+
+2. Write a new function named `queryWikipedia` that:
+    - Accepts one argument `callback` (function).
+    - Uses `XMLHttpRequest` to fetch the Stack Overflow article from Wikipedia's API.
+    - Calls the `callback` function with the extract of the API response once the fetch is successfully completed.
+
+3. Call `queryWikipedia` with `createElement` as the callback.
+
+### Implementation
+The implementation of the task is as follows:
+
+```javascript
+
+function createElement(data) {
+    const paragraph = document.createElement('p');
+    paragraph.textContent = data;
+    document.body.appendChild(paragraph);
+}
+
+function queryWikipedia(callback) {
+    const xhr = new XMLHttpRequest();
+    const url = 'https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=Stack%20Overflow&origin=*';
+
+    xhr.open('GET', url, true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            const response = JSON.parse(xhr.responseText);
+            const pages = response.query.pages;
+            const pageId = Object.keys(pages)[0];
+            const extract = pages[pageId].extract;
+            callback(extract);
+        }
+    };
+    xhr.send();
+}
+
+queryWikipedia(createElement);
+```
+
+### Explanation
+
+- **createElement Function**: This function creates a paragraph element, sets its content to the provided `data`, and appends it to the document body.
+- **queryWikipedia Function**: This function takes a `callback` function as an argument. It performs an `XMLHttpRequest` to fetch the Stack Overflow article from Wikipedia's API. Upon successful completion of the request, it parses the response, extracts the relevant text, and calls the `callback` function with the extracted text.
+- **XMLHttpRequest**: This is used to perform the AJAX request to the Wikipedia API without using any frameworks.
+
+### Usage
+To test the functionality:
+
+1. Save this html as 14-wikipedia.html
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Wikipedia Query</title>
+    </head>
+    <body>
+        <script src="14-wikipedia.js"></script>
+    </body>
+    </html>
+    ```
+3. Open the HTML file in a web browser.
+4. You should see the introductory content of the Stack Overflow article from Wikipedia appended as a paragraph to the body of the document.
+
+### Expected Output
+The introductory content of the Stack Overflow article from Wikipedia should be displayed as a paragraph on the web page.
+</details>
+<details>
+<summary>Task 15: Multiple Callbacks
+
+The goal of this task is to understand how to use multiple callbacks in JavaScript to handle different scenarios when processing orders.</summary>
+
+### Task Description
+1. Create a variable named `stock`:
+    - It contains the stock for the items you are selling.
+    - It’s an object with the values `macbook: 2` and `iphone: 4`.
+
+2. Write a new function named `processPayment` that:
+    - Accepts one argument `itemName` (String).
+    - Decreases the stock by one for the specified item.
+    - Logs to the console the text `Payment is being processed for item <itemName>`.
+
+3. Write a new function named `processError` that:
+    - Accepts one argument `itemName` (String).
+    - Logs to the console the text `No more <itemName> in stock`.
+    - Logs to the console the text `Payment is not being processed`.
+
+4. Write a new function named `processOrder` that:
+    - Accepts three arguments `itemName` (String), `callbackPayment` (function), and `callbackError` (function).
+    - Logs to the console the text `Verifying the stock of <itemName>`.
+    - If there is enough stock for the item, it calls `callbackPayment`.
+    - If there is not enough stock for the item, it calls `callbackError`.
+    - If the item is not recognized, it logs a message indicating that the item is not available in the stock.
+
+5. Prompt the user with the message `Please enter the item you would like to purchase (Macbook, iPhone)` and pass the right callbacks.
+
+### Implementation
+The implementation of the task is as follows:
+
+```javascript
+
+const stock = {
+    macbook: 2,
+    iphone: 4
+};
+
+
+function processPayment(itemName) {
+    stock[itemName.toLowerCase()] -= 1;
+    console.log(`Payment is being processed for item ${itemName}`);
+}
+
+function processError(itemName) {
+    console.log(`No more ${itemName} in stock`);
+    console.log('Payment is not being processed');
+}
+
+function processOrder(itemName, callbackPayment, callbackError) {
+    console.log(`Verifying the stock of ${itemName}`);
+    itemName = itemName.toLowerCase();
+    if (stock[itemName] !== undefined) {
+        if (stock[itemName] > 0) {
+            callbackPayment(itemName);
+        } else {
+            callbackError(itemName);
+        }
+    } else {
+        console.log(`Item ${itemName} is not available in our stock`);
+    }
+}
+
+const item = prompt("Please enter the item you would like to purchase (Macbook, iPhone)");
+
+processOrder(item, processPayment, processError);
+```
+
+### Explanation
+
+- **stock Object**: This object holds the current stock levels for `macbook` and `iphone`.
+- **processPayment Function**: This function decreases the stock of the specified item by 1 and logs a message indicating that payment is being processed.
+- **processError Function**: This function logs an error message indicating that there is no stock for the specified item and that payment is not being processed.
+- **processOrder Function**: This function checks the stock for the specified item. If there is stock available, it calls the `callbackPayment` function. If there is no stock available, it calls the `callbackError` function. If the item is not recognized, it logs a message indicating that the item is not available in the stock.
+- **User Prompt**: The user is prompted to enter the item they would like to purchase, and the input is passed to `processOrder` along with the appropriate callbacks.
+
+### Usage
+To test the functionality:
+
+1.  Save this html as 100-stock.html
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stock Management</title>
+    </head>
+    <body>
+        <script src="100-stock.js"></script>
+    </body>
+    </html>
+    ```
+3. Open the HTML file in a web browser.
+4. You will be prompted to enter the item you would like to purchase. Enter "Macbook" or "iPhone" to see the corresponding messages and stock updates in Console .
+
+### Expected Output
+You will see messages indicating whether the item is in stock, whether the payment is being processed, or if there is an error due to no stock or an unrecognized item.
 </details>
