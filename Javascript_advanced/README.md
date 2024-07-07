@@ -1,6 +1,5 @@
 # JavaScript Advanced
 
-
 ## Learning Objectives
 
 ### What is Lexical Scoping in JavaScript
@@ -21,7 +20,7 @@ function welcome(firstName, lastName) {
 ```
 Here, `fullName` is lexically scoped to the `welcome` function and accessible by the `displayFullName` function.</details>
 
-#### What is Closure in JavaScript
+### What is Closure in JavaScript
 <details>
 <summary>
 A **closure** is a function that retains access to its outer scope even after the outer function has finished executing. Closures are created every time a function is created.</summary>
@@ -41,7 +40,7 @@ guillaume(); // Alerts "Welcome Guillaume"
 Here, the inner function retains access to `fullName` even after `welcomeMessage` has executed.
 </details>
 
-#### How to Use Closure
+### How to Use Closure
 <details>
 <summary>
 Closures can be used to create private variables, implement data encapsulation, and maintain state.
@@ -77,7 +76,7 @@ const studentHogwarts = (() => {
 Here, `privateScore` and `name` are private variables, and their state is maintained through closures.
 </details>
 
-#### How to Chain Different Closures
+### How to Chain Different Closures
 <details>
 <summary>
 Chaining closures involves having functions return other functions that form a chain of function calls, each with access to the previous function's scope.</summary>
@@ -97,7 +96,7 @@ console.log(addBy100(20)); // Outputs 120
 Here, `addBy` returns a function that uses the scope of its parent function.
 </details>
 
-#### How to Simulate Private Methods with Closure
+### How to Simulate Private Methods with Closure
 <details>
 <summary>
 Private methods can be simulated by defining functions within closures that are not exposed outside their scope.</summary>
@@ -125,7 +124,7 @@ const studentHogwarts = (() => {
 Here, `changeScoreBy` is a private method that is not accessible outside the closure.
 </details>
 
-#### The Execution Stack Order with JavaScript
+### The Execution Stack Order with JavaScript
 <details>
 <summary>
 The execution stack order determines the sequence in which functions are executed in JavaScript. The event loop and `setTimeout` can affect this order.</summary>
@@ -148,7 +147,7 @@ console.log('End of the loop printing');
 The `setTimeout` function defers the callback execution, demonstrating the execution stack order.
 </details>
 
-#### How to Use Binding
+### How to Use Binding
 <details>
 <summary>
 **Binding** is used to set the `this` value for a function, ensuring that it has the correct context.
@@ -171,7 +170,7 @@ console.log(boundGetArea()); // Outputs 5000
 Here, `bind` ensures that `this` refers to `roomDimensions` when `getArea` is called.
 </details>
 
-#### How to Use Callbacks
+### How to Use Callbacks
 <details>
 <summary>
 **Callbacks** are functions passed as arguments to other functions and are executed within the outer function to complete some kind of action or routine.</summary>
