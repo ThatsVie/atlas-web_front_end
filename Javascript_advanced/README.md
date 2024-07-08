@@ -1,5 +1,13 @@
 ![puggy_with_large_banner](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/318fe145-6a89-4fa8-bc12-89f714b770c6)
 
+## Resources
+
+- [JavaScript.info: Closure](https://javascript.info/closure)
+- [W3Schools: JavaScript Function Closures](https://www.w3schools.com/js/js_function_closures.asp)
+- [MDN Web Docs: Call Stack](https://developer.mozilla.org/en-US/docs/Glossary/Call_stack)
+- [JavaScript.info: bind](https://javascript.info/bind)
+- [JavaScript.info: Callbacks](https://javascript.info/callbacks)
+
 
 ## Learning Objectives
 
