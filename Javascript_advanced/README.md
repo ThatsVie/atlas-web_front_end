@@ -213,9 +213,10 @@ Here, `queryWikipedia` uses `createElement` as a callback to process the data af
 
 ## Tasks and Usage
 
-<details>
-<summary> Task 0: Lexical Scoping and Welcome Message
+ ## Task 0: Lexical Scoping and Welcome Message
 
+<details>
+<summary>
 The goal of this task is to understand and implement lexical scoping in JavaScript by creating a function that displays a welcome message. </summary>
 
 ### Task Description
@@ -253,9 +254,11 @@ To test the `welcome` function:
 
 
 </details>
-<details>
-<summary> Task 1: Closure Scope Chain
 
+ ## Task 1: Closure Scope Chain
+ 
+<details>
+<summary>
 The goal of this task is to understand and implement closure and scope chains in JavaScript by creating nested functions that access variables from their parent scopes. </summary>
 
 ### Task Description
@@ -308,9 +311,11 @@ To test the `outer` function:
 ![Screenshot 2024-07-06 132328](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/3f6ed971-cfbb-4435-9cc1-930e8c789ddf)
 
 </details>
-<details>
-<summary> Task 2: Closure
 
+## Task 2: Closure
+
+<details>
+<summary>
 The goal of this task is to understand and implement closures in JavaScript by creating a function that returns another function, demonstrating how inner functions can access variables from their parent scope. </summary>
 
 ### Task Description
@@ -354,10 +359,10 @@ To test the `welcomeMessage` function:
 ![Screenshot 2024-07-06 134845](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/05dbe7a7-03c8-45fb-b583-51bedd94d159)
 
 </details>
-<details>
-<summary> Task 3: Closure and Loops
 
-The goal of this task is to understand and implement closures within loops in JavaScript by creating functions that capture the loop variable. </summary>
+## Task 3: Closure and Loops
+<details>
+<summary>The goal of this task is to understand and implement closures within loops in JavaScript by creating functions that capture the loop variable. </summary>
 
 ### Task Description
 1. Write a function named `createClassRoom` that:
@@ -402,10 +407,11 @@ To test the `createClassRoom` function:
 
 
 </details>
-<details>
-<summary> Task 4: Complex Closure
 
-The goal of this task is to understand and implement complex closures in JavaScript by creating functions that return other functions, demonstrating how inner functions can perform mathematical operations using their parent scope's variables. </summary>
+## Task 4: Complex Closure
+
+<details>
+<summary>The goal of this task is to understand and implement complex closures in JavaScript by creating functions that return other functions, demonstrating how inner functions can perform mathematical operations using their parent scope's variables. </summary>
 
 ### Task Description
 1. Create a function named `divideBy` that:
@@ -459,10 +465,11 @@ To test the `divideBy` and `addBy` functions:
 
 
 </details>
-<details>
-<summary> Task 5: Changing DOM with Closure
+ 
+## Task 5: Changing DOM with Closure
 
-The goal of this task is to understand and implement closures in JavaScript by creating a function that changes the style of the entire page. This function will demonstrate how closures can be used to encapsulate functionality and maintain state. </summary>
+<details>
+<summary>The goal of this task is to understand and implement closures in JavaScript by creating a function that changes the style of the entire page. This function will demonstrate how closures can be used to encapsulate functionality and maintain state. </summary>
 
 ### Task Description
 1. Create a function named `changeMode` that:
@@ -569,10 +576,11 @@ main();
 - In the context of this task, `innerHTML` is used to set the content of the buttons dynamically. By assigning a string to the `innerHTML` property of each button element, we can easily specify the text that appears on the button, such as "Spooky", "Dark mode", and "Scream mode". This allows us to create and configure the buttons programmatically within the `main` function.
 
 </details>
-<details>
-<summary> Task 6: Private Methods with Closure
 
-The goal of this task is to understand and implement private methods in JavaScript using closures. This will demonstrate how closures can be used to encapsulate and protect internal state within a module. </summary>
+## Task 6: Private Methods with Closure
+
+<details>
+<summary>The goal of this task is to understand and implement private methods in JavaScript using closures. This will demonstrate how closures can be used to encapsulate and protect internal state within a module. </summary>
 
 ### Task Description
 1. Write a module named `studentHogwarts` that:
@@ -663,9 +671,11 @@ console.log(draco.getScore()); // Should display "Draco: -2"
 - The `getScore` method is used to log the name and score of each student to the console.
 
 </details>
+
+## Task 7: Stack Order and setTimeout
+
 <details>
-<summary> Task 7: Stack Order and setTimeout
-The goal of this task is to understand the execution order in JavaScript, especially how the event loop and the call stack work with `setTimeout`. </summary>
+<summary>The goal of this task is to understand the execution order in JavaScript, especially how the event loop and the call stack work with `setTimeout`. </summary>
 
 ### Task Description
 1. Write the following commands in the specified order:
@@ -724,10 +734,11 @@ Final code block to be executed
 
 
 </details>
-<details>
-<summary> Task 8: Stack Order in Functions
 
-The goal of this task is to understand the execution order in JavaScript functions by creating a process order flow that involves logging messages to the console in a specific sequence.
+## Task 8: Stack Order in Functions
+
+<details>
+<summary>The goal of this task is to understand the execution order in JavaScript functions by creating a process order flow that involves logging messages to the console in a specific sequence.
 </summary>
 
 ### Task Description
@@ -790,10 +801,10 @@ console.log('All the orders have been processed');
 - We log `All the orders have been processed` to the console.
 </details>
 
-<details>
-<summary> Task 9: Prime Numbers & Timing Execution
+ ## Task 9: Prime Numbers & Timing Execution
 
-The goal of this task is to understand how to measure the execution time of a function using the performance API and to count the number of prime numbers between 2 and 100. </summary>
+<details>
+<summary>The goal of this task is to understand how to measure the execution time of a function using the performance API and to count the number of prime numbers between 2 and 100. </summary>
 
 ### Task Description
 1. Write a function named `countPrimeNumbers` that:
@@ -850,11 +861,11 @@ console.log(`Number of prime numbers between 2 and 100: ${totalPrimes}`);
 - The execution time and the count of prime numbers are logged to the console.
 </details>
 
-<details>
-<summary>
-Task 10: Execution Stack & Timing Execution
 
-The goal of this task is to measure the execution time of a function that calculates prime numbers, by executing it 100 times, using the performance API. </summary>
+## Task 10: Execution Stack & Timing Execution
+
+<details>
+<summary>The goal of this task is to measure the execution time of a function that calculates prime numbers, by executing it 100 times, using the performance API. </summary>
 
 ### Task Description
 1. Reuse the function `countPrimeNumbers` from `9-prime.js`:
@@ -920,11 +931,11 @@ console.log(`Execution time of calculating prime numbers 100 times was ${endTime
 - The execution time is logged to the console.
 </details>
 
-<details>
-<summary>
-Task 11: Changing Stack Order using setTimeout
 
-The goal of this task is to measure the execution time of a function that calculates prime numbers, by executing it 100 times, and ensuring the calculations are done at the end of the execution stack using `setTimeout`. </summary>
+## Task 11: Changing Stack Order using setTimeout
+
+<details>
+<summary>The goal of this task is to measure the execution time of a function that calculates prime numbers, by executing it 100 times, and ensuring the calculations are done at the end of the execution stack using `setTimeout`. </summary>
 
 ### Task Description
 1. Reuse the function `countPrimeNumbers` from `10-prime.js`:
@@ -993,10 +1004,11 @@ Execution time of calculating prime numbers 100 times was 0.03999999910593033 mi
 
 
 </details>
-<details>
-<summary>Task 12: Binding
 
-The goal of this task is to understand how to use the `bind` method in JavaScript to ensure that the `this` context is correctly set when calling a function. </summary>
+## Task 12: Binding
+
+<details>
+<summary>The goal of this task is to understand how to use the `bind` method in JavaScript to ensure that the `this` context is correctly set when calling a function. </summary>
 
 ### Task Description
 1. Create an object named `roomDimensions` with the following three attributes:
@@ -1047,10 +1059,11 @@ To test the `boundGetArea` function:
 
 
 </details>
-<details>
-<summary>Task 13: Binding + Closure
 
-The goal of this task is to understand how to use the `bind` method in conjunction with closures to ensure that the `this` context is correctly set when calling a function. </summary>
+## Task 13: Binding + Closure
+
+<details>
+<summary>The goal of this task is to understand how to use the `bind` method in conjunction with closures to ensure that the `this` context is correctly set when calling a function. </summary>
 
 ### Task Description
 1. Write an object named `user` with the following attributes:
@@ -1113,10 +1126,11 @@ To test the `bindLogWelcomeUser` function:
 ![Screenshot 2024-07-07 172325](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/bba5d63a-e97d-4958-8a3a-56638f2d4d2d)
 
 </details>
-<details>
-<summary>Task 14: Simple Callback
 
-The goal of this task is to understand how to use callbacks in JavaScript by fetching data from an API and dynamically creating an HTML element to display the data. </summary>
+## Task 14: Simple Callback
+
+<details>
+<summary>The goal of this task is to understand how to use callbacks in JavaScript by fetching data from an API and dynamically creating an HTML element to display the data. </summary>
 
 ### Task Description
 1. Write a new function named `createElement` that:
@@ -1194,10 +1208,11 @@ The introductory content of the Stack Overflow article from Wikipedia should be 
 ![Screenshot 2024-07-07 173732](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/1044c981-d4e1-4566-9dd7-9b1f52023607)
 
 </details>
-<details>
-<summary>Task 15: Multiple Callbacks
 
-The goal of this task is to understand how to use multiple callbacks in JavaScript to handle different scenarios when processing orders.</summary>
+## Task 15: Multiple Callbacks
+
+<details>
+<summary>The goal of this task is to understand how to use multiple callbacks in JavaScript to handle different scenarios when processing orders.</summary>
 
 ### Task Description
 1. Create a variable named `stock`:
@@ -1307,8 +1322,7 @@ You will see messages indicating whether the item is in stock, whether the payme
 ![Screenshot 2024-07-07 175213](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/a5f33453-ffbb-4d03-8413-2dcf313305b4)
 
 
-
-
+</details>
 
 
 
