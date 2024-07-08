@@ -38,32 +38,6 @@ In `0-index.html`:
 - If jQuery is ready to be used, log to the console `jQuery has been loaded correctly`.
 - If jQuery has not been loaded properly, log to the console `jQuery has not been loaded correctly`.
 
-### Implementation
-The implementation of the task is as follows:
-
-```html
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-    <meta charset="utf-8" />
-    <title>Task 0</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
-    <script type="application/javascript">
-        if (typeof jQuery === 'undefined') {
-            console.log('jQuery has not been loaded correctly');
-        } else {
-            console.log('jQuery has been loaded correctly');
-        }
-    </script>
-</head>
-
-<body>
-
-</body>
-
-</html>
-```
 
 ### Explanation
 - **Loading jQuery from CDN**: The latest slim and minified version of jQuery is loaded from the official jQuery CDN.
@@ -75,6 +49,8 @@ The implementation of the task is as follows:
 1. Open the HTML file in a web browser.
 2. Open the developer tools console.
 3. You should see `jQuery has been loaded correctly` logged in the console.
+
+![Screenshot 2024-07-08 132724](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/5ea62877-b7ba-4028-94a9-d25447e6c444)
 
 
 </details>
@@ -94,36 +70,6 @@ In  `1-index.html`:
   - Add the paragraph to the body of the page.
   - Call the `createTextElement` function.
 
-### Implementation
-The implementation of the task is as follows:
-
-```html
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-    <meta charset="utf-8" />
-    <title>Task 1</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
-</head>
-
-<body>
-    <script type="application/javascript">
-        function createTextElement() {
-            const paragraph = $('<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in diam risus. Nunc sit amet euismod ipsum. Aenean tempus ex sed est volutpat, sed sodales velit tempus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin auctor sollicitudin eleifend. Vivamus porta enim vitae mauris commodo, vitae tempor tellus elementum. Quisque sed pellentesque nulla, at eleifend nisi. Phasellus eget tincidunt ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>');
-            $('body').append(paragraph);
-        }
-
-        $(document).ready(function() {
-            createTextElement();
-        });
-    </script>
-</body>
-
-</html>
-
-
-```
 
 ### Explanation
 - **Loading jQuery from CDN**: The latest slim and minified version of jQuery is loaded from the official jQuery CDN.
@@ -136,6 +82,8 @@ The implementation of the task is as follows:
 
 1. Open the HTML file in a web browser.
 2. You should see a paragraph with the provided text displayed on the page.
+
+![Screenshot 2024-07-08 134155](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/f0eb1006-971c-4845-a973-c4102e2a83a9)
 
 
 </details>
@@ -160,57 +108,6 @@ In `2-index.html`:
 - Use the keyword `append` only once to attach all the elements of the table to the page.
 - Call the `createFamilyTree` function.
 
-### Implementation
-The implementation of the task is as follows:
-
-```html
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-    <meta charset="utf-8" />
-    <title>Task 2</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
-</head>
-
-<body>
-
-    <script type="application/javascript">
-        function createFamilyTree() {
-            $('body').append(`
-            <table>
-                <thead>
-                    <tr>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Guillaume</td>
-                        <td>Salva</td>
-                    </tr>
-                    <tr>
-                        <td>Paulette</td>
-                        <td>Salva</td>
-                    </tr>
-                    <tr>
-                        <td>Antoine</td>
-                        <td>Salva</td>
-                    </tr>
-                </tbody>
-            </table>`);
-        }
-
-        $(document).ready(function() {
-            createFamilyTree();
-        });
-    </script>
-
-</body>
-
-</html>
-```
 
 ### Explanation
 - **Loading jQuery from CDN**: The slim and minified version of jQuery is loaded from the official jQuery CDN.
@@ -223,6 +120,8 @@ The implementation of the task is as follows:
 
 1. Open the HTML file in a web browser.
 2. You should see a table with the provided structure displayed on the page.
+
+![Screenshot 2024-07-08 142941](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/dce72640-b98b-40a1-9dca-8c833628c5d3)
 
 </details>
 
@@ -241,57 +140,6 @@ In `3-index.html`:
 - Do not create any intermediate variables.
 - Call the `createFamilyTree` function.
 
-### Implementation
-The implementation of the task is as follows:
-
-```html
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-    <meta charset="utf-8" />
-    <title>Task 3</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
-</head>
-
-<body>
-
-    <script type="application/javascript">
-        function createFamilyTree() {
-            $('<table></table>').append(
-                $('<thead></thead>').append(
-                    $('<tr></tr>').append(
-                        $('<th></th>').text('Firstname'),
-                        $('<th></th>').text('Lastname')
-                    )
-                )
-            ).append(
-                $('<tbody></tbody>').append(
-                    $('<tr></tr>').append(
-                        $('<td></td>').text('Guillaume'),
-                        $('<td></td>').text('Salva')
-                    ),
-                    $('<tr></tr>').append(
-                        $('<td></td>').text('Paulette'),
-                        $('<td></td>').text('Salva')
-                    ),
-                    $('<tr></tr>').append(
-                        $('<td></td>').text('Antoine'),
-                        $('<td></td>').text('Salva')
-                    )
-                )
-            ).appendTo('body');
-        }
-
-        $(document).ready(function() {
-            createFamilyTree();
-        });
-    </script>
-
-</body>
-
-</html>
-```
 
 ### Explanation
 - **Loading jQuery from CDN**: The slim and minified version of jQuery 3.7.1 is loaded from the official jQuery CDN.
@@ -306,3 +154,8 @@ The implementation of the task is as follows:
 
 1. Open the HTML file in a web browser.
 2. You should see a table with the provided structure displayed on the page.
+
+
+![Screenshot 2024-07-08 144411](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/f9f8b078-8ad9-459a-8eae-03a457cfac83)
+
+</details>
