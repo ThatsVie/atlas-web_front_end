@@ -1,5 +1,4 @@
-
-![javascript pug](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/96f0c447-dace-432c-93a6-f1f96628b7e0)
+![puggy_with_large_banner](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/318fe145-6a89-4fa8-bc12-89f714b770c6)
 
 
 ## Learning Objectives
