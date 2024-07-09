@@ -605,6 +605,8 @@ The implementation of the task is as follows:
 1. Open the HTML file in a web browser.
 2. You should see a table with the provided structure displayed on the page.
 
+![Screenshot 2024-07-08 154243](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/dc8ad252-a276-489c-9413-70b7263cdf19)
+
 </details>
 
 ## Task 5: Click attribute and remove function
@@ -709,6 +711,13 @@ The implementation of the task is as follows:
 
 1. Open the HTML file in a web browser.
 2. You should see a table with the provided structure and functionality
+
+![Screenshot 2024-07-08 155424](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/257a987e-15b6-4e39-a5db-c1eebdab56f2)
+
+**After clicking X on a couple of names**
+
+![Screenshot 2024-07-08 161504](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/fc983994-f8c7-4108-aa85-d3fc36689ead)
+
 
 </details>
 
