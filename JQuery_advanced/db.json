@@ -1,0 +1,69 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Pug Life",
+      "author": "PugLover"
+    },
+    {
+      "id": 2,
+      "title": "Adventures of Pug",
+      "author": "PugFanatic"
+    },
+    {
+      "id": 3,
+      "title": "Pug Tricks",
+      "author": "PugTrainer"
+    },
+    {
+      "id": 4,
+      "title": "Pug Health Tips",
+      "author": "PugVet"
+    },
+    {
+      "id": 5,
+      "title": "Pug Food Recipes",
+      "author": "PugChef"
+    },
+    {
+      "id": 6,
+      "title": "Pug Care Guide",
+      "author": "PugGroomer"
+    },
+    {
+      "id": 7,
+      "title": "Pug Breeds",
+      "author": "PugExpert"
+    },
+    {
+      "id": 8,
+      "title": "Pug History",
+      "author": "PugHistorian"
+    },
+    {
+      "id": 9,
+      "title": "Pug Accessories",
+      "author": "PugDesigner"
+    },
+    {
+      "id": 10,
+      "title": "Pug Fashion",
+      "author": "PugStylist"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "Pugs are the best!",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "I love this post about pug adventures!",
+      "postId": 2
+    }
+  ],
+  "profile": {
+    "name": "PugEnthusiast"
+  }
+}
