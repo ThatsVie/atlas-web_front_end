@@ -832,6 +832,8 @@ The implementation of the task is as follows:
 2. You should see a form and a table with the provided structure and functionality
 3. You can use the form to add new members to the table, either at the top or bottom, and verify that the remove functionality works.
 
+![Screenshot 2024-07-09 112437](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/1f10fa0e-8913-4fe8-8d2d-bf911401dab3)
+
 
 
 </details>
@@ -955,6 +957,11 @@ The implementation of the task is as follows:
 2. You should see a form with a text input and a submit button.
 3. Enter a search term and click the submit button.
 4. The results should be displayed as a list of articles, with each article containing the `id`, `title`, and `snippet`.
+
+![Screenshot 2024-07-09 133422](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/4788e1f9-5466-4fc0-8b3a-acfe6f4a697b)
+
+
+![Screenshot 2024-07-09 133626](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/b8ed6c90-349c-409e-ae66-8f39ca11cabc)
 
 
 </details>
@@ -1109,7 +1116,12 @@ The CSS is necessary to achieve the horizontal display and styling of the pagina
 4. The results should be displayed as a list of articles, with pagination links below.
 5. Click on pagination links to navigate through pages of search results.
 
+![Screenshot 2024-07-09 142753](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/fea038b4-9ff0-45cd-9d04-73e201751efb)
 
+![Screenshot 2024-07-09 142809](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/f1f27260-0120-4255-a77b-e43aee3f32b9)
+
+
+![Screenshot 2024-07-09 142832](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/6e91eef4-0b44-49d8-acc7-f0cf5b7a5b57)
 
 </details>
 
@@ -1279,6 +1291,10 @@ The CSS adjustments ensure that the pagination items are displayed horizontally.
 4. The results should be displayed as a list of articles, with pagination links below.
 5. While the results are being fetched, the list should be wrapped with a `div` having a class `loading`, reducing the opacity to 0.2.
 6. Click on pagination links to navigate through pages of search results.
+
+
+
+https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/1330e69e-ad2d-42fa-a04f-b5efed289fa5
 
 
 
@@ -1457,6 +1473,9 @@ Ensure you have the following `db.json` file in your project directory:
 1. Open the HTML file in a web browser.
 2. The page should display a list of pug-related posts fetched from the JSON server running on `http://localhost:3000`.
 
+![Screenshot 2024-07-09 152302](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/c4b2b020-4e7b-4b13-8c2d-fbbd50c7aeca)
+
+
 </details>
 
 
@@ -1583,6 +1602,12 @@ The code implements a form that allows users to submit new posts to a local serv
 2. Open the HTML file in a web browser.
 3. The page should display a form to submit new posts and a list of existing posts fetched from the JSON server.
 4. Fill in the form and submit it to see the new post added to the list.
+
+
+
+https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/61166945-9d13-42cf-9e74-75381d14dba1
+
+
 
 </details>
 
@@ -1714,4 +1739,10 @@ The code implements a form that allows users to submit new posts to a local serv
 3. The page should display a form to submit new posts and a list of existing posts with delete options.
 4. Fill in the form and submit to create new posts.
 5. Click on the delete span to delete posts and observe that they are removed from the server and the DOM.
+
+
+
+https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/b04c9263-e174-46ca-b804-33c1dbda30a9
+
+
 </details>
