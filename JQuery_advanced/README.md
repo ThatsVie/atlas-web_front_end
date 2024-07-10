@@ -264,7 +264,7 @@ In `0-index.html`:
 2. Open the developer tools console.
 3. You should see `jQuery has been loaded correctly` logged in the console.
 
-![Screenshot 2024-07-08 132724](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/5ea62877-b7ba-4028-94a9-d25447e6c444)
+![Screenshot 2024-07-10 082427](https://github.com/ThatsVie/atlas-web_front_end/assets/143755961/29764ac3-a74d-40aa-a90c-7185119a1086)
 
 
 </details>
