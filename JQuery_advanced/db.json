@@ -49,6 +49,11 @@
       "id": 10,
       "title": "Pug Fashion",
       "author": "PugStylist"
+    },
+    {
+      "author": "pug",
+      "title": "wug",
+      "id": 11
     }
   ],
   "comments": [

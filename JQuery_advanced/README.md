@@ -233,6 +233,11 @@ In `0-index.html`:
     <meta charset="utf-8" />
     <title>Task 0</title>
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
     <script type="application/javascript">
         if (jQuery === 'undefined') {
             console.log('jQuery has not been loaded correctly');
@@ -241,13 +246,11 @@ In `0-index.html`:
         }
     </script>
 
-</head>
-
-<body>
-
 </body>
 
 </html>
+
+
 ```
 
 ### Explanation
