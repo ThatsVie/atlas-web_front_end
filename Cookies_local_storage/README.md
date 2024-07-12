@@ -1,6 +1,7 @@
 # Cookies & Local Storage
 
-![pug cookie scoop](https://github.com/user-attachments/assets/df5740ac-c23d-49b5-b99b-f9793c8105b8)
+![puglookingatcookie](https://github.com/user-attachments/assets/e5c378e3-9b40-4b47-98af-8b7e3bfe6b21)
+
 
 
 ## Resources
