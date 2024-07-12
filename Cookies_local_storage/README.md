@@ -307,7 +307,6 @@ The goal of this task is to learn how to set, get, and display cookies using van
 
 To verify the expiration date of the cookies, you can check the cookies using your browser's developer tools.
 
-
 1. **Open your browser's developer tools**:
    - Right-click on the page and select "Inspect" or press `F12`.
    - Navigate to the "Application" tab.
@@ -327,6 +326,7 @@ You should see a list of cookies set by your site, including their names, values
    - Click the “Log me in” button to set the cookies.
    - Click the “Show the cookies” button to display the cookies on the page.
    - Check the expiration date of the cookies in the browser's developer tools.
+![Screenshot 2024-07-12 180149](https://github.com/user-attachments/assets/71ea9638-cb79-4ec9-985c-99396efd37c5)
 
 
 </details>
