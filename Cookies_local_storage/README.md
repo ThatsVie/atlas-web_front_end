@@ -201,3 +201,132 @@ The goal of this task is to learn how to set, get, and display cookies using van
 
 
 </details>
+
+## Task 1: Create Cookie with Expiration Date and Specific Path
+
+<details>
+<summary>The goal of this task is to modify the cookie-setting function to include an expiration date of 10 days.</summary>
+
+### Task Details
+   - **Reuse the code from the previous task**
+   - **Modify the way you are setting cookies to expire in 10 days**
+   - **Requirements**:
+     - Access your code with `http://localhost:8080/1-index.html`
+     - Use vanilla JavaScript to complete the task
+
+### Implementation
+
+1. **1-index.html**:
+   In the root directory:
+
+   ```html
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>1-index.html</title>
+       <style>
+           body {
+               margin: 20px;
+               font-family: "Times New Roman", Times, serif;
+               font-weight: bold;
+           }
+           h1, h2 {
+               margin-bottom: 10px;
+           }
+           input
+
+ {
+               margin-right: 10px;
+               padding: 5px;
+               border: 1px solid gray;
+           }
+           button {
+               padding: 5px 10px;
+               background-color: white;
+               border: 1px solid gray;
+               border-radius: 5px;
+               color: black;
+               cursor: pointer;
+               font-weight: bold;
+               box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+           }
+           button:hover {
+               background-color: #f0f0f0;
+           }
+       </style>
+   </head>
+   <body>
+       <h1>Login to the website</h1>
+       <input type="text" id="firstname" placeholder="Firstname">
+       <input type="email" id="email" placeholder="Email">
+       <button onclick="setCookies()">Log me in</button>
+       
+       <h2>Cookies</h2>
+       <button onclick="showCookies()">Show the cookies</button>
+
+       <script>
+           function setCookies() {
+               const firstname = document.getElementById('firstname').value;
+               const email = document.getElementById('email').value;
+               
+               // Set expiration date for 10 days from now
+               const expirationDate = new Date();
+               expirationDate.setTime(expirationDate.getTime() + (10 * 24 * 60 * 60 * 1000)); // 10 days in milliseconds
+               const expires = "expires=" + expirationDate.toUTCString();
+               
+               document.cookie = `firstname=${firstname};${expires};path=/`;
+               document.cookie = `email=${email};${expires};path=/`;
+           }
+
+           function showCookies() {
+               const cookies = document.cookie.split('; ').reduce((acc, cookie) => {
+                   const [name, value] = cookie.split('=');
+                   acc[name] = value;
+                   return acc;
+               }, {});
+
+               const p = document.createElement('p');
+               p.innerHTML = `Cookies: ${JSON.stringify(cookies)}`;
+               document.body.appendChild(p);
+           }
+       </script>
+   </body>
+   </html>
+   ```
+
+### Explanation
+
+- **Expiration Date**: We added code to set the cookies to expire in 10 days.
+  - `const expirationDate = new Date();`: Creates a new Date object representing the current date and time.
+  - `expirationDate.setTime(expirationDate.getTime() + (10 * 24 * 60 * 60 * 1000));`: Adds 10 days (in milliseconds) to the current time.
+  - `const expires = "expires=" + expirationDate.toUTCString();`: Converts the date to a UTC string suitable for setting in a cookie.
+
+### Viewing and Testing Cookies
+
+To verify the expiration date of the cookies, you can check the cookies using your browser's developer tools.
+
+
+1. **Open your browser's developer tools**:
+   - Right-click on the page and select "Inspect" or press `F12`.
+   - Navigate to the "Application" tab.
+   - Under "Storage", click on "Cookies".
+   - Select the URL of your current site.
+
+You should see a list of cookies set by your site, including their names, values, and expiration dates.
+
+### Usage
+
+1. **Start the development server:**
+   ```bash
+   npm start
+   ```
+2. **Open your browser** to `http://localhost:8080/1-index.html` and test the functionality:
+   - Enter values into the `Firstname` and `Email` input fields.
+   - Click the “Log me in” button to set the cookies.
+   - Click the “Show the cookies” button to display the cookies on the page.
+   - Check the expiration date of the cookies in the browser's developer tools.
+
+
+</details>
