@@ -1,4 +1,7 @@
-# Cookies & Local Storage Project
+# Cookies & Local Storage
+
+![pug cookie scoop](https://github.com/user-attachments/assets/df5740ac-c23d-49b5-b99b-f9793c8105b8)
+
 
 ## Resources
 - [W3Schools - JavaScript Cookies](https://www.w3schools.com/js/js_cookies.asp)
@@ -192,6 +195,7 @@ The goal of this task is to learn how to set, get, and display cookies using van
    - Click the “Log me in” button to set the cookies.
    - Click the “Show the cookies” button to display the cookies on the page.
 
+![Screenshot 2024-07-12 171613](https://github.com/user-attachments/assets/0be00050-dbf2-492b-b435-b281db091f57)
 
 
 </details>
