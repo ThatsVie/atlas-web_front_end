@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0-index.html</title>
+    <style>
+        body {
+            margin: 20px;
+            font-family: "Times New Roman", Times, serif;
+            font-weight: bold;
+        }
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+        input {
+            margin-right: 10px;
+            padding: 5px;
+            border: 1px solid gray;
+        }
+        button {
+            padding: 5px 10px;
+            background-color: white;
+            border: 1px solid gray;
+            border-radius: 5px;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        button:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Login to the website</h1>
+    <input type="text" id="firstname" placeholder="Firstname">
+    <input type="email" id="email" placeholder="Email">
+    <button onclick="setCookies()">Log me in</button>
+    
+    <h2>Cookies</h2>
+    <button onclick="showCookies()">Show the cookies</button>
+
+    <script>
+        function setCookies() {
+            const firstname = document.getElementById('firstname').value;
+            const email = document.getElementById('email').value;
+            document.cookie = `firstname=${firstname};path=/`;
+            document.cookie = `email=${email};path=/`;
+        }
+
+        function showCookies() {
+            const cookies = document.cookie.split('; ').reduce((acc, cookie) => {
+                const [name, value] = cookie.split('=');
+                acc[name] = value;
+                return acc;
+            }, {});
+
+            const p = document.createElement('p');
+            p.innerHTML = `Cookies: ${JSON.stringify(cookies)}`;
+            document.body.appendChild(p);
+        }
+    </script>
+</body>
+</html>
