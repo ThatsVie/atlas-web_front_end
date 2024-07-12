@@ -217,9 +217,10 @@ The goal of this task is to learn how to set, get, and display cookies using van
 ### Implementation
 
 1. **1-index.html**:
+
    In the root directory:
 
-   ```html
+    ```html
    <!DOCTYPE html>
    <html lang="en">
    <head>
@@ -235,9 +236,7 @@ The goal of this task is to learn how to set, get, and display cookies using van
            h1, h2 {
                margin-bottom: 10px;
            }
-           input
-
- {
+           input {
                margin-right: 10px;
                padding: 5px;
                border: 1px solid gray;
@@ -271,7 +270,6 @@ The goal of this task is to learn how to set, get, and display cookies using van
                const firstname = document.getElementById('firstname').value;
                const email = document.getElementById('email').value;
                
-               // Set expiration date for 10 days from now
                const expirationDate = new Date();
                expirationDate.setTime(expirationDate.getTime() + (10 * 24 * 60 * 60 * 1000)); // 10 days in milliseconds
                const expires = "expires=" + expirationDate.toUTCString();
@@ -279,7 +277,6 @@ The goal of this task is to learn how to set, get, and display cookies using van
                document.cookie = `firstname=${firstname};${expires};path=/`;
                document.cookie = `email=${email};${expires};path=/`;
            }
-
            function showCookies() {
                const cookies = document.cookie.split('; ').reduce((acc, cookie) => {
                    const [name, value] = cookie.split('=');
@@ -294,7 +291,6 @@ The goal of this task is to learn how to set, get, and display cookies using van
        </script>
    </body>
    </html>
-   ```
 
 ### Explanation
 
