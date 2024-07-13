@@ -94,7 +94,7 @@ The goal of this task is to learn how to set, get, and display cookies using van
 
 ### Implementation
 
-1. **0-index.html**:
+### `0-index.html`:
    In the root directory:
 
    ```html
@@ -217,11 +217,10 @@ The goal of this task is to learn how to set, get, and display cookies using van
 
 ### Implementation
 
-1. **1-index.html**:
+ ### `1-index.html`:
 
    In the root directory:
-
-    ```html
+```
    <!DOCTYPE html>
    <html lang="en">
    <head>
@@ -292,6 +291,7 @@ The goal of this task is to learn how to set, get, and display cookies using van
        </script>
    </body>
    </html>
+```
 
 ### Explanation
 
@@ -351,7 +351,7 @@ Create a function to retrieve a cookie and modify display
 
 ### Implementation
 
- `2-index.html`:
+ ### `2-index.html`:
 
    ```html
    <!DOCTYPE html>
@@ -459,14 +459,15 @@ Create a function to retrieve a cookie and modify display
    - Click the “Log me in” button to set the cookies.
    - Click the “Show the cookies” button to display the cookies on the page in the specified format.
 
+- When no input is provided, clicking the 'Show the cookies' button results in `Email: - Firstname:`, which indicates that the `getCookie` function correctly returns an empty string when the cookie does not exist.
 ![Screenshot 2024-07-13 125447](https://github.com/user-attachments/assets/89489759-5a2a-4d7f-a475-414707db2ecd)
+
+- When input is provided and the 'Log me in' button is pressed, followed by clicking the 'Show the cookies' button, the output displays `Email: puggilicious@pugs.com - Firstname: puggilicious`, confirming that the cookies are correctly set and retrieved.
 
 ![Screenshot 2024-07-13 123816](https://github.com/user-attachments/assets/70a5d166-d768-45f3-835f-d2a49426c8f4)
 
 
-The implementation was successful as evidenced by the following behaviors:
-- When no input is provided, clicking the 'Show the cookies' button results in `Email: - Firstname:`, which indicates that the `getCookie` function correctly returns an empty string when the cookie does not exist.
-- When input is provided and the 'Log me in' button is pressed, followed by clicking the 'Show the cookies' button, the output displays `Email: puggilicious@pugs.com - Firstname: puggilicious`, confirming that the cookies are correctly set and retrieved.
+
 
 </details>
 
@@ -508,7 +509,7 @@ In a `3-index.html`:
 
 ### Implementation
 
-### `3-index.html`
+### `3-index.html`:
 
 ```html
 <!DOCTYPE html>
