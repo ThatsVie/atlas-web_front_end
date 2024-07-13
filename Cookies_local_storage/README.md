@@ -1,7 +1,4 @@
 
-https://github.com/user-attachments/assets/aa8ccefd-be7b-49f5-b67d-49d402276f35
-
-https://github.com/user-attachments/assets/9a88684d-39c2-4f2d-84cf-b612ddb4ec50
 # Cookies & Local Storage
 
 
