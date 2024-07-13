@@ -1,11 +1,6 @@
-
 # Cookies & Local Storage
 
-
-
 ![blackandwhitepuggywithcookie](https://github.com/user-attachments/assets/2c25b83b-4b19-45d3-b4a9-d68fade79673)
-
-
 
 
 ## Resources
@@ -883,6 +878,10 @@ Reusing the code from the previous task:
    - Enter values into the `Firstname` and `Email` input fields.
    - Click the “Log me in” button to set the cookies using js-cookie and display the welcome message.
    - Click the “logout” link to delete the cookies using js-cookie, clear the input fields, and show the login form again.
+
+
+
+https://github.com/user-attachments/assets/b76f5f6b-6556-4409-8a78-3aab9c2cdd0a
 
 
 
