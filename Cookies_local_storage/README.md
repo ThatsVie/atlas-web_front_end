@@ -2,7 +2,9 @@
 # Cookies & Local Storage
 
 
-![puggycookies](https://github.com/user-attachments/assets/e2a1fc2a-da7b-45a4-b5d5-a0a2063c5620)
+
+![blackandwhitepuggywithcookie](https://github.com/user-attachments/assets/2c25b83b-4b19-45d3-b4a9-d68fade79673)
+
 
 
 
