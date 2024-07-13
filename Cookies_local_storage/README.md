@@ -322,7 +322,381 @@ You should see a list of cookies set by your site, including their names, values
    - Click the “Log me in” button to set the cookies.
    - Click the “Show the cookies” button to display the cookies on the page.
    - Check the expiration date of the cookies in the browser's developer tools.
+
 ![Screenshot 2024-07-12 180149](https://github.com/user-attachments/assets/71ea9638-cb79-4ec9-985c-99396efd37c5)
 
+The screenshot from `http://localhost:8080/1-index.html` shows that the expiration date for the cookies is `2024-07-22T22:57:11.000Z`, which is 10 days from the date when the cookies were generated.
+
+</details>
+
+
+## Task 2: Create a Function to Retrieve a Cookie and Modify Display
+
+<details>
+<summary>The goal of this task is to learn how to set cookies, retrieve them by name, and display them in a specified format using vanilla JavaScript.</summary>
+
+### Task Details
+Create a function to retrieve a cookie and modify display
+   - **Reuse the code from the previous task**
+   - **Create a function `getCookie`:**
+     - It accepts `name` as an argument
+     - It should return the value of the cookie with the name passed in the argument
+     - If the cookie does not exist, it should return an empty string
+   - **Modify the function `showCookies`:**
+     - It should display the paragraph `Email: EMAIL - Firstname: FIRSTNAME`
+   - **Requirements**:
+     - Access your code with `http://localhost:8080/2-index.html`
+     - Use vanilla JavaScript to complete the task
+
+### Implementation
+
+ `2-index.html`:
+
+   ```html
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>2-index.html</title>
+       <style>
+           body {
+               margin: 20px;
+               font-family: "Times New Roman", Times, serif;
+               font-weight: bold;
+           }
+           h1, h2 {
+               margin-bottom: 10px;
+           }
+           input {
+               margin-right: 10px;
+               padding: 5px;
+               border: 1px solid gray;
+           }
+           button {
+               padding: 5px 10px;
+               background-color: white;
+               border: 1px solid gray;
+               border-radius: 5px;
+               color: black;
+               cursor: pointer;
+               font-weight: bold;
+               box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+           }
+           button:hover {
+               background-color: #f0f0f0;
+           }
+       </style>
+   </head>
+   <body>
+       <h1>Login to the website</h1>
+       <input type="text" id="firstname" placeholder="Firstname">
+       <input type="email" id="email" placeholder="Email">
+       <button onclick="setCookies()">Log me in</button>
+       
+       <h2>Cookies</h2>
+       <button onclick="showCookies()">Show the cookies</button>
+
+       <script>
+           function setCookies() {
+               const firstname = document.getElementById('firstname').value;
+               const email = document.getElementById('email').value;
+               
+               const expirationDate = new Date();
+               expirationDate.setTime(expirationDate.getTime() + (10 * 24 * 60 * 60 * 1000)); // 10 days in milliseconds
+               const expires = "expires=" + expirationDate.toUTCString();
+               
+               document.cookie = `firstname=${firstname};${expires};path=/`;
+               document.cookie = `email=${email};${expires};path=/`;
+           }
+
+           function getCookie(name) {
+               const cookies = document.cookie.split('; ');
+               for (let cookie of cookies) {
+                   const [cookieName, cookieValue] = cookie.split('=');
+                   if (cookieName === name) {
+                       return cookieValue;
+                   }
+               }
+               return '';
+           }
+
+           function showCookies() {
+               const firstname = getCookie('firstname');
+               const email = getCookie('email');
+
+               const p = document.createElement('p');
+               p.innerHTML = `Email: ${email} - Firstname: ${firstname}`;
+               document.body.appendChild(p);
+           }
+       </script>
+   </body>
+   </html>
+   ```
+
+### Explanation
+
+- **`getCookie(name)`**: This function accepts a cookie name as an argument and returns the value of the cookie with the specified name. If the cookie does not exist, it returns an empty string.
+  - `const cookies = document.cookie.split('; ');`: Splits the document cookies into an array.
+  - `for (let cookie of cookies)`: Loops through each cookie.
+  - `const [cookieName, cookieValue] = cookie.split('=');`: Splits each cookie into its name and value.
+  - `if (cookieName === name) { return cookieValue; }`: Checks if the cookie name matches the provided name and returns the value.
+  - `return '';`: Returns an empty string if the cookie does not exist.
+  
+- **Modified `showCookies()`**:
+  - Retrieves the `firstname` and `email` cookies using the `getCookie` function.
+  - Displays the cookies in the format `Email: EMAIL - Firstname: FIRSTNAME`.
+
+### Usage
+
+1. **Start the development server:**
+   ```bash
+   npm start
+   ```
+2. **Open your browser** to `http://localhost:8080/2-index.html` and test the functionality:
+   - Enter values into the `Firstname` and `Email` input fields.
+   - Click the “Log me in” button to set the cookies.
+   - Click the “Show the cookies” button to display the cookies on the page in the specified format.
+
+
+
+The implementation was successful as evidenced by the following behaviors:
+- When no input is provided, clicking the 'Show the cookies' button results in `Email: - Firstname:`, which indicates that the `getCookie` function correctly returns an empty string when the cookie does not exist.
+- When input is provided and the 'Log me in' button is pressed, followed by clicking the 'Show the cookies' button, the output displays `Email: puggilicious@pugs.com - Firstname: puggilicious`, confirming that the cookies are correctly set and retrieved.
+
+</details>
+
+## Task 3: Delete Cookie and Mini Application
+
+<details>
+<summary>
+The goal of this task is to learn how to create a mini application that can log in users, display a welcome message, and log them out by deleting cookies using vanilla JavaScript.</summary>
+
+### Task Details
+In a `3-index.html`:
+   - **Reuse your code from the previous task**
+   - Add a `div` in HTML that will contain the login form:
+     - You can reuse the one you previously wrote
+     - It has one `h2`
+     - It has two text inputs
+     - It has one button
+   - Write a function named `showForm`:
+     - It should remove the Welcome message if it exists
+     - It should show the form
+   - Write a function named `hideForm`:
+     - It should hide the form
+   - Write a function named `deleteCookiesAndShowForm`:
+     - It should remove the two cookies
+     - It should show the form by calling the `showForm` function
+   - Write a function named `showWelcomeMessageOrForm`:
+     - If the user is not logged in, the function `showForm` is called
+     - If the user is logged in, replace the body of the page with an `h1`
+     - It should display `Welcome FIRSTNAME (logout)`
+     - `(logout)` should be a link
+     - The link font should be displayed in normal weight, italic, and 10px to the right of the message
+     - On click, call the function `deleteCookiesAndShowForm`, hide the welcome message, and show the form
+   - **Requirements**:
+     - Access your code with `http://localhost:8080/3-index.html`
+     - Use vanilla JavaScript to complete the task
+     - Build the Welcome message with JavaScript without using HTML
+     - The login form should look like the provided image
+     - When a user is logged in, the page should look like the provided image
+
+### Implementation
+
+### `3-index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-index.html</title>
+    <style>
+        body {
+            margin: 20px;
+            font-family: "Times New Roman", Times, serif;
+            font-weight: bold;
+        }
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+        input {
+            margin-right: 10px;
+            padding: 5px;
+            border: 1px solid gray;
+        }
+        button {
+            padding: 5px 10px;
+            background-color: white;
+            border: 1px solid gray;
+            border-radius: 5px;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        button:hover {
+            background-color: #f0f0f0;
+        }
+        .logout {
+            font-weight: normal;
+            font-style: italic;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body onload="showWelcomeMessageOrForm()">
+    <div id="login-form">
+        <h2>Login to the website</h2>
+        <input type="text" id="firstname" placeholder="Firstname">
+        <input type="email" id="email" placeholder="Email">
+        <button onclick="setCookies()">Log me in</button>
+    </div>
+
+    <script>
+        function setCookies() {
+            const firstname = document.getElementById('firstname').value;
+            const email = document.getElementById('email').value;
+            
+            const expirationDate = new Date();
+            expirationDate.setTime(expirationDate.getTime() + (10 * 24 * 60 * 60 * 1000)); // 10 days in milliseconds
+            const expires = "expires=" + expirationDate.toUTCString();
+            
+            document.cookie = `firstname=${firstname};${expires};path=/`;
+            document.cookie = `email=${email};${expires};path=/`;
+            showWelcomeMessageOrForm();
+        }
+
+        function getCookie(name) {
+            const cookies = document.cookie.split('; ');
+            for (let cookie of cookies) {
+                const [cookieName, cookieValue] = cookie.split('=');
+                if (cookieName === name) {
+                    return cookieValue;
+                }
+            }
+            return '';
+        }
+
+        function showForm() {
+            const welcomeMessage = document.getElementById('welcome-message');
+            if (welcomeMessage) {
+                welcomeMessage.remove();
+            }
+            document.getElementById('login-form').style.display = 'block';
+        }
+
+        function hideForm() {
+            document.getElementById('login-form').style.display = 'none';
+        }
+
+        function deleteCookiesAndShowForm() {
+            document.cookie = "firstname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.cookie = "email=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.getElementById('firstname').value = '';
+            document.getElementById('email').value = '';
+            showForm();
+        }
+
+        function showWelcomeMessageOrForm() {
+            const firstname = getCookie('firstname');
+            const email = getCookie('email');
+
+            if (!firstname || !email) {
+                showForm();
+            } else {
+                hideForm();
+                const welcomeMessage = document.createElement('h1');
+                welcomeMessage.id = 'welcome-message';
+                welcomeMessage.innerHTML = `Welcome: ${firstname} <span class="logout" onclick="deleteCookiesAndShowForm()">(logout)</span>`;
+                document.body.appendChild(welcomeMessage);
+            }
+        }
+    </script>
+</body>
+</html>
+```
+
+### Explanation
+
+- **setCookies()**: This function sets the cookies for `firstname` and `email` with an expiration date of 10 days from the current date.
+  - `const expirationDate = new Date();`: Creates a new Date object representing the current date and time.
+  - `expirationDate.setTime(expirationDate.getTime() + (10 * 24 * 60 * 60 * 1000));`: Adds 10 days (in milliseconds) to the current time.
+  - `const expires = "expires=" + expirationDate.toUTCString();`: Converts the date to a UTC string suitable for setting in a cookie.
+  - `document.cookie = `firstname=${firstname};${expires};path=/`;`: Sets the `firstname` cookie with the expiration date.
+  - `document.cookie = `email=${email};${expires};path=/`;`: Sets the `email` cookie with the expiration date.
+  - `showWelcomeMessageOrForm();`: Calls the `showWelcomeMessageOrForm` function to update the UI.
+
+- **getCookie(name)**: This function retrieves the value of the specified cookie. If the cookie does not exist, it returns an empty string.
+  - `const cookies = document.cookie.split('; ');`: Splits the document cookies into an array.
+  - `for (let cookie of cookies)`: Loops through each cookie.
+  - `const [cookieName, cookieValue] = cookie.split('=');`: Splits each cookie into its name and value.
+  - `if (cookieName === name) { return cookieValue; }`: Checks if the cookie name matches the provided name and returns the value.
+  - `return '';`: Returns an empty string if the cookie does not exist.
+
+- **showForm()**: This function shows the login form and removes the welcome message if it exists.
+  - `const welcomeMessage = document.getElementById('welcome-message');`: Gets the welcome message element.
+  - `if (welcomeMessage) { welcomeMessage.remove(); }`: Removes the welcome message if it exists.
+  - `document.getElementById('login-form').style.display = 'block';`: Shows the login form.
+
+- **hideForm()**: This function hides the login form.
+  - `document.getElementById('login-form').style.display = 'none';`: Hides the login form.
+
+- **deleteCookiesAndShowForm()**: This function deletes the `firstname` and `email` cookies, clears the input fields, and shows the login form.
+  - `document.cookie = "firstname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";`: Deletes the `firstname` cookie.
+  - `document.cookie = "email=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";`: Deletes the `email` cookie.
+  - (The specific date of "Thu, 01 Jan 1970 00:00:00 UTC" is used because it is the epoch time (the start of Unix time), which is the earliest possible date in most computer systems. Setting the cookie's expiration date to this time effectively deletes the cookie, as the expiration date is in the past.)
+  - `document.getElementById('firstname').value = '';`: Clears the `firstname` input field.
+  - `document.getElementById('email').value = '';`: Clears the `email` input field.
+  - `showForm();`: Calls the `showForm` function to show the login form.
+
+- **showWelcomeMessageOrForm()**: This function checks if the user is logged in by verifying if the `firstname` and `email` cookies exist. If the user is logged in, it hides the form and displays the welcome message. If the user is not logged in, it shows the form.
+  - `const firstname = getCookie('firstname');`: Gets the `firstname` cookie.
+  - `const email = getCookie('email');`: Gets the `email` cookie.
+
+
+  - `if (!firstname || !email) { showForm(); } else { hideForm(); }`: Checks if the cookies exist. If they do not, it shows the form. If they do, it hides the form.
+  - `const welcomeMessage = document.createElement('h1');`: Creates an `h1` element for the welcome message.
+  - `welcomeMessage.id = 'welcome-message';`: Sets the id of the welcome message element.
+  - `welcomeMessage.innerHTML = `Welcome: ${firstname} <span class="logout" onclick="deleteCookiesAndShowForm()">logout</span>`;`: Sets the inner HTML of the welcome message.
+  - `document.body.appendChild(welcomeMessage);`: Appends the welcome message to the body.
+
+### Usage
+
+1. **Start the development server:**
+   ```bash
+   npm start
+   ```
+2. **Open your browser** to `http://localhost:8080/3-index.html` and test the functionality:
+   - Enter values into the `Firstname` and `Email` input fields.
+   - Click the “Log me in” button to set the cookies and display the welcome message.
+   - Click the “logout” link to delete the cookies, clear the input fields(not explicitly asked for in the task but included for a polished user experience), and show the login form again.
+
+
+This video effectively demonstrates the full cycle of logging in, setting cookies, displaying a welcome message, logging out, and verifying the deletion of cookies.
+
+**Video Demonstration of Functionality and Usage**
+
+1. **Initial Login:**
+   - The user enters `Pugster` in the `Firstname` input field.
+   - The user enters `pugster@pugmail.com` in the `Email` input field.
+   - The user clicks the `Log me in` button.
+   - The login form is replaced with the message: `Welcome: Pugster (logout)`.
+
+2. **Inspecting Cookies:**
+   - The user opens the browser's Developer Tools (Inspect Tools) to show the cookies set by the application.
+   - The cookies `firstname` and `email` are displayed with the values `Pugster` and `pugster@pugmail.com` respectively, confirming they were successfully set.
+
+3. **Logout:**
+   - The user clicks the `logout` link.
+   - The `firstname` and `email` cookies are deleted.
+   - The login form is displayed again.
+
+4. **Verification of Cookie Deletion:**
+   - The user closes the Developer Tools, refreshes the page, and opens the Developer Tools again.
+   - The absence of the `firstname` and `email` cookies confirms they were successfully deleted.
 
 </details>
