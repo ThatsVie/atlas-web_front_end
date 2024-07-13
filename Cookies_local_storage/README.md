@@ -1,3 +1,7 @@
+
+https://github.com/user-attachments/assets/aa8ccefd-be7b-49f5-b67d-49d402276f35
+
+https://github.com/user-attachments/assets/9a88684d-39c2-4f2d-84cf-b612ddb4ec50
 # Cookies & Local Storage
 
 
@@ -458,6 +462,9 @@ Create a function to retrieve a cookie and modify display
    - Click the “Log me in” button to set the cookies.
    - Click the “Show the cookies” button to display the cookies on the page in the specified format.
 
+![Screenshot 2024-07-13 125447](https://github.com/user-attachments/assets/89489759-5a2a-4d7f-a475-414707db2ecd)
+
+![Screenshot 2024-07-13 123816](https://github.com/user-attachments/assets/70a5d166-d768-45f3-835f-d2a49426c8f4)
 
 
 The implementation was successful as evidenced by the following behaviors:
@@ -676,6 +683,11 @@ In a `3-index.html`:
    - Click the “logout” link to delete the cookies, clear the input fields(not explicitly asked for in the task but included for a polished user experience), and show the login form again.
 
 
+
+https://github.com/user-attachments/assets/b8549258-fecf-4b1e-9efe-f7dd672c997c
+
+
+
 This video effectively demonstrates the full cycle of logging in, setting cookies, displaying a welcome message, logging out, and verifying the deletion of cookies.
 
 **Video Demonstration of Functionality and Usage**
@@ -700,3 +712,6 @@ This video effectively demonstrates the full cycle of logging in, setting cookie
    - The absence of the `firstname` and `email` cookies confirms they were successfully deleted.
 
 </details>
+
+
+
