@@ -631,9 +631,17 @@ In a `3-index.html`:
   - `const expirationDate = new Date();`: Creates a new Date object representing the current date and time.
   - `expirationDate.setTime(expirationDate.getTime() + (10 * 24 * 60 * 60 * 1000));`: Adds 10 days (in milliseconds) to the current time.
   - `const expires = "expires=" + expirationDate.toUTCString();`: Converts the date to a UTC string suitable for setting in a cookie.
-  - `document.cookie = `firstname=${firstname};${expires};path=/`;`: Sets the `firstname` cookie with the expiration date.
-  - `document.cookie = `email=${email};${expires};path=/`;`: Sets the `email` cookie with the expiration date.
+  - ```javascript
+    document.cookie = `firstname=${firstname};${expires};path=/`;
+    ```
+    Sets the `firstname` cookie with the expiration date.
+  - ```javascript
+    document.cookie = `email=${email};${expires};path=/`;
+    ```
+    Sets the `email` cookie with the expiration date.
   - `showWelcomeMessageOrForm();`: Calls the `showWelcomeMessageOrForm` function to update the UI.
+
+
 
 - **getCookie(name)**: This function retrieves the value of the specified cookie. If the cookie does not exist, it returns an empty string.
   - `const cookies = document.cookie.split('; ');`: Splits the document cookies into an array.
@@ -661,8 +669,6 @@ In a `3-index.html`:
 - **showWelcomeMessageOrForm()**: This function checks if the user is logged in by verifying if the `firstname` and `email` cookies exist. If the user is logged in, it hides the form and displays the welcome message. If the user is not logged in, it shows the form.
   - `const firstname = getCookie('firstname');`: Gets the `firstname` cookie.
   - `const email = getCookie('email');`: Gets the `email` cookie.
-
-
   - `if (!firstname || !email) { showForm(); } else { hideForm(); }`: Checks if the cookies exist. If they do not, it shows the form. If they do, it hides the form.
   - `const welcomeMessage = document.createElement('h1');`: Creates an `h1` element for the welcome message.
   - `welcomeMessage.id = 'welcome-message';`: Sets the id of the welcome message element.
@@ -685,28 +691,27 @@ In a `3-index.html`:
 https://github.com/user-attachments/assets/b8549258-fecf-4b1e-9efe-f7dd672c997c
 
 
-
 This video effectively demonstrates the full cycle of logging in, setting cookies, displaying a welcome message, logging out, and verifying the deletion of cookies.
 
 **Video Demonstration of Functionality and Usage**
 
 1. **Initial Login:**
-   - The user enters `Pugster` in the `Firstname` input field.
-   - The user enters `pugster@pugmail.com` in the `Email` input field.
-   - The user clicks the `Log me in` button.
+   - Enters `Pugster` in the `Firstname` input field.
+   - Enters `Pugster@pugmail.com` in the `Email` input field.
+   - Click the `Log me in` button.
    - The login form is replaced with the message: `Welcome: Pugster (logout)`.
 
 2. **Inspecting Cookies:**
-   - The user opens the browser's Developer Tools (Inspect Tools) to show the cookies set by the application.
-   - The cookies `firstname` and `email` are displayed with the values `Pugster` and `pugster@pugmail.com` respectively, confirming they were successfully set.
+   - Open the browser's Developer Tools (Inspect Tools) to show the cookies set by the application.
+   - The cookies `firstname` and `email` are displayed with the values `Pugster` and `Pugster@pugmail.com` respectively, confirming they were successfully set.
 
 3. **Logout:**
-   - The user clicks the `logout` link.
+   - Click the `logout` link.
    - The `firstname` and `email` cookies are deleted.
    - The login form is displayed again.
 
 4. **Verification of Cookie Deletion:**
-   - The user closes the Developer Tools, refreshes the page, and opens the Developer Tools again.
+   - Close the Developer Tools, refresh the page, and open the Developer Tools again.
    - The absence of the `firstname` and `email` cookies confirms they were successfully deleted.
 
 </details>
