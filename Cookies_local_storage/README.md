@@ -880,8 +880,260 @@ Reusing the code from the previous task:
    - Click the “logout” link to delete the cookies using js-cookie, clear the input fields, and show the login form again.
 
 
-
 https://github.com/user-attachments/assets/b76f5f6b-6556-4409-8a78-3aab9c2cdd0a
 
+</details>
+
+## Task 5: Local Storage
+
+<details>
+<summary>
+The goal of this task is to have a fully functional shopping cart that uses local storage to add cart items.  Creative freedom was used  to include additional features to clear the cart and enhanced styling for a better user experience.</summary>
+
+### Task Details
+In this task, we built a basic shopping cart using local storage.
+ We added the following features:
+- Created an array `availableItems` containing all the available items: Shampoo, Soap, Sponge, and Water.
+- Checked if local storage is enabled in the browser. If not, displayed an alert with the message "Sorry, your browser does not support Web storage. Try again with a better one."
+- If local storage is available, displayed the application and called the functions `createStore` and `displayCart`.
+
+### Functions Implemented
+
+1. **addItemToCart(item)**:
+   - Takes one argument `item` (string).
+   - Adds a key to the local storage with the name of the item and sets the value to `true`.
+
+2. **createStore()**:
+   - Creates a `ul` and appends it to the DOM.
+   - Loops through the array of items and creates a list item to add to the `ul`.
+   - The item displays the name of the available product.
+   - On click, the item calls the function `addItemToCart`.
+
+3. **displayCart()**:
+   - If the local storage does not contain any items, this function does nothing.
+   - If the local storage contains any items, it displays the message "You previously had X items in your cart" in a `p` element that is appended to the body.
+
+### Additional Features
+
+1. **Clear Cart Button**:
+   - Added a button with the text "Clear Cart" that calls the function `clearCart`.
+   - The `clearCart` function removes all items from the local storage and updates the cart display.
+   - The purpose of this addition is to provide users with an easy way to clear their cart and reset the application.
+
+2. **Enhanced Styling**:
+   - Applied a vibrant and bold color scheme to make the interface more visually appealing.
+   - Ensured high contrast and accessibility by using colors that stand out and are easy to read.
+   - The purpose of these styling additions is to improve the user experience and make the application more modern and attractive.
+
+### Implementation
+
+Create an HTML file named `5-index.html`:
+
+### `5-index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-index.html</title>
+    <style>
+        body {
+            margin: 20px;
+            font-family: 'Lato', sans-serif;
+            background-color: #f0f0f0;
+            color: #2f4f4f;
+        }
+        h1 {
+            color: #ff6347;
+            font-size: 2rem;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            cursor: pointer;
+            margin: 5px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        li:hover, li:focus {
+            background-color: #ffd700;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            outline: none;
+        }
+        .clear-cart {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #4682b4;
+            background-color: #4682b4;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            font-size: 1rem;
+        }
+        .clear-cart:hover, .clear-cart:focus {
+            background-color: #2c5d8a;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            outline: none;
+        }
+        p {
+            margin-top: 20px;
+            font-size: 1rem;
+            background-color: #ff6347;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        @media (prefers-reduced-motion: no-preference) {
+            * {
+                scroll-behavior: smooth;
+            }
+        }
+        @media (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            li, .clear-cart, p {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap">
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+    <script>
+        const availableItems = ["Shampoo", "Soap", "Sponge", "Water"];
+
+        if (typeof(Storage) === "undefined") {
+            alert("Sorry, your browser does not support Web storage. Try again with a better one.");
+        } else {
+            createStore();
+            displayCart();
+        }
+
+        function addItemToCart(item) {
+            localStorage.setItem(item, true);
+            displayCart();
+        }
+
+        function createStore() {
+            const ul = document.createElement('ul');
+            document.body.appendChild(ul);
+            availableItems.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                li.setAttribute('tabindex', '0');
+                li.onclick = () => addItemToCart(item);
+                li.onkeypress = (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        addItemToCart(item);
+                    }
+                };
+                ul.appendChild(li);
+            });
+
+            const clearCartButton = document.createElement('button');
+            clearCartButton.textContent = "Clear Cart";
+            clearCartButton.className = "clear-cart";
+            clearCartButton.onclick = clearCart;
+            clearCartButton.setAttribute('tabindex', '0');
+            document.body.appendChild(clearCartButton);
+        }
+
+        function displayCart() {
+            const itemsInCart = Object.keys(localStorage).filter(key => availableItems.includes(key));
+            const existingMessage = document.getElementById('cart-message');
+            if (existingMessage) {
+                existingMessage.remove();
+            }
+            if (itemsInCart.length === 0) return;
+
+            const p = document.createElement('p');
+            p.id = 'cart-message';
+            p.textContent = `You previously had ${itemsInCart.length} items in your cart`;
+            document.body.appendChild(p);
+        }
+
+        function clearCart() {
+            availableItems.forEach(item => {
+                localStorage.removeItem(item);
+            });
+            displayCart();
+        }
+    </script>
+</body>
+</html>
+```
+
+### Summary of Accessibility and Responsiveness Features
+
+#### Media Queries for Accessibility and Responsiveness
+
+1. **Reduced Motion Preference**:
+   - **CSS Rule**: `@media (prefers-reduced-motion: no-preference)`
+   - **Effect**: Applies smooth scrolling behavior when users have not indicated a preference for reduced motion.
+   - **Purpose**: Enhances accessibility by respecting user preferences, preventing discomfort for users with vestibular disorders who are sensitive to motion and animation.
+
+2. **Smaller Screen Adjustments**:
+   - **CSS Rule**: `@media (max-width: 600px)`
+   - **Effects**:
+     - **Body Margin**: Reduced to `10px` to utilize more screen space.
+     - **Heading Font Size**: Reduced to `1.5rem` to prevent text from being too large on small screens.
+     - **List Items, Clear Cart Button, and Paragraph**: Font size reduced to `0.9rem` and padding to `10px` for better fit and readability.
+   - **Purpose**: Ensures the application is responsive, providing an optimal user experience on mobile devices.
+
+#### Additional Accessibility Features
+
+1. **High Contrast Colors**:
+   - **Text Color**: Dark slate gray (`#2f4f4f`) ensures good readability against the light gray background (`#f0f0f0`).
+   - **Hover and Focus States**: Clear and distinct colors for interactive elements to ensure they are easily noticeable.
+
+2. **Keyboard Accessibility**:
+   - **Tabindex**: Added `tabindex="0"` to interactive elements like list items and buttons, making them focusable.
+   - **Keypress Events**: Added keypress event handlers to ensure list items can be activated using the Enter or Space keys.
+
+3. **Clear Focus Styles**:
+   - **Focus States**: Applied clear styles for when elements are focused, ensuring users can easily navigate using the keyboard.
+
+4. **Responsive Design**:
+   - **Media Queries**: Adjustments for smaller screens to ensure the interface remains user-friendly and readable on mobile devices.
+
+5. **Font Selection**:
+   - **Modern Font**: Used 'Lato', a clean and modern sans-serif font that improves readability.
+
+### Usage
+
+1. **Start the development server:**
+   ```bash
+   npm start
+   ```
+2. **Open your browser** to `http://localhost:8080/5-index.html` and test the functionality:
+   - **DevTools Setup**:
+     - Open the browser's Developer Tools.
+     - Navigate to the **Application** tab.
+     - In the left sidebar, under **Storage**, click on **Local Storage**.
+     - Select `http://localhost:8080` to view the local storage for the page.
+   - **Interacting with the Shopping Cart**:
+     - You should see a list of available items (Shampoo, Soap, Sponge, Water).
+     - Click on an item to add it to the cart. Observe the local storage updating with the item.
+     - Refresh the page to see the message "You previously had X items in your cart" and confirm the items are still in local storage.
+     - Open a new tab and navigate to `http://localhost:8080/5-index.html` to see the same message, confirming the persistence of local storage.
+     - Click the "Clear Cart" button to remove all items from the cart and observe local storage being cleared.
+     - Refresh the page to confirm the cart is empty and local storage remains cleared.
 
 
+
+</details>
