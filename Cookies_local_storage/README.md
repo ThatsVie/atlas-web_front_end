@@ -1122,7 +1122,7 @@ Create an HTML file named `5-index.html`:
    ```
 2. **Open your browser** to `http://localhost:8080/5-index.html` and test the functionality:
    - **DevTools Setup**:
-     - Open the browser's Developer Tools.
+     - Open the browser's Developer Toolsgit.
      - Navigate to the **Application** tab.
      - In the left sidebar, under **Storage**, click on **Local Storage**.
      - Select `http://localhost:8080` to view the local storage for the page.
@@ -1137,6 +1137,217 @@ Create an HTML file named `5-index.html`:
 
 
 https://github.com/user-attachments/assets/1a6ad24f-7448-413c-b20e-eb5fceab1d08
+
+
+
+</details>
+
+
+## Task 6: Session Storage
+
+<details>
+<summary>
+In this task we transitioned the shopping cart application from using local storage to session storage. The goal is to ensure that the cart data persists only for the duration of the browser session, demonstrating the use of session storage which clears data when the session ends, unlike local storage which persists data across sessions.</summary>
+
+
+### Task Details
+In this task, we replaced the use of local storage with session storage in our shopping cart application. Session storage keeps data for the duration of the page session and does not persist across tabs or windows.
+
+### Functions Implemented
+
+1. **addItemToCart(item)**:
+   - Takes one argument `item` (string).
+   - Adds a key to the session storage with the name of the item and sets the value to `true`.
+
+2. **createStore()**:
+   - Creates a `ul` and appends it to the DOM.
+   - Loops through the array of items and creates a list item to add to the `ul`.
+   - The item displays the name of the available product.
+   - On click, the item calls the function `addItemToCart`.
+
+3. **displayCart()**:
+   - If the session storage does not contain any items, this function does nothing.
+   - If the session storage contains any items, it displays the message "You previously had X items in your cart" in a `p` element that is appended to the body.
+
+4. **clearCart()**:
+   - Removes all items from session storage and updates the cart display.
+
+
+### Implementation
+
+### `6-index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6-index.html</title>
+    <style>
+        body {
+            margin: 20px;
+            font-family: 'Lato', sans-serif;
+            background-color: #f0f0f0;
+            color: #2f4f4f;
+        }
+        h1 {
+            color: #ff6347;
+            font-size: 2rem;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            cursor: pointer;
+            margin: 5px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        li:hover, li:focus {
+            background-color: #ffd700;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            outline: none;
+        }
+        .clear-cart {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #4682b4;
+            background-color: #4682b4;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            font-size: 1rem;
+        }
+        .clear-cart:hover, .clear-cart:focus {
+            background-color: #2c5d8a; /* Darker shade of blue */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            outline: none;
+        }
+        p {
+            margin-top: 20px;
+            font-size: 1rem;
+            background-color: #ff6347;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        @media (prefers-reduced-motion: no-preference) {
+            * {
+                scroll-behavior: smooth;
+            }
+        }
+        @media (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            li, .clear-cart, p {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap">
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+    <script>
+        const availableItems = ["Shampoo", "Soap", "Sponge", "Water"];
+
+        if (typeof(Storage) === "undefined") {
+            alert("Sorry, your browser does not support Web storage. Try again with a better one.");
+        } else {
+            createStore();
+            displayCart();
+        }
+
+        function addItemToCart(item) {
+            sessionStorage.setItem(item, true);
+            displayCart();
+        }
+
+        function createStore() {
+            const ul = document.createElement('ul');
+            document.body.appendChild(ul);
+            availableItems.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                li.setAttribute('tabindex', '0');
+                li.onclick = () => addItemToCart(item);
+                li.onkeypress = (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        addItemToCart(item);
+                    }
+                };
+                ul.appendChild(li);
+            });
+
+            const clearCartButton = document.createElement('button');
+            clearCartButton.textContent = "Clear Cart";
+            clearCartButton.className = "clear-cart";
+            clearCartButton.onclick = clearCart;
+            clearCartButton.setAttribute('tabindex', '0');
+            document.body.appendChild(clearCartButton);
+        }
+
+        function displayCart() {
+            const itemsInCart = Object.keys(sessionStorage).filter(key => availableItems.includes(key));
+            const existingMessage = document.getElementById('cart-message');
+            if (existingMessage) {
+                existingMessage.remove();
+            }
+            if (itemsInCart.length === 0) return;
+
+            const p = document.createElement('p');
+            p.id = 'cart-message';
+            p.textContent = `You previously had ${itemsInCart.length} items in your cart`;
+            document.body.appendChild(p);
+        }
+
+        function clearCart() {
+            availableItems.forEach(item => {
+                sessionStorage.removeItem(item);
+            });
+            displayCart();
+        }
+    </script>
+</body>
+</html>
+```
+
+### Explanation
+
+- **Session Storage**: Unlike local storage, session storage data is only available for the duration of the page session. This means that data persists across page reloads but not across different tabs or windows.
+- **Transition from Local Storage**: The code changes involve replacing `localStorage` methods with `sessionStorage` methods to meet the task requirements.
+
+### Usage
+
+1. **Start the development server:**
+   ```bash
+   npm start
+   ```
+2. **Open your browser** to `http://localhost:8080/6-index.html` and test the functionality:
+   - **DevTools Setup**:
+     - Open the browser's Developer Tools (usually by pressing `F12` or `Ctrl+Shift+I`).
+     - Navigate to the **Application** tab.
+     - In the left sidebar, under **Storage**, click on **Session Storage**.
+     - Select `http://localhost:8080` to view the session storage for the page.
+   - **Interacting with the Shopping Cart**:
+     - You should see a list of available items (Shampoo, Soap, Sponge, Water).
+     - Click on an item to add it to the cart. Observe the session storage updating with the item.
+     - Refresh the page to see the message "You previously had X items in your cart" and confirm the items are still in session storage.
+     - Open a new tab and navigate to `http://localhost:8080/6-index.html` to see that the session storage does not persist, and no items are shown in the cart.
+     - Click the "Clear Cart" button to remove all items from the cart and observe session storage being cleared.
+     - Refresh the page to confirm the cart is empty and session storage remains cleared.
 
 
 
