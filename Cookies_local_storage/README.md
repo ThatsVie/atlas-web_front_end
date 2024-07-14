@@ -1122,7 +1122,7 @@ Create an HTML file named `5-index.html`:
    ```
 2. **Open your browser** to `http://localhost:8080/5-index.html` and test the functionality:
    - **DevTools Setup**:
-     - Open the browser's Developer Toolsgit.
+     - Open the browser's Developer Tools.
      - Navigate to the **Application** tab.
      - In the left sidebar, under **Storage**, click on **Local Storage**.
      - Select `http://localhost:8080` to view the local storage for the page.
@@ -1341,7 +1341,7 @@ In this task, we replaced the use of local storage with session storage in our s
    ```
 2. **Open your browser** to `http://localhost:8080/6-index.html` and test the functionality:
    - **DevTools Setup**:
-     - Open the browser's Developer Tools (usually by pressing `F12` or `Ctrl+Shift+I`).
+     - Open the browser's Developer Tools.
      - Navigate to the **Application** tab.
      - In the left sidebar, under **Storage**, click on **Session Storage**.
      - Select `http://localhost:8080` to view the session storage for the page.
@@ -1358,5 +1358,278 @@ In this task, we replaced the use of local storage with session storage in our s
 https://github.com/user-attachments/assets/4b9f8e0c-22c1-4281-ae2b-c6301031e1c2
 
 
-
 </details>
+
+## Task 7: Advanced Use of Web Storage
+
+The goal of  to build this task is to build a more advanced shopping cart system using session storage, which supports item quantities, item removal, and cart clearing, while ensuring data persists only within the browser session.
+
+### Task Details
+In this task, we built a more advanced cart system using session storage. The system now supports adding multiple quantities of the same item, removing items, and clearing the entire cart, all while utilizing session storage.
+
+### Functions Implemented
+
+1. **getCartFromStorage()**:
+   - Parses a string into a JSON object, returning the content of the cart stored in session storage.
+   - If there is no cart, it returns an empty object.
+
+2. **addItemToCart(item)**:
+   - Accepts `item` (string) as an argument.
+   - Adds the item to the cart object in session storage.
+   - If the same item is added multiple times, the cart stores the quantity.
+   - Stores the updated cart object in session storage and calls `displayCart`.
+
+3. **removeItemFromCart(item)**:
+   - Accepts `item` (string) as an argument.
+   - Removes the entire item from the cart.
+   - Stores the updated cart object in session storage and calls `displayCart`.
+
+4. **clearCart()**:
+   - Clears the entire session storage.
+   - Calls `displayCart` to update the cart display.
+
+5. **createStore()**:
+   - Adds an `h2` tag with the text "Available products:".
+   - Adds a list of every item available for purchase.
+   - When a user clicks on an item, it adds it to the cart.
+
+6. **displayCart()**:
+   - Adds an `h2` tag with the text "Your cart:".
+   - Adds an empty `div` tag.
+   - If the `div` tag already exists, it removes any list child.
+   - Calls `updateCart`.
+
+7. **updateCart()**:
+   - Adds a list to the `div` tag created in `displayCart`.
+   - If the cart is empty, it adds an item "Your cart is empty".
+   - If the cart is not empty, it adds the list of items within the cart with the format: `ITEM_NAME x QUANTITY (remove)`.
+   - When a user clicks on "remove", it calls the function `removeItemFromCart`.
+   - Adds an item "Clear my cart" at the top of the cart. When the user clicks on it, it calls the function `clearCart`.
+
+
+### Implementation
+
+Create an HTML file named `7-index.html`:
+
+### `7-index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-index.html</title>
+    <style>
+        body {
+            margin: 20px;
+            font-family: 'Lato', sans-serif;
+            background-color: #f0f0f0;
+            color: #2f4f4f;
+        }
+        h1 {
+            color: #32cd32; 
+            font-size: 2rem;
+        }
+        h2 {
+            color: #ff6347;
+            font-size: 1.5rem;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            cursor: pointer;
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        li:hover, li:focus {
+            background-color: #ffd700;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            outline: none;
+        }
+        .clear-cart, .remove-item {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #4682b4;
+            background-color: #4682b4;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            font-size: 1rem;
+            display: inline-block;
+        }
+        .clear-cart:hover, .clear-cart:focus, .remove-item:hover, .remove-item:focus {
+            background-color: #2c5d8a; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            outline: none;
+        }
+        p {
+            margin-top: 20px;
+            font-size: 1rem;
+            background-color: #ff6347;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        @media (prefers-reduced-motion: no-preference) {
+            * {
+                scroll-behavior: smooth;
+            }
+        }
+        @media (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            h1, h2 {
+                font-size: 1.2rem;
+            }
+            li, .clear-cart, .remove-item, p {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap">
+</head>
+<body>
+    <h1>Advanced Shopping Cart</h1>
+    <script>
+        const availableItems = ["Shampoo", "Soap", "Sponge", "Water"];
+
+        if (typeof(Storage) === "undefined") {
+            alert("Sorry, your browser does not support Web storage. Try again with a better one.");
+        } else {
+            createStore();
+            displayCart();
+        }
+
+        function getCartFromStorage() {
+            const cart = sessionStorage.getItem('cart');
+            return cart ? JSON.parse(cart) : {};
+        }
+
+        function addItemToCart(item) {
+            const cart = getCartFromStorage();
+            if (cart[item]) {
+                cart[item]++;
+            } else {
+                cart[item] = 1;
+            }
+            sessionStorage.setItem('cart', JSON.stringify(cart));
+            displayCart();
+        }
+
+        function removeItemFromCart(item) {
+            const cart = getCartFromStorage();
+            delete cart[item];
+            sessionStorage.setItem('cart', JSON.stringify(cart));
+            displayCart();
+        }
+
+        function clearCart() {
+            sessionStorage.clear();
+            displayCart();
+        }
+
+        function createStore() {
+            const storeContainer = document.createElement('div');
+            const storeTitle = document.createElement('h2');
+            storeTitle.textContent = "Available products:";
+            storeContainer.appendChild(storeTitle);
+            const ul = document.createElement('ul');
+            availableItems.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                li.setAttribute('tabindex', '0');
+                li.onclick = () => addItemToCart(item);
+                li.onkeypress = (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        addItemToCart(item);
+                    }
+                };
+                ul.appendChild(li);
+            });
+            storeContainer.appendChild(ul);
+            document.body.appendChild(storeContainer);
+        }
+
+        function displayCart() {
+            const cartContainer = document.getElementById('cart-container');
+            if (cartContainer) {
+                cartContainer.remove();
+            }
+
+            const cartSection = document.createElement('div');
+            cartSection.id = 'cart-container';
+            const cartTitle = document.createElement('h2');
+            cartTitle.textContent = "Your cart:";
+            cartSection.appendChild(cartTitle);
+            const cartDiv = document.createElement('div');
+            cartSection.appendChild(cartDiv);
+            document.body.appendChild(cartSection);
+            updateCart();
+        }
+
+        function updateCart() {
+            const cart = getCartFromStorage();
+            const cartDiv = document.querySelector('#cart-container div');
+            cartDiv.innerHTML = '';
+            const ul = document.createElement('ul');
+
+            if (Object.keys(cart).length === 0) {
+                const li = document.createElement('li');
+                li.textContent = "Your cart is empty";
+                ul.appendChild(li);
+            } else {
+                Object.keys(cart).forEach(item => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `${item} x ${cart[item]} <span class="remove-item" onclick="removeItemFromCart('${item}')">(remove)</span>`;
+                    ul.appendChild
+
+(li);
+                });
+                const clearCartButton = document.createElement('span');
+                clearCartButton.className = "clear-cart";
+                clearCartButton.textContent = "Clear my cart";
+                clearCartButton.onclick = clearCart;
+                cartDiv.appendChild(clearCartButton);
+            }
+            cartDiv.appendChild(ul);
+        }
+    </script>
+</body>
+</html>
+```
+
+### Usage
+
+1. **Start the development server:**
+   ```bash
+   npm start
+   ```
+2. **Open your browser** to `http://localhost:8080/7-index.html` and test the functionality:
+   - **DevTools Setup**:
+     - Open the browser's Developer Tools.
+     - Navigate to the **Application** tab.
+     - In the left sidebar, under **Storage**, click on **Session Storage**.
+     - Select `http://localhost:8080` to view the session storage for the page.
+   - **Interacting with the Shopping Cart**:
+     - You should see a list of available items (Shampoo, Soap, Sponge, Water).
+     - Click on an item to add it to the cart. Observe the session storage updating with the item.
+     - Refresh the page to see the items are still in the cart and confirm the items are still in session storage.
+     - Open a new tab and navigate to `http://localhost:8080/7-index.html` to see that the session storage does not persist, and no items are shown in the cart.
+     - Click the "Clear my cart" button to remove all items from the cart and observe session storage being cleared.
+     - Refresh the page to confirm the cart is empty and session storage remains cleared.
+
+### Explanation
+
+- **Session Storage**: Unlike local storage, session storage data is only available for the duration of the page session. This means that data persists across page reloads but not across different tabs or windows.
+- **Advanced Cart Features**: The cart now supports adding multiple quantities of the same item, removing items, and clearing the entire cart, all using session storage.
