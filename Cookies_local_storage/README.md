@@ -1136,7 +1136,11 @@ Create an HTML file named `5-index.html`:
 
 
 
-https://github.com/user-attachments/assets/1a6ad24f-7448-413c-b20e-eb5fceab1d08
+
+
+
+https://github.com/user-attachments/assets/96fa63db-6ed1-4507-a90b-18e6c55efb64
+
 
 
 
@@ -1348,6 +1352,10 @@ In this task, we replaced the use of local storage with session storage in our s
      - Open a new tab and navigate to `http://localhost:8080/6-index.html` to see that the session storage does not persist, and no items are shown in the cart.
      - Click the "Clear Cart" button to remove all items from the cart and observe session storage being cleared.
      - Refresh the page to confirm the cart is empty and session storage remains cleared.
+
+
+
+https://github.com/user-attachments/assets/4b9f8e0c-22c1-4281-ae2b-c6301031e1c2
 
 
 
