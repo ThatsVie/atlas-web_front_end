@@ -70,7 +70,7 @@ function showCookies() {
 ```
 </details>
 
-#### How to use js-cookie for easy cookie manipulation
+### How to use js-cookie for easy cookie manipulation
 
 <details>
 <summary>In Task 4, we integrated the `js-cookie` library for easier cookie manipulation. We replaced our custom cookie functions with methods from `js-cookie`</summary>
