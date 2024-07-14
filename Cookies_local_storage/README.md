@@ -1361,8 +1361,8 @@ https://github.com/user-attachments/assets/4b9f8e0c-22c1-4281-ae2b-c6301031e1c2
 </details>
 
 ## Task 7: Advanced Use of Web Storage
-
-The goal of  to build this task is to build a more advanced shopping cart system using session storage, which supports item quantities, item removal, and cart clearing, while ensuring data persists only within the browser session.
+<details>
+<summary>The goal of  to build this task is to build a more advanced shopping cart system using session storage, which supports item quantities, item removal, and cart clearing, while ensuring data persists only within the browser session.</summary>
 
 ### Task Details
 In this task, we built a more advanced cart system using session storage. The system now supports adding multiple quantities of the same item, removing items, and clearing the entire cart, all while utilizing session storage.
@@ -1609,6 +1609,12 @@ Create an HTML file named `7-index.html`:
 </html>
 ```
 
+### Explanation
+
+- **Session Storage**: Unlike local storage, session storage data is only available for the duration of the page session. This means that data persists across page reloads but not across different tabs or windows.
+- **Advanced Cart Features**: The cart now supports adding multiple quantities of the same item, removing items, and clearing the entire cart, all using session storage.
+
+
 ### Usage
 
 1. **Start the development server:**
@@ -1629,7 +1635,7 @@ Create an HTML file named `7-index.html`:
      - Click the "Clear my cart" button to remove all items from the cart and observe session storage being cleared.
      - Refresh the page to confirm the cart is empty and session storage remains cleared.
 
-### Explanation
 
-- **Session Storage**: Unlike local storage, session storage data is only available for the duration of the page session. This means that data persists across page reloads but not across different tabs or windows.
-- **Advanced Cart Features**: The cart now supports adding multiple quantities of the same item, removing items, and clearing the entire cart, all using session storage.
+https://github.com/user-attachments/assets/4473598b-d21b-4c10-9bb9-c54a5ff766ae
+
+</details>
