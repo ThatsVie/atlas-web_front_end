@@ -10,12 +10,147 @@
 - [W3Schools - HTML5 Web Storage](https://www.w3schools.com/html/html5_webstorage.asp)
 
 ## Learning Objectives
-- Understand how to create cookies using JavaScript
-- Learn how to set specific settings for the cookie
-- Learn how to read cookies with JavaScript
-- How to use js-cookie for easy cookie manipulation
-- How to use the browser web storage
-- The differences between local storage and session storage
+
+### Understand how to create cookies using JavaScript
+<details>
+<summary>In Task 0, we created cookies using JavaScript by defining a `setCookies` function. This function sets the `firstname` and `email` cookies based on user input. </summary>
+
+```javascript
+function setCookies() {
+    const firstname = document.getElementById('firstname').value;
+    const email = document.getElementById('email').value;
+    document.cookie = `firstname=${firstname};path=/`;
+    document.cookie = `email=${email};path=/`;
+}
+```
+</details>
+
+### Learn how to set specific settings for the cookie
+
+<details>
+<summary>In Task 1, we learned how to set specific settings for cookies, such as expiration dates. We modified the `setCookies` function to set cookies that expire in 10 days. </summary>
+
+```javascript
+function setCookies() {
+    const firstname = document.getElementById('firstname').value;
+    const email = document.getElementById('email').value;
+    
+    const expirationDate = new Date();
+    expirationDate.setTime(expirationDate.getTime() + (10 * 24 * 60 * 60 * 1000)); // 10 days in milliseconds
+    const expires = "expires=" + expirationDate.toUTCString();
+    
+    document.cookie = `firstname=${firstname};${expires};path=/`;
+    document.cookie = `email=${email};${expires};path=/`;
+}
+```
+</details>
+
+### Learn how to read cookies with JavaScript
+
+<details>
+<summary>In Task 2, we created a function `getCookie` to read cookies by name, and modified the `showCookies` function to display the cookies in a specific format.</summary>
+
+```javascript
+function getCookie(name) {
+    const cookies = document.cookie.split('; ').reduce((acc, cookie) => {
+        const [key, value] = cookie.split('=');
+        acc[key] = value;
+        return acc;
+    }, {});
+    return cookies[name] || '';
+}
+
+function showCookies() {
+    const email = getCookie('email');
+    const firstname = getCookie('firstname');
+    const p = document.createElement('p');
+    p.innerHTML = `Email: ${email} - Firstname: ${firstname}`;
+    document.body.appendChild(p);
+}
+```
+</details>
+
+#### How to use js-cookie for easy cookie manipulation
+
+<details>
+<summary>In Task 4, we integrated the `js-cookie` library for easier cookie manipulation. We replaced our custom cookie functions with methods from `js-cookie`</summary>
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+<script>
+    function setCookiesAndShowWelcomeMessage() {
+        const firstname = document.getElementById('firstname').value;
+        const email = document.getElementById('email').value;
+        Cookies.set('firstname', firstname, { expires: 10, path: '/' });
+        Cookies.set('email', email, { expires: 10, path: '/' });
+        showWelcomeMessageOrForm();
+    }
+
+    function deleteCookiesAndShowForm() {
+        Cookies.remove('firstname', { path: '/' });
+        Cookies.remove('email', { path: '/' });
+        showForm();
+    }
+</script>
+```
+</details>
+
+
+### How to use the browser web storage
+
+<details>
+<summary>Throughout Tasks 5, 6, and 7, we learned how to use both local storage and session storage to persist data across page sessions.</summary>
+
+- **Local Storage**: In Task 5, we used local storage to build a shopping cart that persists data across browser sessions:
+
+    ```javascript
+    function addItemToCart(item) {
+        localStorage.setItem(item, true);
+        displayCart();
+    }
+    ```
+
+- **Session Storage**: In Tasks 6 and 7, we transitioned to session storage, which only persists data for the duration of the page session:
+
+    ```javascript
+    function addItemToCart(item) {
+        sessionStorage.setItem(item, true);
+        displayCart();
+    }
+    ```
+
+</details>
+
+### The differences between local storage and session storage
+<details>
+<summary>Throughout the project, we explored the differences between local storage and session storage</summary>
+
+- **Local Storage**:
+  - Data persists even after the browser is closed and reopened.
+  - Suitable for storing data that needs to be available across multiple sessions.
+  - Example from Task 5:
+
+    ```javascript
+    function addItemToCart(item) {
+        localStorage.setItem(item, true);
+        displayCart();
+    }
+    ```
+
+- **Session Storage**:
+  - Data persists only for the duration of the page session.
+  - Data is cleared when the tab or window is closed.
+  - Suitable for storing data that only needs to be available for the current session.
+  - Example from Task 6 and Task 7:
+
+    ```javascript
+    function addItemToCart(item) {
+        sessionStorage.setItem(item, true);
+        displayCart();
+    }
+    ```
+    </details>
+
 
 ## Requirements
 - Allowed editors: vi, vim, emacs, Visual Studio Code
